@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://ep-winter-violet-agu1tfeh-pooler.c-2.eu-central-1.aws.neon.tech:5432/neondb?sslmode=require
-    username: neondb_owner
-    password: npg_ZKl59NqyTBuU
+    url: ${URLDATABASE}
+    username: ${PGDATABASE}
+    password: ${PGPASSWORD}
     hikari:
       maximum-pool-size: 10
       minimum-idle: 2

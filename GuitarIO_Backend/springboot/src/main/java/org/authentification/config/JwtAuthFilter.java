@@ -33,15 +33,11 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
         String auth = request.getHeader("Authorization");
 
-        System.out.println("➡ JwtAuthFilter called for: " + request.getRequestURI());
-        System.out.println("➡ Authorization header = " + auth);
-
         if (auth != null && auth.startsWith("Bearer ")) {
             String token = auth.substring(7);
 
             try {
                 var claims = jwt.parse(token).getBody();
-                System.out.println("➡ CLAIMS = " + claims);
 
                 Object uidObj = claims.get("uid");
                 if (uidObj == null) {
@@ -59,8 +55,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                     );
 
                     SecurityContextHolder.getContext().setAuthentication(authentication);
-                    System.out.println("✅ Authentication set for uid=" + uid + " role=" + role);
-                }
+                    }
 
             } catch (Exception e) {
                 e.printStackTrace(); // IMPORTANT: we need the real reason
