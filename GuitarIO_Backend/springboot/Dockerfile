@@ -10,16 +10,4 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
-CMD ["sh", "-c", "java -jar app.ja# neuen orphan-branch ohne history erstellen
-                                  git checkout --orphan main_new
-
-                                  # alles neu hinzufügen
-                                  git add -A
-                                  git commit -m "Fresh start"
-
-                                  # alten main ersetzen
-                                  git branch -D main
-                                  git branch -m main
-
-                                  # force push
-                                  git push -f origin mainr --server.port=${PORT:-8080}"]
+CMD ["sh", "-c", "java -jar app.jar --server.port=${PORT:-8080}"]
