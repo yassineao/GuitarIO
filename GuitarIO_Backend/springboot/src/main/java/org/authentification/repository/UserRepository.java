@@ -6,5 +6,5 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByEmail(String email);   // ok
     boolean existsByEmail(String email);        // ok
-    // DO NOT declare findById — it's inherited from JpaRepository
+
 }
