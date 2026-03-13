@@ -81,6 +81,8 @@ GuitarIO/
 2. **Install dependencies**
    ```bash
    pnpm install
+   # or
+   npm install
    ```
 
 3. **Environment Configuration**
@@ -100,11 +102,14 @@ GuitarIO/
    pnpm run seed
    ```
 
-5. **Run Development Server**
+5. **Run Tests**
    ```bash
-   pnpm run dev
+   pnpm run test
    ```
-   Open [http://localhost:3000](http://localhost:3000)
+   For test coverage:
+   ```bash
+   pnpm run test:coverage
+   ```
 
 ### Backend Setup
 
@@ -116,7 +121,12 @@ GuitarIO/
 2. **Configure Database**
    Update `application.properties` or environment variables for PostgreSQL connection
 
-3. **Run Spring Boot Application**
+3. **Run Tests**
+   ```bash
+   ./mvnw test
+   ```
+
+4. **Run Spring Boot Application**
    ```bash
    ./mvnw spring-boot:run
    ```
@@ -141,11 +151,13 @@ docker run -p 3000:3000 guitar-io-frontend
 ## 📚 Available Scripts
 
 ### Frontend
-- `pnpm run dev` - Start development server
-- `pnpm run build` - Build for production
-- `pnpm run start` - Start production server
-- `pnpm run lint` - Run ESLint
-- `pnpm run seed` - Seed the database
+- `pnpm run dev` / `npm run dev` - Start development server
+- `pnpm run build` / `npm run build` - Build for production
+- `pnpm run start` / `npm start` - Start production server
+- `pnpm run lint` / `npm run lint` - Run ESLint
+- `pnpm run seed` / `npm run seed` - Seed the database
+- `npm test` / `pnpm run test` - Run tests
+- `npm run test:coverage` / `pnpm run test:coverage` - Run tests with coverage
 
 ### Backend
 - `./mvnw clean compile` - Compile the project
@@ -171,7 +183,44 @@ docker run -p 3000:3000 guitar-io-frontend
 ### AI Chat
 - `POST /api/chat` - Interact with AI assistant
 
-## 🤝 Contributing
+## � Testing
+
+### Backend Tests
+- **Unit Tests**: Service layer testing with Mockito
+  - `UserServiceTest`: User registration, authentication, and validation
+  - `JwtServiceTest`: JWT token generation and parsing
+- **Integration Tests**: Controller testing with Spring Boot Test
+  - `UserControllerTest`: Authentication endpoints (register, login)
+
+### Frontend Tests
+- **Component Tests**: React component testing with Jest and React Testing Library
+  - `Note.test.js`: Note component rendering and props
+  - `ChordChart.test.js`: Chord chart component functionality
+- **API Tests**: Authentication API testing
+  - `login.test.js`: Login API function testing with mocked fetch
+
+### Running Tests
+
+**Frontend:**
+```bash
+cd GuitarIO_Frontend
+npm install  # or pnpm install
+npm test
+npm run test:coverage
+```
+
+**Backend:**
+```bash
+cd GuitarIO_Backend/springboot
+./mvnw test
+```
+
+### Test Coverage
+- Backend: Service layer and basic controller functionality
+- Frontend: React components and API utilities
+- All tests include proper mocking and edge case handling
+
+## �🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
