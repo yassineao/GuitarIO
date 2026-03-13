@@ -1,0 +1,5 @@
+C:\Users\yassu\Projektorr\obj\Debug\net8.0\Projektorr.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yassu\Projektorr\obj\Debug\net8.0\Projektorr.AssemblyInfoInputs.cache
+C:\Users\yassu\Projektorr\obj\Debug\net8.0\Projektorr.AssemblyInfo.cs
+C:\Users\yassu\Projektorr\obj\Debug\net8.0\Projektorr.csproj.CoreCompileInputs.cache
+C:\Users\yassu\Projektorr\obj\Debug\net8.0\Projektorr.sourcelink.json

@@ -1,0 +1,20 @@
+@import "./global/fonts.css";
+@import "./global/base.css";
+@import "./global/layout.css";
+@import "./global/slider-section.css";
+@import "./global/popup-form.css";
+@import "./global/auth-form.css";
+@import "./global/theme.css";
+@import "./global/navigation.css";
+@import "./global/home.css";
+@import "./global/category.css";
+@import "./global/about.css";
+@import "./global/items.css";
+@import "./global/party.css";
+@import "./global/footer.css";
+@import "./global/utilities.css";
+@import "./global/responsive.css";
+@import "./guitarTitel.css";
+
+@tailwind base;
+@tailwind utilities;

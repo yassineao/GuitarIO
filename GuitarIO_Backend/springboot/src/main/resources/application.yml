@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://ep-winter-violet-agu1tfeh-pooler.c-2.eu-central-1.aws.neon.tech:5432/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_ZKl59NqyTBuU
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      keepaliveTime: 300000   # 5 min
+      idle-timeout: 600000    # 10 min
+
+  jpa:
+    hibernate:
+      ddl-auto: update        # dev only; prefer migrations later
+    show-sql: true            # helpful for debugging
+    open-in-view: false
+    properties:
+      hibernate.format_sql: true
+      # dialect is optional; Hibernate detects Postgres automatically, but you can keep it:
+      # hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# REMOVE this whole section if you don't have an IdP yet
+#spring:
+#  security:
+#    oauth2:
+#      resource-server:
+#        jwt:
+#          issuer-uri: https://your-real-issuer.example.com/

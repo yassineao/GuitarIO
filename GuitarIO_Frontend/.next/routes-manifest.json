@@ -1,0 +1,209 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/lessons/[chapter]/[lesson]",
+      "regex": "^/api/lessons/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPchapter": "nxtPchapter",
+        "nxtPlesson": "nxtPlesson"
+      },
+      "namedRegex": "^/api/lessons/(?<nxtPchapter>[^/]+?)/(?<nxtPlesson>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/Chapters/[chapter]/[lesson]",
+      "regex": "^/Chapters/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPchapter": "nxtPchapter",
+        "nxtPlesson": "nxtPlesson"
+      },
+      "namedRegex": "^/Chapters/(?<nxtPchapter>[^/]+?)/(?<nxtPlesson>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/notes/[id]",
+      "regex": "^/notes/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/notes/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/api/AuthContext",
+      "regex": "^/api/AuthContext(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/AuthContext(?:/)?$"
+    },
+    {
+      "page": "/api/chat",
+      "regex": "^/api/chat(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/chat(?:/)?$"
+    },
+    {
+      "page": "/api/chord",
+      "regex": "^/api/chord(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/chord(?:/)?$"
+    },
+    {
+      "page": "/api/lessons/chapters-with-numbers",
+      "regex": "^/api/lessons/chapters\\-with\\-numbers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/lessons/chapters\\-with\\-numbers(?:/)?$"
+    },
+    {
+      "page": "/api/login",
+      "regex": "^/api/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/login(?:/)?$"
+    },
+    {
+      "page": "/api/route",
+      "regex": "^/api/route(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/route(?:/)?$"
+    },
+    {
+      "page": "/api/songsterr",
+      "regex": "^/api/songsterr(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/songsterr(?:/)?$"
+    },
+    {
+      "page": "/api/tabs",
+      "regex": "^/api/tabs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/tabs(?:/)?$"
+    },
+    {
+      "page": "/api/test",
+      "regex": "^/api/test(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/test(?:/)?$"
+    },
+    {
+      "page": "/Chapters",
+      "regex": "^/Chapters(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Chapters(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/majorNotes",
+      "regex": "^/majorNotes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/majorNotes(?:/)?$"
+    },
+    {
+      "page": "/notes",
+      "regex": "^/notes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/notes(?:/)?$"
+    },
+    {
+      "page": "/options",
+      "regex": "^/options(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/options(?:/)?$"
+    },
+    {
+      "page": "/play-song",
+      "regex": "^/play\\-song(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/play\\-song(?:/)?$"
+    },
+    {
+      "page": "/protected",
+      "regex": "^/protected(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/protected(?:/)?$"
+    },
+    {
+      "page": "/register",
+      "regex": "^/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/register(?:/)?$"
+    },
+    {
+      "page": "/RequireAuth",
+      "regex": "^/RequireAuth(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/RequireAuth(?:/)?$"
+    },
+    {
+      "page": "/test",
+      "regex": "^/test(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test(?:/)?$"
+    }
+  ],
+  "dataRoutes": [
+    {
+      "page": "/Chapters/[chapter]/[lesson]",
+      "routeKeys": {
+        "nxtPchapter": "nxtPchapter",
+        "nxtPlesson": "nxtPlesson"
+      },
+      "dataRouteRegex": "^/_next/data/OWpM48Thtc6Lb2rqdy\\-e3/Chapters/([^/]+?)/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/OWpM48Thtc6Lb2rqdy\\-e3/Chapters/(?<nxtPchapter>[^/]+?)/(?<nxtPlesson>[^/]+?)\\.json$"
+    },
+    {
+      "page": "/notes/[id]",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "dataRouteRegex": "^/_next/data/OWpM48Thtc6Lb2rqdy\\-e3/notes/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/OWpM48Thtc6Lb2rqdy\\-e3/notes/(?<nxtPid>[^/]+?)\\.json$"
+    }
+  ],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

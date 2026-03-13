@@ -1,0 +1,6 @@
+target/
+*.jar
+node_modules/
+*.env.local
+*.env.development.local
+*.env

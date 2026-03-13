@@ -1,0 +1,64 @@
+/* Imported typeface for futuristic / sci-fi vibe */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap");
+
+/* Full screen dark neon grid center */
+#cyberpunk-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #0b0c10;
+  color: #00f0ff;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Optional cyberpunk title above input */
+.cyberpunk-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-shadow: 0 0 6px #ff00ff, 0 0 15px #00f0ff;
+}
+
+/* Wrap input and button */
+.cyberpunk-input-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Neon input box */
+#cyberpunk-search-input {
+  width: 300px;
+  padding: 12px 16px;
+  font-size: 18px;
+  border: 2px solid #00f0ff;
+  background: #111518;
+  color: #00f0ff;
+  text-shadow: 0 0 4px #00f0ff, 0 0 8px #00f0ff;
+  outline: none;
+  transition: 0.3s;
+}
+
+#cyberpunk-search-input:focus {
+  border-color: #ff00ff;
+  box-shadow: 0 0 8px #ff00ff, 0 0 20px #ff00ff88;
+}
+
+/* Neon search button */
+.cyberpunk-search-btn {
+  margin-left: 8px;
+  padding: 12px 20px;
+  background: #05060a;
+  border: 2px solid #ff00ff;
+  color: #ff00ff;
+  font-size: 18px;
+  cursor: pointer;
+  text-shadow: 0 0 4px #ff00ff, 0 0 8px #ff00ff;
+  transition: 0.3s;
+}
+
+.cyberpunk-search-btn:hover {
+  color: #00fff7;
+  border-color: #00fff7;
+  box-shadow: 0 0 8px #00fff7, 0 0 30px #00fff788;
+}

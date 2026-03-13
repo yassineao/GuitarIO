@@ -1,0 +1,295 @@
+.login .form-details {
+  padding: 0 40px;
+  background: url("https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.signup .form-details {
+  padding: 0 20px;
+  background: url("https://commons.wikimedia.org/wiki/Category:Google_SVG_logos#/media/File:Gmail_icon_(2020).svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.form-box .form-content {
+  width: 100%;
+  padding: 35px;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 29px;
+}
+
+form {
+  margin-top: -3%;
+}
+
+form .input-field,
+.form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+
+.form .field {
+  border-radius: 6px;
+}
+
+.input-field input,
+.field input,
+.field button {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.input-field input,
+.field input {
+  background: none;
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid #717171;
+}
+
+.field input {
+  border: 1px solid #cacaca;
+}
+
+.input-field input:focus {
+  border: 1px solid #00bcd4;
+}
+
+.field input:focus {
+  border-bottom-width: 2px;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #4a4646;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+  padding: 16px 15px 0;
+}
+
+.input-field input:is(:focus, :valid) ~ label {
+  transform: translateY(-120%);
+  color: #00bcd4;
+  font-size: 0.75rem;
+}
+
+.form-box a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.form-box a:hover,
+.form-content a:hover {
+  text-decoration: underline;
+}
+
+form :where(.forgot-pass-link, .policy-text) {
+  display: inline-flex;
+  margin-top: 13px;
+  font-size: 0.95rem;
+}
+
+form button,
+.field button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+form button {
+  padding: 14px 0;
+  font-size: 1rem;
+  border-radius: 3px;
+  margin: 25px 0;
+  background: #00bcd4;
+}
+
+form button:hover {
+  background: #0097a7;
+}
+
+.field button {
+  background-color: #0171d3;
+}
+
+.field button:hover {
+  background-color: #016dcb;
+}
+
+.form-content .bottom-link,
+.form-link {
+  text-align: center;
+}
+
+.form-link span,
+.form-link a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #d1d0d1;
+}
+
+.form a {
+  color: #0171d3;
+  text-decoration: none;
+}
+
+.form-popup .signup,
+.form-popup.show-signup .login {
+  display: none;
+}
+
+.form-popup.show-signup .signup {
+  display: flex;
+}
+
+.forms.show-signup .form.signup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.forms.show-signup .form.login {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  column-gap: 30px;
+}
+
+.form.signup {
+  background: rgb(255 255 255);
+  box-shadow: rgb(0 241 255 / 96%) 6px 7px 30px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #8b8b8b;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.line {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin: 36px 0;
+  background-color: #d4d4d4;
+}
+
+.line::before {
+  content: "Or";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  color: #8b8b8b;
+  padding: 0 15px;
+}
+
+.media-options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.facebook {
+  color: #fff;
+  background-color: #4267b2;
+}
+
+a.facebook .facebook-icon {
+  height: 28px;
+  width: 28px;
+  color: #0171d3;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.facebook-icon,
+img.google-img {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+img.google-img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+
+a.google {
+  border: 1px solid #cacaca;
+}
+
+a.google span {
+  font-weight: 500;
+  opacity: 0.6;
+  color: #232836;
+}
+
+.signup .policy-text {
+  display: flex;
+  margin-top: 14px;
+  align-items: center;
+}
+
+.signup .policy-text input {
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+}
+
+#__next div .signup {
+  border-style: dashed;
+  border-color: rgba(242, 7, 7, 0);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+  box-shadow: 0px 16px 20px 7px rgba(250, 127, 66, 0.96);
+  background-size: cover;
+  background-position-x: 0%;
+  filter: invert(0.83) hue-rotate(87deg) saturate(0);
+  opacity: 0.94;
+  visibility: visible;
+  align-self: center;
+}
+
+#error-message {
+  color: red;
+}

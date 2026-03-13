@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#unique-slider {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: rgb(0, 0, 0);
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+}
+
+body.main-layout {
+  overflow: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  text-shadow: 0 0 10px currentColor;
+}
+
+a:nth-child(1):hover {
+  color: #be21d3;
+}
+
+a:nth-child(2):hover {
+  color: #81c784;
+}
+
+a:nth-child(3):hover {
+  color: #64b5f6;
+}
+
+a:nth-child(4):hover {
+  color: #ffb74d;
+}
+
+a:nth-child(5):hover {
+  color: #ba68c8;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: clamp(1rem, 5vw, 5rem);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  color: #cccccc;
+  width: 90vw;
+  max-width: 1200px;
+}
+
+h2:hover:not(.cool_titel) {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #cccccc;
+}
+
+h2 * {
+  will-change: transform;
+}

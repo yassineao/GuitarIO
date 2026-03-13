@@ -1,0 +1,82 @@
+{
+  "name": "projektorr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "node -r dotenv/config ./scripts/seed.js"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^2.0.46",
+    "@coderline/alphatab": "^1.3.1",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@nextui-org/react": "^2.4.6",
+    "@prisma/client": "^5.22.0",
+    "@vercel/postgres": "^0.7.2",
+    "ai": "^5.0.112",
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "chordjs": "^2.0.1",
+    "chordpro-parser": "^1.0.0",
+    "chordprojs": "^0.1.1",
+    "chordsheetjs": "^10.11.0",
+    "dotenv": "^17.2.4",
+    "gsap": "^3.12.5",
+    "html-react-parser": "^5.2.10",
+    "ionicons": "^7.4.0",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "marked": "^13.0.2",
+    "mongoose": "^8.2.0",
+    "next": "^16.0.10",
+    "react": "^18.3.1",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
+    "react-slick": "^0.30.2",
+    "react-slider": "^2.0.6",
+    "slick-carousel": "^1.8.1",
+    "songsterr-api-node": "^1.0.8",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.0.7",
+    "swr": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tone": "^15.0.4",
+    "vexflow": "^4.2.5",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.29",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.4.41",
+    "prisma": "^5.22.0",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "postcss.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yassineao/GuitarTuto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yassineao/GuitarTuto/issues"
+  },
+  "homepage": "https://github.com/yassineao/GuitarTuto#readme"
+}

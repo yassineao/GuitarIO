@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background: #111;
+}
+
+#celeste {
+  --grey: #575858;
+  --bluegrey: #270b1e;
+  --dark: #222;
+  --highlight: #50505d;
+  --text: #eee;
+  --rgba: 0,0,0;
+  --rgba2: 36,36,42;
+  --bg: url("https://c.l3n.co/F19HwD.png");
+  --img1: url("https://r4.wallpaperflare.com/wallpaper/372/651/621/guitar-electric-guitar-wallpaper-4980787da1da9d5b86c708efa00196dd.jpg");
+  --border: #35353d;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+  background: #0d0d0d url("https://c.l3n.co/F1vLm7.png");
+  width: min(80%, 1200px);
+  padding: clamp(12px, 2vw, 20px);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.celeste2 {
+  margin: auto;
+  position: relative;
+}
+
+.top-left {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
+  bottom: clamp(10px, 2vw, 20px);
+  width: 80%;
+  background-image: radial-gradient(
+    circle at top left,
+    #111,
+    var(--bluegrey) 10%,
+    var(--highlight) 20%,
+    rgba(0,0,0,0) 40%
+  );
+  clip-path: polygon(100% 0, 0 0, 0 100%, 3% 100%, 3% 3%, 100% 3%);
+  z-index: 5;
+  opacity: 0.8;
+}
+
+.bottom-right {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  bottom: clamp(10px, 2vw, 20px);
+  right: clamp(10px, 2vw, 20px);
+  width: 80%;
+  background-image: radial-gradient(
+    circle at bottom right,
+    #111,
+    var(--bluegrey) 10%,
+    var(--highlight) 20%,
+    rgba(0,0,0,0) 40%
+  );
+  clip-path: polygon(97% 0, 97% 97%, 0 97%, 0 100%, 100% 100%, 100% 0%);
+  z-index: 5;
+  opacity: 0.8;
+}
+
+.celeste3 {
+  position: relative;
+  z-index: 4;
+  padding: clamp(16px, 3vw, 35px);
+}
+
+.celeste4 {
+  background: rgb(21 8 19 / 95%);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: clamp(20px, 4vw, 40px);
+  position: relative;
+  height: auto;
+}
+
+.celeste4::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--img1);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.celeste-write {
+  padding: clamp(16px, 3vw, 30px) clamp(16px, 3vw, 30px) clamp(70px, 12vw, 150px);
+  color: var(--text);
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  font-size: clamp(12px, 1.5vw, 16px);
+  line-height: clamp(1.4, 1.5, 1.6);
+  text-align: justify;
+  position: relative;
+  z-index: 6;
+}
+
+.celeste-write b {
+  background: var(--highlight);
+  padding: 2px;
+}
+
+.celeste5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 6;
+  gap: clamp(10px, 2vw, 20px);
+}
+
+.celeste-iconn {
+  position: relative;
+  margin-left: clamp(-30px, -4vw, -60px);
+  margin-bottom: clamp(-30px, -4vw, -60px);
+  border-radius: 100%;
+  width: clamp(70px, 10vw, 100px);
+  height: clamp(70px, 10vw, 100px);
+  border: 1px solid var(--border);
+  outline-offset: clamp(20px, 4vw, 40px);
+  z-index: 100;
+}
+
+.celeste-iconnn {
+  width: clamp(70px, 10vw, 100px);
+  height: clamp(70px, 10vw, 100px);
+  border-radius: 100%;
+  background-size: cover;
+  filter: grayscale(100%);
+  outline: 2px solid var(--border);
+  outline-offset: 10px;
+  position: relative;
+  background-position: center;
+  z-index: 100;
+}
+
+.celeste-iconnnn {
+  width: clamp(70px, 10vw, 100px);
+  height: clamp(70px, 10vw, 100px);
+  border-radius: 100%;
+  position: absolute;
+  inset: 0;
+  animation: orbit 4s linear infinite;
+  z-index: 100;
+}
+
+.celeste-iconnnn::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: clamp(6px, 1vw, 10px);
+  height: clamp(6px, 1vw, 10px);
+  background: var(--border);
+  border-radius: 50%;
+  z-index: 100;
+}
+
+@keyframes orbit {
+  to { transform: rotate(360deg); }
+}
+
+.celeste-ball1 {
+  position: absolute;
+  inset: 0;
+  width: clamp(180px, 24vw, 276px);
+  height: clamp(180px, 24vw, 276px);
+  margin: auto;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: orbit2 5s linear infinite;
+  z-index: 100;
+}
+
+@keyframes orbit2 {
+  to { transform: rotate(-360deg); }
+}
+
+.celeste-ball1::after {
+  content: "";
+  position: absolute;
+  top: clamp(65px, 8vw, 100px);
+  left: 0;
+  width: clamp(6px, 1vw, 10px);
+  height: clamp(6px, 1vw, 10px);
+  background: red;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.celeste-lyrics {
+  font-family: "Courier Prime", monospace;
+  font-weight: 500;
+  font-size: clamp(10px, 1.2vw, 13px);
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: clamp(0.5px, 0.15vw, 1px);
+}
+
+.celeste-lyrics b {
+  color: var(--highlight);
+}
+
+.celeste-lyrics sup {
+  display: block;
+  margin-left: clamp(-35px, -5vw, -70px);
+}
+
+.celeste-lyrics sub {
+  display: block;
+  margin-left: clamp(25px, 4vw, 60px);
+}
+
+@media (max-width: 1000px) {
+  .lessonss {
+    margin-top: 20%;
+  }
+}

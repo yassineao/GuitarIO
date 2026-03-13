@@ -1,0 +1,62 @@
+:root {
+  --header-height: 3.5rem;
+  --first-color: hsl(324.52deg 100% 31.57%);
+  --first-color-alt: hsl(194, 100%, 51%);
+  --white-color: #fff;
+  --text-color: hsl(22, 4%, 75%);
+  --text-color-light: hsl(22, 4%, 55%);
+  --body-color: hsl(260, 60%, 17%);
+  --container-color: hsl(22, 8%, 7%);
+
+  --body-font: "Nosifer", sans-serif;
+  --second-font: "Average Sans", sans-serif !important;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: hsl(340deg 29.34% 9.25%);
+  color: var(--white-color);
+}
+
+/* Shapes */
+.shape__bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.shape__small,
+.shape__big {
+  position: absolute;
+  background-color: var(--first-color);
+  filter: blur(96px);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.shape__small {
+  width: 150px;
+  height: 150px;
+}
+
+.shape__big {
+  width: 250px;
+  height: 250px;
+  opacity: 0.8;
+}
