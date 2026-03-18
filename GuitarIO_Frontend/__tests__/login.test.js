@@ -80,6 +80,24 @@ describe('authenticateUser', () => {
       mockController,
       mockSetErrorMessage
     )).rejects.toThrow('Network error')
+
+    expect(mockSetErrorMessage).toHaveBeenCalledWith('Network error')
+  })
+
+  test('should surface missing API configuration errors', async () => {
+    const originalApiUrl = process.env.NEXT_PUBLIC_API_URL
+    delete process.env.NEXT_PUBLIC_API_URL
+
+    await expect(authenticateUser(
+      'test@example.com',
+      'password123',
+      mockController,
+      mockSetErrorMessage
+    )).rejects.toThrow('Missing environment variable: NEXT_PUBLIC_API_URL')
+
+    expect(mockSetErrorMessage).toHaveBeenCalledWith('Missing environment variable: NEXT_PUBLIC_API_URL')
+
+    process.env.NEXT_PUBLIC_API_URL = originalApiUrl
   })
 
   test('should handle malformed JSON response', async () => {

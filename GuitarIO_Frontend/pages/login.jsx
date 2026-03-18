@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import Link from "next/link";
 import { authenticateUser } from "./api/login";
@@ -43,6 +43,11 @@ export default function Login() {
       const accessToken = payload.access || payload.accessToken;
       const refreshToken = payload.refresh || payload.refreshToken;
 
+      if (!accessToken) {
+        setErrorMessage("Login succeeded but no access token was returned.");
+        return;
+      }
+
 
       console.log("Login successful, accessToken:", accessToken);
       // Tell AuthContext you logged in
@@ -54,6 +59,10 @@ export default function Login() {
     } catch (err) {
       if (err?.name === "AbortError") {
         setErrorMessage("Request timed out. Please try again.");
+      } else if (err instanceof Error && err.message) {
+        setErrorMessage(err.message);
+      } else {
+        setErrorMessage("Unable to sign in right now. Please try again.");
       }
     } finally {
       clearTimeout(timeout);
