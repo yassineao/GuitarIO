@@ -88,11 +88,7 @@ public class UserController {
         }
     }
 
-    @RestController
-    public class MainController {
-        @GetMapping("/")
-        public String hello() { return "OK"; }
-    }
-
+    @GetMapping("/health")
+    public String health() { return "OK"; }
 
 }
