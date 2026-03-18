@@ -49,7 +49,6 @@ export default function Login() {
       }
 
 
-      console.log("Login successful, accessToken:", accessToken);
       // Tell AuthContext you logged in
       login(accessToken, refreshToken);
 

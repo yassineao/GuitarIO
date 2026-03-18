@@ -25,7 +25,6 @@ export default function ProtectedPage() {
 
     // Parse user data and set the user's name
     const user = JSON.parse(userData);
-    console.log(user.email)
     setUserName(user.lastname);
   }, []);
 

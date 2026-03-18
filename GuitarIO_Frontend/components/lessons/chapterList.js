@@ -13,7 +13,6 @@ const ChaptersLessons = ({chapterss}) => {
   };
 
   const handleClick = () => {
-     console.log("ssss",activeChapter);
     if (activeChapter !== null) {
       window.location.href = `/Chapters/${activeChapter}/1`;
     }

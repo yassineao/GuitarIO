@@ -10,7 +10,6 @@ export default async function handler(req, res) {
 const google = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
-console.log("GEMINI_API_KEY in handler:", process.env.GEMINI_API_KEY);  
   if (req.method !== "POST") {
     res.setHeader("Allow", ["POST"]);
     return res.status(405).json({ error: "Only POST allowed" });

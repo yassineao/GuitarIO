@@ -15,7 +15,6 @@ const fetcher = async (url) => {
 };
 
 export default function Chapters({ chapter, lesson }) {
-  console.log("chapter:", chapter, "lesson:", lesson);
   const router = useRouter();
 
   // lesson is already the number from the URL
@@ -37,7 +36,6 @@ const { data: chaptersIndex } = useSWR(
   fetcher,
   { revalidateOnFocus: false, dedupingInterval: 10 * 60 * 1000 }
 );  
-console.log("chaptersIndex:", chaptersIndex);
 
   if (isLoading) return <WavyGuitarStrings />;
   if (error) return <p>Error: {error.message}</p>;
@@ -55,7 +53,6 @@ console.log("chaptersIndex:", chaptersIndex);
 
 const lessonNumbers = chaptersIndex?.[title] || [];
 const hasNext = lessonNumbers.includes(nextNum);
-console.log("hasNext:", hasNext, "nextNum:", nextNum, "lessonNumbers:", lessonNumbers);
  const prefetchNext = () => {
   if (!hasNext) return;
   mutate(nextKey, fetcher(nextKey), false);

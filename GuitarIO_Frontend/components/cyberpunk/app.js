@@ -95,7 +95,7 @@ function Sidebar({
               type="button"
               className="button button--primary button--size-lg"
               aria-label="Create new feed"
-              onClick={() => console.log("Create feed")}
+              onClick={() => {}}
             >
               <IconFeedAdd className="button__icon" />
             </button>

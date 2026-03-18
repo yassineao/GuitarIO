@@ -9,20 +9,16 @@ export default function Home() {
   const router = useRouter();
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
-    console.log("Retrieved token:", token);
     if (!token) return;
 
     try {
       const decoded = jwtDecode(token);
-      console.log("Decoded JWT:", decoded);
-      console.log("Decoded name:", decoded);
 
       const name = decoded.user || decoded.sub || `User #${decoded.uid}`;
 
-      console.log("Decoded name:", name);
       setUserName(name);
     } catch (err) {
-      console.log("Invalid token", err);
+      // invalid token
     }
   }, []);
 

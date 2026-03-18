@@ -962,3 +962,38 @@ Import trace for requested module:
 [02:32:09.720] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773848108203} /_vercel/insights/view
 [02:32:11.833] Server  LOG     [dotenv@17.2.4] injecting env (0) from .env.local -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
 [02:32:11.840] Server  LOG     GEMINI_API_KEY in handler: "AIzaSyBmylbqefR61SsQPn-YrOCr5rY11voqnXg"
+[02:46:54.780] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ3Nzc1LCJleHAiOjE3NzM4NDg2NzV9.R9z_sgMPni2FHpBDhd-7evVgws3I_oNpQi86LyYTq-c
+[02:46:54.780] Browser LOG     AuthProvider init, token: null
+[02:46:54.780] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:46:54.780] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773848993258} /_vercel/insights/view
+[02:46:55.016] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:47:01.736] Browser LOG     Building public API URL for path: /auth/login
+[02:47:01.736] Browser LOG     Retrieving environment variable: NEXT_PUBLIC_API_URL - Value: [REDACTED]
+[02:47:02.204] Browser LOG     Login successful, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ5MDAwLCJleHAiOjE3NzM4NDk5MDB9.dmtD-UTXMVTytuY8LGEZOiqOhGhpl3jvHJdE5U0bDck
+[02:47:02.204] Browser LOG     AuthContext login, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ5MDAwLCJleHAiOjE3NzM4NDk5MDB9.dmtD-UTXMVTytuY8LGEZOiqOhGhpl3jvHJdE5U0bDck
+[02:47:02.204] Browser LOG     AuthContext lowwwwwgin, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ5MDAwLCJleHAiOjE3NzM4NDk5MDB9.dmtD-UTXMVTytuY8LGEZOiqOhGhpl3jvHJdE5U0bDck
+[02:47:02.204] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849000659} /_vercel/insights/view
+[02:47:02.204] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[02:47:02.204] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ5MDAwLCJleHAiOjE3NzM4NDk5MDB9.dmtD-UTXMVTytuY8LGEZOiqOhGhpl3jvHJdE5U0bDck
+[02:47:02.204] Browser LOG     Decoded JWT: {"exp":1773849900,"iat":1773849000,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[02:47:02.204] Browser LOG     Decoded name: {"exp":1773849900,"iat":1773849000,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[02:47:02.204] Browser LOG     Decoded name: el matador
+[02:47:02.204] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ5MDAwLCJleHAiOjE3NzM4NDk5MDB9.dmtD-UTXMVTytuY8LGEZOiqOhGhpl3jvHJdE5U0bDck
+[02:47:02.204] Browser LOG     Decoded JWT: {"exp":1773849900,"iat":1773849000,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[02:47:02.204] Browser LOG     Decoded name: {"exp":1773849900,"iat":1773849000,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[02:47:02.204] Browser LOG     Decoded name: el matador
+[02:47:04.272] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849002752} /_vercel/insights/view

@@ -17,7 +17,6 @@ export function AuthProvider({ children }) {
     }
 
     const token = localStorage.getItem("accessToken");
-    console.log("AuthProvider init, token:", token);
     if (!token) {
       setLoading(false);
       return;
@@ -50,8 +49,6 @@ export function AuthProvider({ children }) {
 
   // Call this after successful login
   const login = (accessToken, refreshToken) => {
-
-    console.log("AuthContext login, accessToken:", accessToken);
     if (!accessToken) return;
 
     if (typeof window !== "undefined") {
@@ -63,8 +60,6 @@ export function AuthProvider({ children }) {
 
     try {
       const decoded = jwtDecode(accessToken);
-
-          console.log("AuthContext lowwwwwgin, accessToken:", accessToken);
       setUser(decoded);
       setConnected(true);
     } catch (e) {
