@@ -630,7 +630,6 @@ h2.nav-section__title {
   display: block;
   height: 1rem;
   line-height: 1;
-  vertical-align: top;
   width: 1rem;
   fill: currentcolor;
 }

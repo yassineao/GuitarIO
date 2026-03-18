@@ -1,7 +1,5 @@
 package org.authentification.controller;
 
-import jakarta.persistence.Column;
-import org.authentification.dto.TokenResponse;
 import org.authentification.entity.Lesson;
 import org.authentification.entity.User;
 import org.authentification.entity.UserLesson;
