@@ -3,9 +3,6 @@ server:
 
 spring:
   datasource:
-    url: ${URLDATABASE}
-    username: ${PGDATABASE}
-    password: ${PGPASSWORD}
     hikari:
       maximum-pool-size: 10
       minimum-idle: 2

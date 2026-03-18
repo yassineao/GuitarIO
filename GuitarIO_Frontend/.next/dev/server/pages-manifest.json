@@ -2,7 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/notes/[id]": "pages/notes/[id].js",
   "/majorNotes": "pages/majorNotes.js",
   "/notes": "pages/notes.js",
-  "/notes/[id]": "pages/notes/[id].js"
+  "/play-song": "pages/play-song.js",
+  "/login": "pages/login.js"
 }

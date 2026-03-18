@@ -119,7 +119,17 @@ GuitarIO/
    ```
 
 2. **Configure Database**
-   Update `application.properties` or environment variables for PostgreSQL connection
+   Set environment variables for PostgreSQL and JWT before starting the app. For local development you can keep using `URLDATABASE`, but cloud platforms like Koyeb typically provide `DATABASE_URL` plus `PGUSER` and `PGPASSWORD`.
+
+   Example:
+   ```env
+   JWT_SECRET=replace-with-a-32-char-secret
+   URLDATABASE=jdbc:postgresql://localhost:5432/guitario
+   PGUSER=postgres
+   PGPASSWORD=postgres
+   ```
+
+   On Koyeb, the backend now also accepts a managed Postgres `DATABASE_URL` in the form `postgres://user:password@host:5432/dbname`.
 
 3. **Run Tests**
    ```bash
@@ -138,7 +148,7 @@ GuitarIO/
 ```bash
 cd GuitarIO_Backend
 docker build -t guitar-io-backend .
-docker run -p 8080:8080 guitar-io-backend
+docker run -e JWT_SECRET=replace-with-a-32-char-secret -e URLDATABASE=jdbc:postgresql://host.docker.internal:5432/guitario -e PGUSER=postgres -e PGPASSWORD=postgres -p 8000:8000 guitar-io-backend
 ```
 
 ### Frontend

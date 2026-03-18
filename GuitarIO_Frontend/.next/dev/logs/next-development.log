@@ -2007,3 +2007,11 @@ React will try to recreate this component tree from scratch using the error boun
 [00:27:34.234] Browser LOG     AuthProvider init, token: null
 [00:27:34.234] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
 [00:27:34.234] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/e color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/e","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773799275529} /_vercel/insights/view
+[01:17:52.042] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773802293213} /_vercel/insights/view
+[01:17:52.042] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: http://localhost:8080
+[01:17:52.042] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: http://localhost:8080
+[01:17:52.042] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:18:27.517] Browser LOG     AuthProvider init, token: null
+[01:18:27.517] Browser LOG     AuthProvider init, token: null
+[01:18:27.517] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:18:27.517] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/login","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773802328813} /_vercel/insights/view
