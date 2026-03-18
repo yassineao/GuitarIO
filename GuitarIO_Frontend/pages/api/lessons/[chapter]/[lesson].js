@@ -1,3 +1,5 @@
+import { buildServerApiUrl } from "../../../../lib/api-url";
+
 export default async function handler(req, res) {
   const { chapter, lesson } = req.query;
 
@@ -5,9 +7,9 @@ export default async function handler(req, res) {
   // So we forward Authorization from the browser request if present.
   const auth = req.headers.authorization || "";
 
-  const backendUrl = `http://localhost:8080/lessons/lesson/${encodeURIComponent(
-    chapter
-  )}/${encodeURIComponent(lesson)}`;
+  const backendUrl = buildServerApiUrl(
+    `/lessons/lesson/${encodeURIComponent(chapter)}/${encodeURIComponent(lesson)}`
+  );
 
   const r = await fetch(backendUrl, {
     headers: auth ? { Authorization: auth } : {},

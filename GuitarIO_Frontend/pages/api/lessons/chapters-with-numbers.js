@@ -1,15 +1,14 @@
+import { buildServerApiUrl } from "../../../lib/api-url";
+
 export default async function handler(req, res) {
   try {
     // Forward auth if needed (from browser request)
     const auth = req.headers.authorization || "";
 
-    const backendRes = await fetch(
-      "http://localhost:8080/lessons/chapters-with-numbers",
-      {
-        method: "GET",
-        headers: auth ? { Authorization: auth } : {},
-      }
-    );
+    const backendRes = await fetch(buildServerApiUrl("/lessons/chapters-with-numbers"), {
+      method: "GET",
+      headers: auth ? { Authorization: auth } : {},
+    });
 
     const text = await backendRes.text();
     let payload;

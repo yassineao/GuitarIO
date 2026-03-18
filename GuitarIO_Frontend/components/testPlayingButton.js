@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import GlitchingButton from './glitchingButton';
+import { buildPublicPythonApiUrl } from '../lib/api-url';
 export default function TPB({ name }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [note, setNote] = useState('');
@@ -21,7 +22,7 @@ export default function TPB({ name }) {
     formData.append('file', selectedFile);
 
     try {
-      const response = await fetch('http://localhost:5000/detect-note', {
+      const response = await fetch(buildPublicPythonApiUrl('/detect-note'), {
         method: 'POST',
         body: formData,
       });
@@ -167,7 +168,7 @@ export default function TPB({ name }) {
     formData.append('file', audioBlob, 'recording.wav');
 
     try {
-      const response = await fetch('http://localhost:5000/detect-note', {
+      const response = await fetch(buildPublicPythonApiUrl('/detect-note'), {
         method: 'POST',
         body: formData,
       });

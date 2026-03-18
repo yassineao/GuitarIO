@@ -136,7 +136,7 @@ GuitarIO/
 
 ### Backend
 ```bash
-cd GuitarIO_Backend/springboot
+cd GuitarIO_Backend
 docker build -t guitar-io-backend .
 docker run -p 8080:8080 guitar-io-backend
 ```

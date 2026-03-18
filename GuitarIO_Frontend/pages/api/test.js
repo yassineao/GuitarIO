@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { buildPublicPythonApiUrl } from '../../lib/api-url';
 
 export default function Test() {
   const [question, setQuestion] = useState('');
@@ -12,7 +13,7 @@ export default function Test() {
     setAnswer('');
 
     try {
-      const response = await axios.post('http://localhost:5000/ask', { question });
+      const response = await axios.post(buildPublicPythonApiUrl('/ask'), { question });
       setAnswer(response.data.answer);
     } catch (err) {
       setError(err.response ? err.response.data.error : 'An error occurred');

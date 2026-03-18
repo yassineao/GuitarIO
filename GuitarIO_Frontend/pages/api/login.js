@@ -1,7 +1,9 @@
 
+import { buildPublicApiUrl } from "../../lib/api-url";
+
 
 export async function authenticateUser(email, password, controller, setErrorMessage) {
-  const res = await fetch("http://localhost:8080/auth/login", {
+  const res = await fetch(buildPublicApiUrl("/auth/login"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     credentials: "include",

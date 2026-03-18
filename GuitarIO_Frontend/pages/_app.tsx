@@ -16,6 +16,7 @@ import "@/styles/loader.css";
 
 import type { AppProps } from "next/app";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "@/components/navbarr";
 import Footer from "@/components/footer";
@@ -40,6 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <footer className="footer" id="footer">
   <Footer />
 </footer>
+        <Analytics />
       </AuthProvider>
     </>
   );

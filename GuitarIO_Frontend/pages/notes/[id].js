@@ -38,7 +38,6 @@ export default function Notes({ name }) {
 };
   
   const uppercaseId = id ? String(id).toUpperCase() : "";
-  const chords = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
   const chordss = [
     "",
     "m",
@@ -59,16 +58,11 @@ export default function Notes({ name }) {
     "5"
   ];
 
-  const updateChord = (index) => {
-  const chord = chords[index % chords.length];
-  document.querySelectorAll('.scales_chords_api[chord]').forEach((el) => {
-    el.setAttribute('chord', chord);
-  });
-
-  if (window.ScalesChordsAPI) {
-    window.ScalesChordsAPI.scan();
-  }
-};
+  const updateChord = () => {
+    if (window.ScalesChordsAPI) {
+      window.ScalesChordsAPI.scan();
+    }
+  };
 
 
   useEffect(() => {
@@ -86,24 +80,22 @@ export default function Notes({ name }) {
       }
 
       setCurrentIndex(newIndex);
-      updateChord(newIndex);
+      updateChord();
     };
 
     document.addEventListener("click", activate);
 
     // Initialize the chord for the first item
-    updateChord(currentIndex);
+    updateChord();
 
     return () => {
       document.removeEventListener("click", activate);
     };
   }, [currentIndex]);
 
-  const chordsWithId = chordss.map(chord => `${uppercaseId}${chord}`);
-
   useEffect(() => {
     // Trigger an update on chord when `id` changes
-    updateChord(currentIndex);
+    updateChord();
   }, [id, currentIndex]);
 
   

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
+import { buildPublicApiUrl } from "../lib/api-url";
 
 export default function Register() {
   const router = useRouter();
@@ -56,7 +57,7 @@ export default function Register() {
     try {
       setSubmitting(true);
 
-      const res = await fetch("http://localhost:8080/auth/register", {
+      const res = await fetch(buildPublicApiUrl("/auth/register"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

@@ -1,294 +1,2009 @@
-[00:00:03.762] Server  LOG      ✓ Ready in 3s
-[00:00:16.776] Server  WARN    Browserslist: caniuse-lite is outdated. Please run:
-  npx update-browserslist-db@latest
-  Why you should do it regularly: https://github.com/browserslist/update-db#readme
-[00:00:18.097] Server  LOG      ○ Compiling / ...
-[00:00:18.535] Server  ERROR   Warning: Invalid DOM property `class`. Did you mean `className`?
+[00:00:02.765] Server  LOG      ✓ Ready in 2.1s
+[00:00:19.181] Server  LOG      ○ Compiling / ...
+[00:00:20.648] Server  ERROR   Warning: Invalid DOM property `class`. Did you mean `className`?
     at section
     at div
     at div
-    at Home (C:\Users\yassu\GuitarTuto\pages\index.jsx:8:43)
-    at main
+    at Home (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\index.jsx:8:43)
     at div
-    at AuthProvider (C:\Users\yassu\GuitarTuto\pages\api\AuthContext.js:7:32)
-    at App (C:\Users\yassu\GuitarTuto\pages\_app.tsx:24:31)
-    at StyleRegistry (C:\Users\yassu\GuitarTuto\node_modules\styled-jsx\dist\index\index.js:449:36)
+    at AuthProvider (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\api\AuthContext.js:7:32)
+    at App (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\_app.tsx:25:31)
+    at StyleRegistry (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\node_modules\styled-jsx\dist\index\index.js:449:36)
     at PathnameContextProviderAdapter (webpack://next/src/shared/lib/router/adapters.tsx:70:3)
     at AppContainer (webpack://next/src/server/render.tsx:737:27)
     at AppContainerWithIsomorphicFiberStructure (webpack://next/src/server/render.tsx:785:11)
     at div
     at Body (webpack://next/src/server/render.tsx:1254:19)
-[00:00:19.462] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+[00:00:21.412] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
     at div
     at section
     at div
     at div
     at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
-    at main
     at div
     at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
-    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
     at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
     at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
     at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
     at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
     at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
     at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-[00:00:19.462] Browser LOG     Retrieved token: null
-[00:00:19.462] Browser LOG     AuthProvider init, token: null
-[00:00:19.462] Browser LOG     Retrieved token: null
-[00:00:19.462] Browser LOG     AuthProvider init, token: null
-[00:03:10.191] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:04:57.069] Browser LOG     AuthProvider init, token: null
-[00:04:57.069] Browser LOG     AuthProvider init, token: null
-[00:11:50.246] Browser LOG     AuthProvider init, token: null
-[00:11:50.246] Browser LOG     AuthProvider init, token: null
-[00:11:50.598] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:11:52.313] Browser LOG     AuthProvider init, token: null
-[00:11:52.313] Browser LOG     AuthProvider init, token: null
-[00:11:54.628] Browser LOG     AuthProvider init, token: null
-[00:11:54.628] Browser LOG     AuthProvider init, token: null
-[00:11:56.318] Browser LOG     AuthProvider init, token: null
-[00:11:56.318] Browser LOG     AuthProvider init, token: null
-[00:15:05.493] Browser LOG     AuthProvider init, token: null
-[00:15:05.493] Browser LOG     AuthProvider init, token: null
-[00:15:05.776] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:15:07.274] Browser LOG     AuthProvider init, token: null
-[00:15:07.274] Browser LOG     AuthProvider init, token: null
-[00:28:26.726] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
-    at div
-    at div
-    at div
-    at Card (webpack-internal:///(pages-dir-browser)/./components/card.js:11:17)
+[00:00:21.412] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMzQ0MywiZXhwIjoxNzczMzM0MzQzfQ.6gDikBK9IN9HDy2NRLmbLjBQxWGOSN1U9Qq0o2g3mzE
+[00:00:21.413] Browser LOG     Decoded JWT: {"exp":1773334343,"iat":1773333443,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
+[00:00:21.413] Browser LOG     Decoded name: {"exp":1773334343,"iat":1773333443,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
+[00:00:21.413] Browser LOG     Decoded name: qqq
+[00:00:21.413] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMzQ0MywiZXhwIjoxNzczMzM0MzQzfQ.6gDikBK9IN9HDy2NRLmbLjBQxWGOSN1U9Qq0o2g3mzE
+[00:00:21.413] Browser LOG     Retrieved token: null
+[00:00:21.413] Browser LOG     AuthProvider init, token: null
+[00:00:21.632] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:21.632] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773797642921} /_vercel/insights/view
+[00:00:27.521] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773797648810} /_vercel/insights/view
+[00:00:27.521] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: http://localhost:8080
+[00:00:27.521] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: http://localhost:8080
+[00:00:27.521] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:29.575] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773797650874} /_vercel/insights/view
+[00:00:30.647] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773797651932} /_vercel/insights/view
+[00:00:30.647] Browser LOG     Retrieved token: null
+[00:00:30.647] Browser LOG     Retrieved token: null
+[00:00:31.965] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773797653259} /_vercel/insights/view
+[00:00:37.168] Browser LOG     AuthProvider init, token: null
+[00:00:37.168] Browser LOG     AuthProvider init, token: null
+[00:00:37.168] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:37.168] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773797658465} /_vercel/insights/view
+[00:00:40.371] Browser LOG     AuthProvider init, token: null
+[00:00:40.371] Browser LOG     AuthProvider init, token: null
+[00:00:40.371] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:40.371] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","r":"","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773797661670} /_vercel/insights/view
+[00:00:49.624] Browser LOG     AuthProvider init, token: null
+[00:00:49.624] Browser LOG     AuthProvider init, token: null
+[00:00:49.624] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:49.624] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/a color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/a","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773797670918} /_vercel/insights/view
+[00:02:18.137] Browser LOG     AuthProvider init, token: null
+[00:02:18.137] Browser LOG     AuthProvider init, token: null
+[00:02:18.137] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:18.137] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773797759435} /_vercel/insights/view
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
     at section
     at div
-    at Notes
-    at main
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
     at div
     at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
-    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
     at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
     at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
     at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
     at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
     at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
     at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-[00:28:26.726] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:28:28.194] Browser LOG     Retrieved token: null
-[00:28:28.194] Browser LOG     Retrieved token: null
-[00:33:48.342] Browser LOG     AuthProvider init, token: null
-[00:33:48.342] Browser LOG     AuthProvider init, token: null
-[00:37:08.900] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
-    at div
-    at div
-    at div
-    at Card (webpack-internal:///(pages-dir-browser)/./components/card.js:11:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bm 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
     at section
     at div
-    at Notes
-    at main
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
     at div
     at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
-    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
     at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
     at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
     at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
     at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
     at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
     at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-[00:37:08.901] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:37:12.350] Browser LOG     Retrieved token: null
-[00:37:12.350] Browser LOG     Retrieved token: null
-[00:37:19.010] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:37:19.010] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:37:25.069] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:37:25.069] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:38:54.505] Browser LOG     Refreshing page data due to server-side change
-[00:39:01.910] Browser LOG     Retrieved token: null
-[00:39:01.910] Browser LOG     Retrieved token: null
-[00:39:08.698] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:39:08.698] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:39:21.969] Browser LOG     Retrieved token: null
-[00:39:21.969] Browser LOG     Retrieved token: null
-[00:40:05.771] Browser LOG     Refreshing page data due to server-side change
-[00:44:47.886] Browser LOG     Retrieved token: null
-[00:44:47.886] Browser LOG     Retrieved token: null
-[00:44:57.144] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:44:57.144] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:49:15.863] Browser LOG     Login successful, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:49:15.863] Browser LOG     AuthContext login, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:49:15.863] Browser LOG     AuthContext lowwwwwgin, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:49:16.332] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:49:16.332] Browser LOG     Decoded JWT: {"exp":1773333362,"iat":1773332462,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
-[00:49:16.332] Browser LOG     Decoded name: {"exp":1773333362,"iat":1773332462,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
-[00:49:16.332] Browser LOG     Decoded name: qqq
-[00:49:16.332] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:49:16.332] Browser LOG     Decoded JWT: {"exp":1773333362,"iat":1773332462,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
-[00:49:16.332] Browser LOG     Decoded name: {"exp":1773333362,"iat":1773332462,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
-[00:49:16.332] Browser LOG     Decoded name: qqq
-[00:49:26.942] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:49:26.942] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:49:45.155] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:49:45.156] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:49:48.115] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:49:48.115] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:49:48.115] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:50:24.442] Server  LOG     [dotenv@17.2.4] injecting env (0) from .env.local -- tip: ⚙️  override existing env vars with { override: true }
-[00:50:24.460] Server  LOG     GEMINI_API_KEY in handler: "AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo"
-[00:50:54.743] Server  LOG     GEMINI_API_KEY: "AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo" "NEXT_PUBLIC_API_URL:" undefined
-[00:50:55.378] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:50:55.378] Browser LOG     GEMINI_API_KEY: AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo NEXT_PUBLIC_API_URL: undefined
-[00:50:55.378] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:50:55.378] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:51:57.820] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:52:04.983] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:52:04.983] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:52:07.371] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:52:09.629] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:52:09.629] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:52:10.076] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bdim 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: baug 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bmaj7 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b7 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bm7 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bdim7 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bm(maj7) 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bm7b5 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bsus2 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bsus4 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b6/9 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b9 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b11 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b13 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b5 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bm
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bdim
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: baug
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bmaj7
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b7
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bm7
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bdim7
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bm(maj7)
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bm7b5
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bsus2
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bsus4
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b6/9
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b9
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b11
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b13
+[00:09:31.199] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b5
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
 
-Check the render method of `ChaptersLessons`.  
-    at li
-    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
-    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
-    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
-    at div
-    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
-    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
-    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
-    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
-    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
-    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
-    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
-    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-[00:54:56.693] Browser LOG     ssss Music Theory
-[00:54:57.111] Server  LOG     chapter: "Music Theory" "lesson:" "1"
-[00:54:57.112] Server  LOG     chaptersIndex: undefined
-[00:54:57.795] Browser LOG     chapter: Music Theory lesson: 1
-[00:54:57.795] Browser LOG     chaptersIndex: undefined
-[00:54:57.795] Browser LOG     chapter: Music Theory lesson: 1
-[00:54:57.795] Browser LOG     chaptersIndex: undefined
-[00:54:57.795] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:54:57.795] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:54:57.795] Browser LOG     chapter: Music Theory lesson: 1
-[00:54:57.795] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[00:54:57.795] Browser LOG     chapter: Music Theory lesson: 1
-[00:54:57.795] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[00:54:58.085] Browser LOG     chapter: Music Theory lesson: 1
-[00:54:58.085] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[00:54:58.085] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
-[00:54:58.085] Browser LOG     chapter: Music Theory lesson: 1
-[00:54:58.085] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[00:54:58.085] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
-[00:56:27.064] Server  LOG     chapter: "Music Theory" "lesson:" "1"
-[00:56:27.065] Server  LOG     chaptersIndex: undefined
-[00:56:27.971] Browser LOG     chapter: Music Theory lesson: 1
-[00:56:27.971] Browser LOG     chaptersIndex: undefined
-[00:56:27.971] Browser LOG     chapter: Music Theory lesson: 1
-[00:56:27.971] Browser LOG     chaptersIndex: undefined
-[00:56:27.971] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:56:27.971] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[00:56:27.971] Browser LOG     chapter: Music Theory lesson: 1
-[00:56:27.971] Browser LOG     chaptersIndex: undefined
-[00:56:27.971] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
-[00:56:27.971] Browser LOG     chapter: Music Theory lesson: 1
-[00:56:27.971] Browser LOG     chaptersIndex: undefined
-[00:56:27.971] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
-[00:56:27.971] Browser LOG     chapter: Music Theory lesson: 1
-[00:56:27.971] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[00:56:27.971] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
-[00:56:27.971] Browser LOG     chapter: Music Theory lesson: 1
-[00:56:27.971] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[00:56:27.971] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
-[01:02:17.650] Server  LOG     chapter: "Music Theory" "lesson:" "1"
-[01:02:17.651] Server  LOG     chaptersIndex: undefined
-[01:02:18.532] Browser LOG     chapter: Music Theory lesson: 1
-[01:02:18.532] Browser LOG     chaptersIndex: undefined
-[01:02:18.532] Browser LOG     chapter: Music Theory lesson: 1
-[01:02:18.532] Browser LOG     chaptersIndex: undefined
-[01:02:18.532] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[01:02:18.532] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[01:02:18.532] Browser LOG     chapter: Music Theory lesson: 1
-[01:02:18.532] Browser LOG     chaptersIndex: undefined
-[01:02:18.532] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
-[01:02:18.532] Browser LOG     chapter: Music Theory lesson: 1
-[01:02:18.532] Browser LOG     chaptersIndex: undefined
-[01:02:18.532] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
-[01:02:18.532] Browser LOG     chapter: Music Theory lesson: 1
-[01:02:18.532] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[01:02:18.532] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
-[01:02:18.532] Browser LOG     chapter: Music Theory lesson: 1
-[01:02:18.532] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[01:02:18.532] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
-[01:05:22.412] Server  LOG     chapter: "Music Theory" "lesson:" "1"
-[01:05:22.413] Server  LOG     chaptersIndex: undefined
-[01:05:23.142] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:23.142] Browser LOG     chaptersIndex: undefined
-[01:05:23.142] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:23.142] Browser LOG     chaptersIndex: undefined
-[01:05:23.142] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMjQ2MiwiZXhwIjoxNzczMzMzMzYyfQ.yGuqqQ7yaQ6A3R59CGucoMgMuS-GC3Sc3QoSnhjY9IQ
-[01:05:23.142] Browser LOG     AuthProvider init, token: null
-[01:05:23.569] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:23.569] Browser LOG     chaptersIndex: undefined
-[01:05:23.569] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:23.569] Browser LOG     chaptersIndex: undefined
-[01:05:28.298] Server  LOG     chapter: "Music Theory" "lesson:" "1"
-[01:05:28.298] Server  LOG     chaptersIndex: undefined
-[01:05:28.867] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:28.867] Browser LOG     chaptersIndex: undefined
-[01:05:28.867] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:28.867] Browser LOG     chaptersIndex: undefined
-[01:05:28.867] Browser LOG     AuthProvider init, token: null
-[01:05:28.867] Browser LOG     AuthProvider init, token: null
-[01:05:28.867] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:28.867] Browser LOG     chaptersIndex: undefined
-[01:05:28.867] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:28.867] Browser LOG     chaptersIndex: undefined
-[01:05:32.741] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[01:05:36.472] Browser LOG     Login successful, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMzQ0MywiZXhwIjoxNzczMzM0MzQzfQ.6gDikBK9IN9HDy2NRLmbLjBQxWGOSN1U9Qq0o2g3mzE
-[01:05:36.472] Browser LOG     AuthContext login, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMzQ0MywiZXhwIjoxNzczMzM0MzQzfQ.6gDikBK9IN9HDy2NRLmbLjBQxWGOSN1U9Qq0o2g3mzE
-[01:05:36.472] Browser LOG     AuthContext lowwwwwgin, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMzQ0MywiZXhwIjoxNzczMzM0MzQzfQ.6gDikBK9IN9HDy2NRLmbLjBQxWGOSN1U9Qq0o2g3mzE
-[01:05:36.683] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
-    at div
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
     at section
     at div
-    at div
-    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
     at div
     at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
-    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
     at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
     at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
     at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
     at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
     at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
     at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-[01:05:36.683] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMzQ0MywiZXhwIjoxNzczMzM0MzQzfQ.6gDikBK9IN9HDy2NRLmbLjBQxWGOSN1U9Qq0o2g3mzE
-[01:05:36.683] Browser LOG     Decoded JWT: {"exp":1773334343,"iat":1773333443,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
-[01:05:36.683] Browser LOG     Decoded name: {"exp":1773334343,"iat":1773333443,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
-[01:05:36.683] Browser LOG     Decoded name: qqq
-[01:05:36.683] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjM0LCJ1c2VyIjoicXFxIiwicm9sZSI6IlJPTEVfVVNFUiIsInN1YiI6Inlhc3N1a2U4QGdtYWlsLmNvbSIsImlhdCI6MTc3MzMzMzQ0MywiZXhwIjoxNzczMzM0MzQzfQ.6gDikBK9IN9HDy2NRLmbLjBQxWGOSN1U9Qq0o2g3mzE
-[01:05:36.683] Browser LOG     Decoded JWT: {"exp":1773334343,"iat":1773333443,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
-[01:05:36.683] Browser LOG     Decoded name: {"exp":1773334343,"iat":1773333443,"role":"ROLE_USER","sub":"yassuke8@gmail.com","uid":34,"user":"qqq"}
-[01:05:36.683] Browser LOG     Decoded name: qqq
-[01:05:39.581] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:39.581] Browser LOG     chaptersIndex: undefined
-[01:05:39.581] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:39.581] Browser LOG     chaptersIndex: undefined
-[01:05:39.581] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:39.581] Browser LOG     chaptersIndex: undefined
-[01:05:39.581] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:39.581] Browser LOG     chaptersIndex: undefined
-[01:05:39.755] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:39.755] Browser LOG     chaptersIndex: undefined
-[01:05:39.755] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
-[01:05:39.755] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:39.755] Browser LOG     chaptersIndex: undefined
-[01:05:39.755] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
-[01:05:39.755] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:39.755] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[01:05:39.756] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
-[01:05:39.756] Browser LOG     chapter: Music Theory lesson: 1
-[01:05:39.756] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
-[01:05:39.756] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:31.199] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bm 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bdim 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: baug 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bmaj7 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b7 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bm7 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bdim7 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bm(maj7) 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bm7b5 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bsus2 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: bsus4 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b6/9 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b9 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b11 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b13 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s%s useEffect  You returned: b5 
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:09:49.092] Browser LOG     AuthProvider init, token: null
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bm
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bdim
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: baug
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bmaj7
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b7
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bm7
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bdim7
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bm(maj7)
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bm7b5
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bsus2
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: bsus4
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b6/9
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b9
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b11
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b13
+[00:09:49.092] Browser ERROR   Warning: %s must not return anything besides a function, which is used for clean-up.%s useEffect  You returned: b5
+[00:09:49.092] Browser LOG     AuthProvider init, token: null
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   uncaughtError: TypeError: destroy is not a function
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.092] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.093] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.093] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.093] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.093] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.093] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.093] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.093] Browser ERROR   The above error occurred in the <Note> component:
+
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:09:49.093] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:49.093] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798210386} /_vercel/insights/view
+[00:09:59.575] Browser LOG     AuthProvider init, token: null
+[00:09:59.575] Browser LOG     AuthProvider init, token: null
+[00:09:59.575] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:59.575] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798220871} /_vercel/insights/view
+[00:11:28.113] Browser LOG     AuthProvider init, token: null
+[00:11:28.113] Browser LOG     AuthProvider init, token: null
+[00:11:28.113] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:11:28.113] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798309408} /_vercel/insights/view
+[00:11:54.074] Browser ERROR   Warning: Extra attributes from the server: %s%s id 
+    at ins
+    at div
+    at div
+    at div
+    at li
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:11:54.074] Browser LOG     AuthProvider init, token: null
+[00:11:54.074] Browser LOG     AuthProvider init, token: null
+[00:11:54.074] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:11:54.074] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798335371} /_vercel/insights/view
+[00:12:04.928] Browser LOG     AuthProvider init, token: null
+[00:12:04.928] Browser LOG     AuthProvider init, token: null
+[00:12:04.928] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:04.928] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/a color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/a","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798346226} /_vercel/insights/view
+[00:12:17.114] Browser LOG     AuthProvider init, token: null
+[00:12:17.114] Browser LOG     AuthProvider init, token: null
+[00:12:17.114] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:17.114] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/a color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/a","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798358409} /_vercel/insights/view
+[00:12:24.059] Browser LOG     AuthProvider init, token: null
+[00:12:24.059] Browser LOG     AuthProvider init, token: null
+[00:12:24.059] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:24.059] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/g color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/g","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798365353} /_vercel/insights/view
+[00:12:27.003] Browser ERROR   Warning: Extra attributes from the server: %s%s id 
+    at ins
+    at div
+    at div
+    at div
+    at li
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:12:27.003] Browser LOG     AuthProvider init, token: null
+[00:12:27.003] Browser LOG     AuthProvider init, token: null
+[00:12:27.003] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:27.003] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/g color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/g","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798368301} /_vercel/insights/view
+[00:12:40.347] Browser LOG     AuthProvider init, token: null
+[00:12:40.348] Browser LOG     AuthProvider init, token: null
+[00:12:40.348] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:40.348] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/g color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/g","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798381643} /_vercel/insights/view
+[00:12:43.948] Browser LOG     AuthProvider init, token: null
+[00:12:43.948] Browser LOG     AuthProvider init, token: null
+[00:12:43.948] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:43.948] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/f color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/f","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798385246} /_vercel/insights/view
+[00:12:46.522] Browser LOG     AuthProvider init, token: null
+[00:12:46.522] Browser LOG     AuthProvider init, token: null
+[00:12:46.522] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:46.522] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/g color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/g","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798387817} /_vercel/insights/view
+[00:12:52.203] Browser ERROR   Warning: Extra attributes from the server: %s%s id 
+    at ins
+    at div
+    at div
+    at div
+    at li
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:12:52.203] Browser LOG     AuthProvider init, token: null
+[00:12:52.203] Browser LOG     AuthProvider init, token: null
+[00:12:52.203] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:52.203] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/g color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/g","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798393501} /_vercel/insights/view
+[00:14:15.271] Browser LOG     AuthProvider init, token: null
+[00:14:15.271] Browser LOG     AuthProvider init, token: null
+[00:14:15.271] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:15.271] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/g color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/g","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798476570} /_vercel/insights/view
+[00:14:18.501] Browser LOG     AuthProvider init, token: null
+[00:14:18.501] Browser LOG     AuthProvider init, token: null
+[00:14:18.501] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:18.501] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/a color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/a","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798479799} /_vercel/insights/view
+[00:14:20.537] Browser LOG     AuthProvider init, token: null
+[00:14:20.537] Browser LOG     AuthProvider init, token: null
+[00:14:20.537] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:20.537] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798481832} /_vercel/insights/view
+[00:14:32.317] Browser ERROR   Warning: Extra attributes from the server: %s%s id 
+    at ins
+    at div
+    at div
+    at div
+    at li
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:14:32.317] Browser LOG     AuthProvider init, token: null
+[00:14:32.317] Browser LOG     AuthProvider init, token: null
+[00:14:32.317] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:32.317] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798493614} /_vercel/insights/view
+[00:14:37.462] Browser ERROR   Warning: Extra attributes from the server: %s%s id 
+    at ins
+    at div
+    at div
+    at div
+    at li
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:14:37.462] Browser LOG     AuthProvider init, token: null
+[00:14:37.462] Browser LOG     AuthProvider init, token: null
+[00:14:37.462] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:37.462] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798498759} /_vercel/insights/view
+[00:14:43.521] Browser ERROR   Warning: Extra attributes from the server: %s%s id 
+    at ins
+    at div
+    at div
+    at div
+    at li
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:14:43.521] Browser LOG     AuthProvider init, token: null
+[00:14:43.521] Browser LOG     AuthProvider init, token: null
+[00:14:43.521] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:43.521] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798504816} /_vercel/insights/view
+[00:16:37.396] Browser LOG     AuthProvider init, token: null
+[00:16:37.396] Browser LOG     AuthProvider init, token: null
+[00:16:37.396] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:37.396] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798618693} /_vercel/insights/view
+[00:16:40.697] Browser LOG     AuthProvider init, token: null
+[00:16:40.697] Browser LOG     AuthProvider init, token: null
+[00:16:40.697] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:40.697] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/c color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/c","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798621992} /_vercel/insights/view
+[00:16:43.577] Browser ERROR   Warning: Extra attributes from the server: %s%s id 
+    at ins
+    at div
+    at div
+    at div
+    at li
+    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
+    at ul
+    at section
+    at div
+    at Notes (webpack-internal:///(pages-dir-browser)/./pages/notes/[id].js:22:18)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:16:43.577] Browser LOG     AuthProvider init, token: null
+[00:16:43.577] Browser LOG     AuthProvider init, token: null
+[00:16:43.577] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:43.577] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/c color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/c","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798624875} /_vercel/insights/view
+[00:18:04.185] Browser LOG     AuthProvider init, token: null
+[00:18:04.185] Browser LOG     AuthProvider init, token: null
+[00:18:04.185] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:18:04.185] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/c color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/c","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798705484} /_vercel/insights/view
+[00:18:07.101] Browser LOG     AuthProvider init, token: null
+[00:18:07.101] Browser LOG     AuthProvider init, token: null
+[00:18:07.101] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:18:07.101] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/d color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/d","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798708400} /_vercel/insights/view
+[00:18:21.257] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798722544} /_vercel/insights/view
+[00:18:21.257] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:18:28.364] Browser LOG     AuthProvider init, token: null
+[00:18:28.364] Browser LOG     AuthProvider init, token: null
+[00:18:28.364] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:18:28.364] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773798729658} /_vercel/insights/view
+[00:23:32.907] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773799034202} /_vercel/insights/view
+[00:23:32.907] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:23:36.209] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773799037504} /_vercel/insights/view
+[00:23:36.209] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at div
+    at div
+    at Card (webpack-internal:///(pages-dir-browser)/./components/card.js:11:17)
+    at section
+    at div
+    at Notes
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:23:43.979] Browser LOG     AuthProvider init, token: null
+[00:23:43.979] Browser LOG     AuthProvider init, token: null
+[00:23:43.979] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:23:43.979] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/c color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/c","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773799045275} /_vercel/insights/view
+[00:26:36.597] Browser LOG     AuthProvider init, token: null
+[00:26:36.598] Browser LOG     AuthProvider init, token: null
+[00:26:36.598] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:26:36.598] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/c color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/c","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773799217896} /_vercel/insights/view
+[00:26:39.966] Browser LOG     AuthProvider init, token: null
+[00:26:39.966] Browser LOG     AuthProvider init, token: null
+[00:26:39.966] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:26:39.966] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/d color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/d","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773799221260} /_vercel/insights/view
+[00:27:31.366] Browser LOG     AuthProvider init, token: null
+[00:27:31.366] Browser LOG     AuthProvider init, token: null
+[00:27:31.366] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:31.366] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/d color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/d","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773799272661} /_vercel/insights/view
+[00:27:34.233] Browser LOG     AuthProvider init, token: null
+[00:27:34.234] Browser LOG     AuthProvider init, token: null
+[00:27:34.234] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:34.234] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/e color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/e","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773799275529} /_vercel/insights/view

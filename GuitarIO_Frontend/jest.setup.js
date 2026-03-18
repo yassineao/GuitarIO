@@ -24,7 +24,10 @@ jest.mock('next/router', () => ({
 }))
 
 // Mock environment variables
-process.env.NEXT_PUBLIC_API_URL = 'http://localhost:3001'
+process.env.API_URL = 'http://localhost:8080'
+process.env.NEXT_PUBLIC_API_URL = 'http://localhost:8080'
+process.env.PYTHON_API_URL = 'http://localhost:5000'
+process.env.NEXT_PUBLIC_PYTHON_API_URL = 'http://localhost:5000'
 process.env.NEXT_PUBLIC_GEMINI_API_KEY = 'test-api-key'
 
 // Global test setup
