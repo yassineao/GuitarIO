@@ -12,11 +12,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class JwtServiceTest {
 
+    private static final String TEST_SECRET = "6mJqV8xN2pL4sR7tY1wK9dF3hC5bU0zQ8nA2eX6vM1pR4tY7";
+
     private JwtService jwtService;
 
     @BeforeEach
     void setUp() {
-        jwtService = new JwtService();
+        jwtService = new JwtService(TEST_SECRET);
     }
 
     @Test
