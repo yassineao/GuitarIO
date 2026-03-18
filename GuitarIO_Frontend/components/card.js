@@ -20,9 +20,7 @@ const Card = ({ name , handle}) => {
       <a class="brutalist-card__button brutalist-card__button--mark" href={handle}
         >Check it</a
       >
-      <a class="brutalist-card__button brutalist-card__button--read" href="#"
-        >Okay</a
-      >
+    
     </div>
     </div>
   

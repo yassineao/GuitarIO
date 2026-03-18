@@ -12,7 +12,7 @@ const ComponentContainer = styled.div`
 const Lesson = ({ Lesson }) => {
 
   return (
-    <div>
+    <div className='center'>
       <ComponentContainer>
         <h2>Lesson Title: {Lesson.title}</h2>
         {/* <p>lesson: {Lesson.isAvailable ? 'Yes' : 'No'}</p>

@@ -128,7 +128,7 @@ function Sidebar({
         </div>
       </form>
 
-      <NavSection renderTitle={(props) => <h2 {...props}>Feeds</h2>}>
+      <NavSection renderTitle={(props) => <h2 {...props}>Channels</h2>}>
         <ChannelNav
           channels={channels}
           activeChannel={activeChannel}

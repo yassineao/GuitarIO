@@ -1,17 +1,36 @@
-[00:00:02.076] Server  LOG      ✓ Ready in 1676ms
-[00:00:02.097] Server  WARN     ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:00:03.202] Server  WARN     ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:00:12.461] Browser LOG     AuthProvider init, token: null
-[00:00:12.461] Browser LOG     AuthProvider init, token: null
-[00:00:12.461] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:12.461] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/login","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773803668225} /_vercel/insights/view
-[00:00:16.360] Browser LOG     Building public API URL for path: /auth/login
-[00:00:16.360] Browser LOG     Retrieving environment variable: NEXT_PUBLIC_API_URL - Value: [REDACTED]
-[00:00:16.749] Browser LOG     Login successful, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODAzNjcyLCJleHAiOjE3NzM4MDQ1NzJ9.gkiXAy05jJ59Emf6_HEYauYrplFaONgMkSdk6O8E2vw
-[00:00:16.749] Browser LOG     AuthContext login, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODAzNjcyLCJleHAiOjE3NzM4MDQ1NzJ9.gkiXAy05jJ59Emf6_HEYauYrplFaONgMkSdk6O8E2vw
-[00:00:16.749] Browser LOG     AuthContext lowwwwwgin, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODAzNjcyLCJleHAiOjE3NzM4MDQ1NzJ9.gkiXAy05jJ59Emf6_HEYauYrplFaONgMkSdk6O8E2vw
-[00:00:17.113] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773803672851} /_vercel/insights/view
-[00:00:17.113] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+[00:00:01.990] Server  LOG      ✓ Ready in 1588ms
+[00:00:02.010] Server  WARN     ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:00:03.028] Server  WARN     ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:00:03.429] Server  LOG     GEMINI_API_KEY: "AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo" "NEXT_PUBLIC_API_URL:" "http://localhost:8000"
+[00:00:03.432] Server  LOG     GEMINI_API_KEY: "AIzaSyCDw1XPadeCEbWLLHh_0INvtUuS_SgwVHo" "NEXT_PUBLIC_API_URL:" "http://localhost:8000"
+[00:00:12.725] Server  LOG        Reload env: .env.local
+[00:00:18.879] Browser LOG     GEMINI_API_KEY: AIzaSyBmylbqefR61SsQPn-YrOCr5rY11voqnXg NEXT_PUBLIC_API_URL: http://localhost:8000
+[00:00:18.880] Browser LOG     GEMINI_API_KEY: AIzaSyBmylbqefR61SsQPn-YrOCr5rY11voqnXg NEXT_PUBLIC_API_URL: http://localhost:8000
+[00:00:18.880] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODM4Nzk2LCJleHAiOjE3NzM4Mzk2OTZ9.7jPPgCdqFYe86UHsBxAVIemrpdcVZ46GWJ_cG5HmnL8
+[00:00:18.880] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODM4Nzk2LCJleHAiOjE3NzM4Mzk2OTZ9.7jPPgCdqFYe86UHsBxAVIemrpdcVZ46GWJ_cG5HmnL8
+[00:00:18.880] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:18.880] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773838997364} /_vercel/insights/view
+[00:00:20.969] Server  LOG     [dotenv@17.2.4] injecting env (0) from .env.local -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+[00:00:20.980] Server  LOG     GEMINI_API_KEY in handler: "AIzaSyBmylbqefR61SsQPn-YrOCr5rY11voqnXg"
+[00:55:51.393] Server  LOG        Reload env: .env
+[00:55:51.805] Server  LOG        Reload env: .env.local
+[00:58:31.253] Server  LOG        Reload env: .env.local
+[00:58:31.253] Server  LOG        Reload env: .env
+[01:01:22.601] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842661057} /_vercel/insights/view
+[01:01:22.601] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:01:28.505] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODM4Nzk2LCJleHAiOjE3NzM4Mzk2OTZ9.7jPPgCdqFYe86UHsBxAVIemrpdcVZ46GWJ_cG5HmnL8
+[01:01:28.505] Browser LOG     AuthProvider init, token: null
+[01:01:28.505] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:01:28.505] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842666974} /_vercel/insights/view
+[01:01:28.736] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:01:28.888] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:01:34.707] Browser LOG     Building public API URL for path: /auth/login
+[01:01:34.707] Browser LOG     Retrieving environment variable: NEXT_PUBLIC_API_URL - Value: [REDACTED]
+[01:01:34.956] Browser LOG     Login successful, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:01:34.956] Browser LOG     AuthContext login, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:01:34.956] Browser LOG     AuthContext lowwwwwgin, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:01:35.255] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842673724} /_vercel/insights/view
+[01:01:35.255] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
     at div
     at section
     at div
@@ -26,12 +45,920 @@
     at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
     at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
     at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-[00:00:17.113] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:00:17.113] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODAzNjcyLCJleHAiOjE3NzM4MDQ1NzJ9.gkiXAy05jJ59Emf6_HEYauYrplFaONgMkSdk6O8E2vw
-[00:00:17.113] Browser LOG     Decoded JWT: {"exp":1773804572,"iat":1773803672,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
-[00:00:17.113] Browser LOG     Decoded name: {"exp":1773804572,"iat":1773803672,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
-[00:00:17.113] Browser LOG     Decoded name: el matador
-[00:00:17.113] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODAzNjcyLCJleHAiOjE3NzM4MDQ1NzJ9.gkiXAy05jJ59Emf6_HEYauYrplFaONgMkSdk6O8E2vw
-[00:00:17.113] Browser LOG     Decoded JWT: {"exp":1773804572,"iat":1773803672,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
-[00:00:17.113] Browser LOG     Decoded name: {"exp":1773804572,"iat":1773803672,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
-[00:00:17.113] Browser LOG     Decoded name: el matador
+[01:01:35.255] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:01:35.255] Browser LOG     Decoded JWT: {"exp":1773843573,"iat":1773842673,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:01:35.255] Browser LOG     Decoded name: {"exp":1773843573,"iat":1773842673,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:01:35.255] Browser LOG     Decoded name: el matador
+[01:01:35.255] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:01:35.255] Browser LOG     Decoded JWT: {"exp":1773843573,"iat":1773842673,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:01:35.255] Browser LOG     Decoded name: {"exp":1773843573,"iat":1773842673,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:01:35.255] Browser LOG     Decoded name: el matador
+[01:01:38.084] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842676566} /_vercel/insights/view
+[01:01:40.099] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842678579} /_vercel/insights/view
+[01:01:43.113] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:01:43.220] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:01:43.220] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:01:43.220] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:01:43.220] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842681702} /_vercel/insights/view
+[01:01:43.616] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:01:49.660] Browser LOG     ssss Music Theory
+[01:01:50.073] Server  LOG     chapter: "Music Theory" "lesson:" "1"
+[01:01:50.074] Server  LOG     chaptersIndex: undefined
+[01:01:50.536] Browser LOG     chapter: Music Theory lesson: 1
+[01:01:50.536] Browser LOG     chaptersIndex: undefined
+[01:01:50.537] Browser LOG     chapter: Music Theory lesson: 1
+[01:01:50.537] Browser LOG     chaptersIndex: undefined
+[01:01:50.537] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:01:50.537] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:01:50.537] Browser LOG     chapter: Music Theory lesson: 1
+[01:01:50.537] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:01:50.537] Browser LOG     chapter: Music Theory lesson: 1
+[01:01:50.537] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:01:50.537] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:01:50.537] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Music%20Theory/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Music%20Theory/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842689009} /_vercel/insights/view
+[01:01:50.629] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:01:50.630] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:01:50.872] Browser LOG     chapter: Music Theory lesson: 1
+[01:01:50.872] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:01:50.872] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:01:50.872] Browser LOG     chapter: Music Theory lesson: 1
+[01:01:50.872] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:01:50.872] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:02:09.629] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842708106} /_vercel/insights/view
+[01:02:09.629] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:02:09.629] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:02:14.081] Browser LOG     ssss Open Chords
+[01:02:14.149] Server  LOG     chapter: "Open Chords" "lesson:" "1"
+[01:02:14.149] Server  LOG     chaptersIndex: undefined
+[01:02:14.448] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:02:14.464] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:02:14.623] Browser LOG     chapter: Open Chords lesson: 1
+[01:02:14.623] Browser LOG     chaptersIndex: undefined
+[01:02:14.623] Browser LOG     chapter: Open Chords lesson: 1
+[01:02:14.623] Browser LOG     chaptersIndex: undefined
+[01:02:14.623] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:02:14.623] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:02:14.623] Browser LOG     chapter: Open Chords lesson: 1
+[01:02:14.623] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:14.623] Browser LOG     chapter: Open Chords lesson: 1
+[01:02:14.623] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:14.623] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:02:14.623] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Open%20Chords/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Open%20Chords/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842713042} /_vercel/insights/view
+[01:02:14.623] Browser LOG     chapter: Open Chords lesson: 1
+[01:02:14.623] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:14.623] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:02:14.623] Browser LOG     chapter: Open Chords lesson: 1
+[01:02:14.623] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:14.623] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:02:18.038] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842716517} /_vercel/insights/view
+[01:02:18.038] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:02:18.038] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:02:21.208] Browser LOG     ssss Music Theory
+[01:02:21.233] Server  LOG     chapter: "Music Theory" "lesson:" "1"
+[01:02:21.234] Server  LOG     chaptersIndex: undefined
+[01:02:21.543] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:02:21.550] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:02:21.640] Browser LOG     chapter: Music Theory lesson: 1
+[01:02:21.640] Browser LOG     chaptersIndex: undefined
+[01:02:21.640] Browser LOG     chapter: Music Theory lesson: 1
+[01:02:21.640] Browser LOG     chaptersIndex: undefined
+[01:02:21.640] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:02:21.640] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:02:21.640] Browser LOG     chapter: Music Theory lesson: 1
+[01:02:21.640] Browser LOG     chaptersIndex: undefined
+[01:02:21.640] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:02:21.640] Browser LOG     chapter: Music Theory lesson: 1
+[01:02:21.640] Browser LOG     chaptersIndex: undefined
+[01:02:21.640] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:02:21.640] Browser LOG     chapter: Music Theory lesson: 1
+[01:02:21.640] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:21.640] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:02:21.640] Browser LOG     chapter: Music Theory lesson: 1
+[01:02:21.640] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:21.640] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:02:21.640] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:02:21.640] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Music%20Theory/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Music%20Theory/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842720121} /_vercel/insights/view
+[01:02:26.930] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842725399} /_vercel/insights/view
+[01:02:26.930] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:02:26.930] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:02:30.004] Browser LOG     ssss Guitar Basics
+[01:02:30.033] Server  LOG     chapter: "Guitar Basics" "lesson:" "1"
+[01:02:30.034] Server  LOG     chaptersIndex: undefined
+[01:02:30.324] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:02:30.338] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:02:30.500] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:02:30.500] Browser LOG     chaptersIndex: undefined
+[01:02:30.500] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:02:30.500] Browser LOG     chaptersIndex: undefined
+[01:02:30.500] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:02:30.500] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:02:30.500] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:02:30.500] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:30.500] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:02:30.500] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:30.500] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:02:30.500] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Guitar%20Basics/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Guitar%20Basics/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842728916} /_vercel/insights/view
+[01:02:30.500] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:02:30.500] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:30.500] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:02:30.500] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:02:30.500] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:30.500] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:02:30.607] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:02:30.979] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:02:31.766] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:02:31.846] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Guitar%20Basics/2 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Guitar%20Basics/2","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842730302} /_vercel/insights/view
+[01:02:31.846] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:02:31.846] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:31.846] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:02:31.846] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:31.846] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:02:31.846] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:02:31.846] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:31.846] Browser LOG     hasNext: false nextNum: 3 lessonNumbers: [1,2]
+[01:02:31.846] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:02:31.846] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:02:31.846] Browser LOG     hasNext: false nextNum: 3 lessonNumbers: [1,2]
+[01:02:34.259] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773842732730} /_vercel/insights/view
+[01:02:34.259] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:09:14.167] Browser LOG     ssss Guitar Basics
+[01:09:14.308] Server  LOG     chapter: "Guitar Basics" "lesson:" "1"
+[01:09:14.311] Server  LOG     chaptersIndex: undefined
+[01:09:14.821] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:09:14.846] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:09:14.959] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:09:14.959] Browser LOG     chaptersIndex: undefined
+[01:09:14.959] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:09:14.959] Browser LOG     chaptersIndex: undefined
+[01:09:14.959] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:09:14.959] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:09:14.959] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:09:14.959] Browser LOG     chaptersIndex: undefined
+[01:09:14.959] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:09:14.959] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:09:14.959] Browser LOG     chaptersIndex: undefined
+[01:09:14.959] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:09:14.960] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:09:14.960] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:09:14.960] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:09:14.960] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:09:14.960] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:09:14.960] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:09:14.960] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:09:14.960] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Guitar%20Basics/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Guitar%20Basics/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843133442} /_vercel/insights/view
+[01:17:16.990] Server  LOG     chapter: "Guitar Basics" "lesson:" "1"
+[01:17:16.992] Server  LOG     chaptersIndex: undefined
+[01:17:17.562] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:17.562] Browser LOG     chaptersIndex: undefined
+[01:17:17.562] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:17.562] Browser LOG     chaptersIndex: undefined
+[01:17:17.562] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQyNjczLCJleHAiOjE3NzM4NDM1NzN9.-Spy-AKMu6xe2NY8_9Zelydw4Y2whLJ35m3usj8KJaM
+[01:17:17.562] Browser LOG     AuthProvider init, token: null
+[01:17:17.562] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:17.562] Browser LOG     chaptersIndex: undefined
+[01:17:17.562] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:17:17.562] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:17.562] Browser LOG     chaptersIndex: undefined
+[01:17:17.562] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:17:17.562] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:17.562] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:17.562] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:17:17.562] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:17.562] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:17.562] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:17:17.562] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:17:17.562] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Guitar%20Basics/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Guitar%20Basics/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843616042} /_vercel/insights/view
+[01:17:17.747] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:17:17.755] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:17:17.875] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:17:25.029] Browser LOG     Building public API URL for path: /auth/login
+[01:17:25.029] Browser LOG     Retrieving environment variable: NEXT_PUBLIC_API_URL - Value: [REDACTED]
+[01:17:25.300] Browser LOG     Login successful, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:25.300] Browser LOG     AuthContext login, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:25.300] Browser LOG     AuthContext lowwwwwgin, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:25.579] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843624039} /_vercel/insights/view
+[01:17:25.579] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:17:25.579] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:25.579] Browser LOG     Decoded JWT: {"exp":1773844523,"iat":1773843623,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:17:25.579] Browser LOG     Decoded name: {"exp":1773844523,"iat":1773843623,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:17:25.579] Browser LOG     Decoded name: el matador
+[01:17:25.579] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:25.579] Browser LOG     Decoded JWT: {"exp":1773844523,"iat":1773843623,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:17:25.579] Browser LOG     Decoded name: {"exp":1773844523,"iat":1773843623,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:17:25.579] Browser LOG     Decoded name: el matador
+[01:17:27.779] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843626261} /_vercel/insights/view
+[01:17:30.381] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:17:30.494] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:30.495] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:30.495] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:17:30.495] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:17:30.495] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843628959} /_vercel/insights/view
+[01:17:35.001] Browser LOG     ssss Music Theory
+[01:17:35.032] Server  LOG     chapter: "Music Theory" "lesson:" "1"
+[01:17:35.032] Server  LOG     chaptersIndex: undefined
+[01:17:35.346] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:17:35.352] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:17:35.457] Browser LOG     chapter: Music Theory lesson: 1
+[01:17:35.457] Browser LOG     chaptersIndex: undefined
+[01:17:35.457] Browser LOG     chapter: Music Theory lesson: 1
+[01:17:35.457] Browser LOG     chaptersIndex: undefined
+[01:17:35.457] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:35.457] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:35.457] Browser LOG     chapter: Music Theory lesson: 1
+[01:17:35.457] Browser LOG     chaptersIndex: undefined
+[01:17:35.457] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:17:35.457] Browser LOG     chapter: Music Theory lesson: 1
+[01:17:35.457] Browser LOG     chaptersIndex: undefined
+[01:17:35.457] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:17:35.457] Browser LOG     chapter: Music Theory lesson: 1
+[01:17:35.457] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:35.457] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:17:35.457] Browser LOG     chapter: Music Theory lesson: 1
+[01:17:35.457] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:35.457] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:17:35.457] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:17:35.457] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Music%20Theory/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Music%20Theory/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843633940} /_vercel/insights/view
+[01:17:40.659] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843639134} /_vercel/insights/view
+[01:17:40.659] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:17:40.659] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:17:43.346] Browser LOG     ssss Guitar Basics
+[01:17:43.372] Server  LOG     chapter: "Guitar Basics" "lesson:" "1"
+[01:17:43.373] Server  LOG     chaptersIndex: undefined
+[01:17:43.697] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:17:43.702] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:17:43.826] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:43.826] Browser LOG     chaptersIndex: undefined
+[01:17:43.826] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:43.826] Browser LOG     chaptersIndex: undefined
+[01:17:43.826] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:43.826] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:17:43.826] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:43.826] Browser LOG     chaptersIndex: undefined
+[01:17:43.826] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:17:43.826] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:43.826] Browser LOG     chaptersIndex: undefined
+[01:17:43.826] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:17:43.826] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:43.826] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:43.826] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:17:43.826] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:17:43.826] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:43.826] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:17:43.826] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:17:43.826] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Guitar%20Basics/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Guitar%20Basics/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843642310} /_vercel/insights/view
+[01:17:44.433] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:17:45.162] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:17:45.250] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Guitar%20Basics/2 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Guitar%20Basics/2","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843643717} /_vercel/insights/view
+[01:17:45.250] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:17:45.250] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:45.250] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:17:45.250] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:45.250] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:17:45.250] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:17:45.250] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:45.250] Browser LOG     hasNext: false nextNum: 3 lessonNumbers: [1,2]
+[01:17:45.250] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:17:45.250] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:17:45.250] Browser LOG     hasNext: false nextNum: 3 lessonNumbers: [1,2]
+[01:17:46.470] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773843644944} /_vercel/insights/view
+[01:17:46.470] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:25:10.561] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:10.572] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:10.572] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:10.572] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:25:10.572] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:25:10.572] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844089021} /_vercel/insights/view
+[01:25:16.694] Browser LOG     ssss Songs
+[01:25:16.797] Server  LOG     chapter: "Songs" "lesson:" "1"
+[01:25:16.799] Server  LOG     chaptersIndex: undefined
+[01:25:17.300] Browser LOG     chapter: Songs lesson: 1
+[01:25:17.300] Browser LOG     chaptersIndex: undefined
+[01:25:17.300] Browser LOG     chapter: Songs lesson: 1
+[01:25:17.300] Browser LOG     chaptersIndex: undefined
+[01:25:17.300] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:17.300] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:17.300] Browser LOG     chapter: Songs lesson: 1
+[01:25:17.300] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:17.300] Browser LOG     chapter: Songs lesson: 1
+[01:25:17.300] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:17.300] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:25:17.300] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Songs/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Songs/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844095762} /_vercel/insights/view
+[01:25:17.332] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:17.334] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:17.627] Browser LOG     chapter: Songs lesson: 1
+[01:25:17.627] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:17.627] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:25:17.627] Browser LOG     chapter: Songs lesson: 1
+[01:25:17.627] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:17.627] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:25:30.564] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:30.666] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:30.666] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:30.666] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:25:30.666] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:25:30.666] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844109146} /_vercel/insights/view
+[01:25:33.275] Browser LOG     ssss Open Chords
+[01:25:33.301] Server  LOG     chapter: "Open Chords" "lesson:" "1"
+[01:25:33.302] Server  LOG     chaptersIndex: undefined
+[01:25:33.606] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:33.609] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:33.703] Browser LOG     chapter: Open Chords lesson: 1
+[01:25:33.703] Browser LOG     chaptersIndex: undefined
+[01:25:33.703] Browser LOG     chapter: Open Chords lesson: 1
+[01:25:33.703] Browser LOG     chaptersIndex: undefined
+[01:25:33.703] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:33.703] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:33.703] Browser LOG     chapter: Open Chords lesson: 1
+[01:25:33.703] Browser LOG     chaptersIndex: undefined
+[01:25:33.703] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:25:33.703] Browser LOG     chapter: Open Chords lesson: 1
+[01:25:33.703] Browser LOG     chaptersIndex: undefined
+[01:25:33.703] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:25:33.703] Browser LOG     chapter: Open Chords lesson: 1
+[01:25:33.703] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:33.703] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:25:33.703] Browser LOG     chapter: Open Chords lesson: 1
+[01:25:33.703] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:33.703] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: [1]
+[01:25:33.703] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:25:33.703] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Open%20Chords/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Open%20Chords/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844112187} /_vercel/insights/view
+[01:25:45.141] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844123615} /_vercel/insights/view
+[01:25:45.141] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:25:45.141] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:25:47.331] Browser LOG     ssss Guitar Basics
+[01:25:47.356] Server  LOG     chapter: "Guitar Basics" "lesson:" "1"
+[01:25:47.356] Server  LOG     chaptersIndex: undefined
+[01:25:47.683] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:47.687] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:47.785] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:25:47.785] Browser LOG     chaptersIndex: undefined
+[01:25:47.785] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:25:47.785] Browser LOG     chaptersIndex: undefined
+[01:25:47.785] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:47.785] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:25:47.785] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:25:47.785] Browser LOG     chaptersIndex: undefined
+[01:25:47.785] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:25:47.785] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:25:47.785] Browser LOG     chaptersIndex: undefined
+[01:25:47.785] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:25:47.785] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:25:47.785] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:47.785] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:25:47.785] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:25:47.785] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:47.785] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:25:47.785] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:25:47.785] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Guitar%20Basics/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Guitar%20Basics/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844126265} /_vercel/insights/view
+[01:25:48.775] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:49.394] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:50.574] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:25:50.665] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Guitar%20Basics/2 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Guitar%20Basics/2","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844129133} /_vercel/insights/view
+[01:25:50.665] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:25:50.665] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:50.665] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:25:50.665] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:50.665] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:25:50.665] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:25:50.665] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:50.665] Browser LOG     hasNext: false nextNum: 3 lessonNumbers: [1,2]
+[01:25:50.665] Browser LOG     chapter: Guitar Basics lesson: 2
+[01:25:50.665] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:25:50.665] Browser LOG     hasNext: false nextNum: 3 lessonNumbers: [1,2]
+[01:25:51.615] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844130087} /_vercel/insights/view
+[01:25:51.615] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:30:11.098] Browser LOG     ssss Guitar Basics
+[01:30:11.296] Server  LOG     chapter: "Guitar Basics" "lesson:" "1"
+[01:30:11.297] Server  LOG     chaptersIndex: undefined
+[01:30:11.952] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:30:11.953] Browser LOG     chaptersIndex: undefined
+[01:30:11.953] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:30:11.953] Browser LOG     chaptersIndex: undefined
+[01:30:11.953] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:30:11.953] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:30:11.953] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:30:11.953] Browser LOG     chaptersIndex: undefined
+[01:30:11.953] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:30:11.953] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:30:11.953] Browser LOG     chaptersIndex: undefined
+[01:30:11.953] Browser LOG     hasNext: false nextNum: 2 lessonNumbers: []
+[01:30:11.953] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:30:11.953] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:30:11.953] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:30:11.953] Browser LOG     chapter: Guitar Basics lesson: 1
+[01:30:11.953] Browser LOG     chaptersIndex: {"Guitar Basics":[1,2],"Music Theory":[1],"Open Chords":[1],"Rhythm":[1],"Songs":[1],"Technique":[1]}
+[01:30:11.953] Browser LOG     hasNext: true nextNum: 2 lessonNumbers: [1,2]
+[01:30:11.953] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:30:11.953] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Guitar%20Basics/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Guitar%20Basics/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844390422} /_vercel/insights/view
+[01:30:12.087] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:30:12.093] Server  LOG     Retrieving environment variable: API_URL (fallback: NEXT_PUBLIC_API_URL) - Value: [REDACTED]
+[01:30:24.089] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844402556} /_vercel/insights/view
+[01:30:24.089] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:30:24.089] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:30:24.089] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:30:24.089] Browser LOG     Decoded JWT: {"exp":1773844523,"iat":1773843623,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:30:24.089] Browser LOG     Decoded name: {"exp":1773844523,"iat":1773843623,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:30:24.089] Browser LOG     Decoded name: el matador
+[01:30:24.089] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:30:24.089] Browser LOG     Decoded JWT: {"exp":1773844523,"iat":1773843623,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:30:24.089] Browser LOG     Decoded name: {"exp":1773844523,"iat":1773843623,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:30:24.089] Browser LOG     Decoded name: el matador
+[01:30:25.810] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844404292} /_vercel/insights/view
+[01:30:27.557] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844406040} /_vercel/insights/view
+[01:30:30.676] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773844409158} /_vercel/insights/view
+[01:34:14.152] Server  LOG     [dotenv@17.2.4] injecting env (0) from .env.local -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[01:34:14.164] Server  LOG     GEMINI_API_KEY in handler: "AIzaSyBmylbqefR61SsQPn-YrOCr5rY11voqnXg"
+[01:41:05.929] Server  ERROR    ⨯ ./components/cyberpunk/app.js
+Error:   × Expected '</', got '}'
+     ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\components\cyberpunk\app.js:139:1]
+ 136 │         />
+ 137 │       </NavSection>
+ 138 │ 
+ 139 │       <NavSection renderTitle={(props) =>}>
+     ·                                          ─
+ 140 │         <ConversationNav
+ 141 │           genres={genres}
+ 141 │           activeGenre={activeGenre}
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/cyberpunk/app.js
+[01:41:06.365] Browser ERROR   ./components/cyberpunk/app.js
+Error:   × Expected '</', got '}'
+     ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\components\cyberpunk\app.js:139:1]
+ 136 │         />
+ 137 │       </NavSection>
+ 138 │ 
+ 139 │       <NavSection renderTitle={(props) =>}>
+     ·                                          ─
+ 140 │         <ConversationNav
+ 141 │           genres={genres}
+ 141 │           activeGenre={activeGenre}
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/cyberpunk/app.js
+[01:41:06.365] Browser ERROR   ./components/cyberpunk/app.js
+Error:   × Expected '</', got '}'
+     ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\components\cyberpunk\app.js:139:1]
+ 136 │         />
+ 137 │       </NavSection>
+ 138 │ 
+ 139 │       <NavSection renderTitle={(props) =>}>
+     ·                                          ─
+ 140 │         <ConversationNav
+ 141 │           genres={genres}
+ 141 │           activeGenre={activeGenre}
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/cyberpunk/app.js
+./pages/play-song.jsx
+[01:41:18.361] Browser ERROR   ./components/cyberpunk/app.js
+Error:   × Expected '</', got '}'
+     ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\components\cyberpunk\app.js:139:1]
+ 136 │         />
+ 137 │       </NavSection>
+ 138 │ 
+ 139 │       <NavSection renderTitle={(props) =>}>
+     ·                                          ─
+ 140 │         <ConversationNav
+ 141 │           genres={genres}
+ 141 │           activeGenre={activeGenre}
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/cyberpunk/app.js
+[01:44:30.546] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQzNjIzLCJleHAiOjE3NzM4NDQ1MjN9.jCQXw8RynQuCJuMJtztaYDYEq6fd4A-7J7HQ-HD4rpk
+[01:44:30.546] Browser LOG     AuthProvider init, token: null
+[01:44:30.546] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:44:30.546] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773845248960} /_vercel/insights/view
+[01:44:31.001] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:44:38.772] Browser LOG     Building public API URL for path: /auth/login
+[01:44:38.772] Browser LOG     Retrieving environment variable: NEXT_PUBLIC_API_URL - Value: [REDACTED]
+[01:44:39.347] Browser LOG     Login successful, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[01:44:39.347] Browser LOG     AuthContext login, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[01:44:39.347] Browser LOG     AuthContext lowwwwwgin, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[01:44:39.517] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773845257977} /_vercel/insights/view
+[01:44:39.517] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[01:44:39.517] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[01:44:39.517] Browser LOG     Decoded JWT: {"exp":1773846157,"iat":1773845257,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:44:39.517] Browser LOG     Decoded name: {"exp":1773846157,"iat":1773845257,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:44:39.517] Browser LOG     Decoded name: el matador
+[01:44:39.517] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[01:44:39.517] Browser LOG     Decoded JWT: {"exp":1773846157,"iat":1773845257,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:44:39.517] Browser LOG     Decoded name: {"exp":1773846157,"iat":1773845257,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[01:44:39.517] Browser LOG     Decoded name: el matador
+[01:47:50.776] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773845449256} /_vercel/insights/view
+[01:48:27.739] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[01:48:27.740] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[01:48:27.740] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:48:27.740] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773845486222} /_vercel/insights/view
+[01:49:55.194] Server  LOG     [dotenv@17.2.4] injecting env (0) from .env.local -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[01:49:55.203] Server  LOG     GEMINI_API_KEY in handler: "AIzaSyBmylbqefR61SsQPn-YrOCr5rY11voqnXg"
+[01:57:00.517] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[01:57:00.517] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[01:57:00.517] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:57:00.517] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773845998997} /_vercel/insights/view
+[02:01:38.112] Browser LOG     Create feed
+[02:05:58.146] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773846536594} /_vercel/insights/view
+[02:05:58.146] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at div
+    at div
+    at Card (webpack-internal:///(pages-dir-browser)/./components/card.js:11:17)
+    at section
+    at div
+    at Notes
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[02:05:58.146] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:10:04.250] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773846782733} /_vercel/insights/view
+[02:10:07.863] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ1MjU3LCJleHAiOjE3NzM4NDYxNTd9.q6_GSTfxW5hTYrM8gupu0Nf8lOP_3bJamfjt4dg_i3Q
+[02:10:07.863] Browser LOG     AuthProvider init, token: null
+[02:10:07.863] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:10:07.863] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773846786343} /_vercel/insights/view
+[02:11:34.787] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773846873262} /_vercel/insights/view
+[02:11:34.788] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:11:47.806] Browser LOG     AuthProvider init, token: null
+[02:11:47.806] Browser LOG     AuthProvider init, token: null
+[02:11:47.806] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:11:47.806] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/a color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/a","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773846886282} /_vercel/insights/view
+[02:12:19.103] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773846917536} /_vercel/insights/view
+[02:12:19.103] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[02:12:19.103] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:12:19.103] Browser LOG     Retrieved token: null
+[02:12:19.103] Browser LOG     Retrieved token: null
+[02:12:23.024] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773846921507} /_vercel/insights/view
+[02:12:26.266] Browser LOG     AuthProvider init, token: null
+[02:12:26.266] Browser LOG     AuthProvider init, token: null
+[02:12:26.266] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:12:26.266] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773846924746} /_vercel/insights/view
+[02:13:37.601] Server  ERROR    ⨯ ./components/testPlayingButton.js
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\components\testPlayingButton.js:205:1]
+ 202 │           <GlitchingButton name={"Upload and Detect Note"} handleClick={handleUpload}></GlitchingButton>
+ 203 │           <button onClick={handleUpload}>Upload and Detect Note</button>
+ 204 │         </div> */}
+ 205 │       )}
+     ·        ▲
+ 206 │     </div>
+ 207 │   );
+ 207 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/testPlayingButton.js
+./components/note.js
+[02:13:38.372] Browser ERROR   ./components/testPlayingButton.js
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\components\testPlayingButton.js:205:1]
+ 202 │           <GlitchingButton name={"Upload and Detect Note"} handleClick={handleUpload}></GlitchingButton>
+ 203 │           <button onClick={handleUpload}>Upload and Detect Note</button>
+ 204 │         </div> */}
+ 205 │       )}
+     ·        ▲
+ 206 │     </div>
+ 207 │   );
+ 207 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/testPlayingButton.js
+./components/note.js
+./pages/majorNotes.js
+[02:13:50.374] Browser ERROR   ./components/testPlayingButton.js
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\components\testPlayingButton.js:205:1]
+ 202 │           <GlitchingButton name={"Upload and Detect Note"} handleClick={handleUpload}></GlitchingButton>
+ 203 │           <button onClick={handleUpload}>Upload and Detect Note</button>
+ 204 │         </div> */}
+ 205 │       )}
+     ·        ▲
+ 206 │     </div>
+ 207 │   );
+ 207 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/testPlayingButton.js
+./components/note.js
+[02:16:24.392] Browser LOG     AuthProvider init, token: null
+[02:16:24.392] Browser LOG     AuthProvider init, token: null
+[02:16:24.392] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:16:24.392] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773847162875} /_vercel/insights/view
+[02:19:38.345] Browser LOG     AuthProvider init, token: null
+[02:19:38.345] Browser LOG     AuthProvider init, token: null
+[02:19:38.345] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:19:38.345] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773847356820} /_vercel/insights/view
+[02:26:10.510] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773847748962} /_vercel/insights/view
+[02:26:10.510] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at div
+    at div
+    at Card (webpack-internal:///(pages-dir-browser)/./components/card.js:11:17)
+    at section
+    at div
+    at Notes
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[02:26:10.510] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:26:12.684] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/login","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773847751150} /_vercel/insights/view
+[02:26:18.001] Browser LOG     Building public API URL for path: /auth/login
+[02:26:18.002] Browser LOG     Retrieving environment variable: NEXT_PUBLIC_API_URL - Value: [REDACTED]
+[02:26:22.457] Browser LOG     Building public API URL for path: /auth/login
+[02:26:22.457] Browser LOG     Retrieving environment variable: NEXT_PUBLIC_API_URL - Value: [REDACTED]
+[02:26:37.272] Browser LOG     Building public API URL for path: /auth/login
+[02:26:37.272] Browser LOG     Retrieving environment variable: NEXT_PUBLIC_API_URL - Value: [REDACTED]
+[02:26:37.497] Browser LOG     Login successful, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ3Nzc1LCJleHAiOjE3NzM4NDg2NzV9.R9z_sgMPni2FHpBDhd-7evVgws3I_oNpQi86LyYTq-c
+[02:26:37.497] Browser LOG     AuthContext login, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ3Nzc1LCJleHAiOjE3NzM4NDg2NzV9.R9z_sgMPni2FHpBDhd-7evVgws3I_oNpQi86LyYTq-c
+[02:26:37.497] Browser LOG     AuthContext lowwwwwgin, accessToken: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ3Nzc1LCJleHAiOjE3NzM4NDg2NzV9.R9z_sgMPni2FHpBDhd-7evVgws3I_oNpQi86LyYTq-c
+[02:26:37.749] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773847776130} /_vercel/insights/view
+[02:26:37.749] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ3Nzc1LCJleHAiOjE3NzM4NDg2NzV9.R9z_sgMPni2FHpBDhd-7evVgws3I_oNpQi86LyYTq-c
+[02:26:37.749] Browser LOG     Decoded JWT: {"exp":1773848675,"iat":1773847775,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[02:26:37.749] Browser LOG     Decoded name: {"exp":1773848675,"iat":1773847775,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[02:26:37.749] Browser LOG     Decoded name: el matador
+[02:26:37.749] Browser LOG     Retrieved token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ3Nzc1LCJleHAiOjE3NzM4NDg2NzV9.R9z_sgMPni2FHpBDhd-7evVgws3I_oNpQi86LyYTq-c
+[02:26:37.749] Browser LOG     Decoded JWT: {"exp":1773848675,"iat":1773847775,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[02:26:37.749] Browser LOG     Decoded name: {"exp":1773848675,"iat":1773847775,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
+[02:26:37.749] Browser LOG     Decoded name: el matador
+[02:26:40.311] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773847778790} /_vercel/insights/view
+[02:26:43.028] Server  LOG     [dotenv@17.2.4] injecting env (0) from .env.local -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[02:26:43.035] Server  LOG     GEMINI_API_KEY in handler: "AIzaSyBmylbqefR61SsQPn-YrOCr5rY11voqnXg"
+[02:32:09.720] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ3Nzc1LCJleHAiOjE3NzM4NDg2NzV9.R9z_sgMPni2FHpBDhd-7evVgws3I_oNpQi86LyYTq-c
+[02:32:09.720] Browser LOG     AuthProvider init, token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwidXNlciI6ImVsIG1hdGFkb3IiLCJ1aWQiOjM1LCJzdWIiOiJ5YXNzaW5lLmFtcmkub3VhenphbmlAZ21haWwuY29tIiwiaWF0IjoxNzczODQ3Nzc1LCJleHAiOjE3NzM4NDg2NzV9.R9z_sgMPni2FHpBDhd-7evVgws3I_oNpQi86LyYTq-c
+[02:32:09.720] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:32:09.720] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773848108203} /_vercel/insights/view
+[02:32:11.833] Server  LOG     [dotenv@17.2.4] injecting env (0) from .env.local -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+[02:32:11.840] Server  LOG     GEMINI_API_KEY in handler: "AIzaSyBmylbqefR61SsQPn-YrOCr5rY11voqnXg"

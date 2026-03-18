@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import { Button } from "./ui";
 import { FIXTURES } from "./fixtures";
 import parse from "html-react-parser";
 import ChordSheetJS from "chordsheetjs";
@@ -185,7 +184,7 @@ export default function Chat({
       const html = formatter.format(song);
       
       return (
-        <div className="chord-sheet" style={{ whiteSpace: "pre-wrap" }}>
+        <div className="chord-sheet">
           {parse(html)}
         </div>
       );
@@ -207,15 +206,21 @@ export default function Chat({
       (message.role === "user" ? "You" : assistantName) ||
       "Unknown";
 
-    return (
-      <div className="message" style={{ padding: 12, borderBottom: "1px solid #eee" }}>
-        <div className="message__body">
-          <RenderMessageBody content={message.content} />
-        </div>
+    const isUser = message.role === "user";
 
-        <div className="message__footer" style={{ marginTop: 8, opacity: 0.7 }}>
-          <span className="message__authoring">{author}</span>
-          {` - ${timeLabel}`}
+    return (
+      <div className={`cp-message ${isUser ? "cp-message--user" : "cp-message--assistant"}`}>
+        <div className="cp-message__avatar">
+          {isUser ? "◈" : "◆"}
+        </div>
+        <div className="cp-message__content">
+          <div className="cp-message__header">
+            <span className="cp-message__author">{author}</span>
+            <span className="cp-message__time">{timeLabel}</span>
+          </div>
+          <div className="cp-message__body">
+            <RenderMessageBody content={message.content} />
+          </div>
         </div>
       </div>
     );
@@ -225,67 +230,77 @@ export default function Chat({
     if (!activeAnswers.length) return null;
 
     return (
-      <ul className="nav" style={{ padding: 12 }}>
+      <div className="cp-choices">
         {activeAnswers.map((a) => (
-          <li className="nav__item" key={a.id}>
-            <a
-              href="#"
-              className="nav__link"
-              onClick={(e) => {
-                e.preventDefault();
-                if (!loading) pickAnswer(a.content);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !loading) pickAnswer(a.content);
-              }}
-              style={{
-                cursor: loading ? "not-allowed" : "pointer",
-                opacity: loading ? 0.6 : 1,
-              }}
-            >
-              {a.content}
-            </a>
-          </li>
+          <button
+            key={a.id}
+            type="button"
+            className={`cp-choices__btn ${loading ? "cp-choices__btn--disabled" : ""}`}
+            disabled={loading}
+            onClick={() => {
+              if (!loading) pickAnswer(a.content);
+            }}
+          >
+            <span className="cp-choices__icon">▶</span>
+            {a.content}
+          </button>
         ))}
-      </ul>
+      </div>
     );
   }
 
   return (
-    <div className="channel-feed">
-      <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 12 }}>{title}</h1>
+    <div className="cp-chat">
+      <div className="cp-chat__header">
+        <div className="cp-chat__header-icon">◉</div>
+        <h1 className="cp-chat__title">{title}</h1>
+        <div className="cp-chat__header-line" />
+      </div>
 
-      <div className="channel-feed__body">
+      <div className="cp-chat__body">
         {messages.map((m, i) => (
           <FeedMessage key={i} message={m} />
         ))}
+        {loading && (
+          <div className="cp-chat__loading">
+            <span className="cp-chat__loading-dot" />
+            <span className="cp-chat__loading-dot" />
+            <span className="cp-chat__loading-dot" />
+          </div>
+        )}
       </div>
 
-      <div className="channel-feed__footer">
-        <form className="channel-message-form" action="#" onSubmit={sendTypedMessage}>
-          <div className="form-group">
-            <label className="form-label" htmlFor="message">
-              Message
-            </label>
-
-            <div className="form-control">
-              <DialogChoices />
-              <textarea
-                id="message"
-                className="form-control"
-                name="message"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-              />
-            </div>
+      <div className="cp-chat__footer">
+        <DialogChoices />
+        {/* <form className="cp-chat__form" onSubmit={sendTypedMessage}>
+          <label className="form-label" htmlFor="message">
+            Transmit
+          </label>
+          <div className="cp-chat__input-wrap">
+            <textarea
+              id="message"
+              className="cp-chat__textarea"
+              name="message"
+              placeholder="Type your message..."
+              rows={2}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  sendTypedMessage(e);
+                }
+              }}
+            />
+            <button
+              type="submit"
+              className={`cp-chat__send ${loading ? "cp-chat__send--loading" : ""}`}
+              disabled={loading}
+            >
+              {loading ? "···" : "▶ SEND"}
+            </button>
           </div>
-
-          <div className="form-footer">
-            <Button size="xl" type="submit" variant="primary">
-              {loading ? "Sending..." : "Send"}
-            </Button>
-          </div>
-        </form>
+        </form> */}
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const Note = ({ name, ext }) => {
             ></ins>
           </div>
         </div>
-
+<div className="play-button">
         <ins
           ref={soundRef}
           className="scales_chords_api"
@@ -38,7 +38,7 @@ const Note = ({ name, ext }) => {
           output="sound"
         ></ins>
 
-        <TPB name={name} />
+      </div>
       </div>
     </li>
   );

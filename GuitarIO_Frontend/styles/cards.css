@@ -1,136 +1,214 @@
+/* ═══════════════════════════════════════════
+   CYBERPUNK NOTE CARDS
+   ═══════════════════════════════════════════ */
+
+section.cardo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: start;
+  padding: 6vh 4vw;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0a0a14;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(0, 240, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 42, 109, 0.05) 0%, transparent 50%);
+}
+
+/* Subtle scanline overlay on the grid */
+section.cardo::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 240, 255, 0.012) 2px,
+    rgba(0, 240, 255, 0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 100;
+}
+
 #cardi {
-    width: 320px;
-    border: 4px solid #000;
-    background-color: #fff;
-    padding: 1.5rem;
-    box-shadow: 10px 10px 0 #000;
-    font-family: "Arial", sans-serif;
-  }
-  
-  #cardi .brutalist-card__header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #000;
-    padding-bottom: 1rem;
-  }
-  
-  #cardi .brutalist-card__icon {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
-    padding: 0.5rem;
-  }
-  
-  #cardi .brutalist-card__icon svg {
-    height: 1.5rem;
-    width: 1.5rem;
-    fill: #fff;
-  }
-  
-  #cardi .brutalist-card__alert {
-    font-weight: 900;
-    color: #000;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-  }
-  
-  #cardi .brutalist-card__message {
-    margin-top: 1rem;
-    color: #000;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    border-bottom: 2px solid #000;
-    padding-bottom: 1rem;
-    font-weight: 600;
-  }
-  
-  #cardi .brutalist-card__actions {
-    margin-top: 1rem;
-  }
-  
-  #cardi .brutalist-card__button {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    border: 3px solid #000;
-    background-color: #fff;
-    color: #000;
-    position: relative;
-    transition: all 0.2s ease;
-    box-shadow: 5px 5px 0 #000;
-    overflow: hidden;
-    text-decoration: none;
-    margin-bottom: 1rem;
-  }
-  
-  #cardi .brutalist-card__button--read {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  #cardi .brutalist-card__button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255, 255, 255, 0.3),
-      transparent
-    );
-    transition: all 0.6s;
-  }
-  
-  #cardi .brutalist-card__button:hover::before {
-    left: 100%;
-  }
-  
-  #cardi .brutalist-card__button:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 7px 7px 0 #000;
-  }
-  
-  #cardi .brutalist-card__button--mark:hover {
-    background-color: #296fbb;
-    border-color: #296fbb;
-    color: #fff;
-    box-shadow: 7px 7px 0 #004280;
-  }
-  
-  #cardi .brutalist-card__button--read:hover {
-    background-color: #ff0000;
-    border-color: #ff0000;
-    color: #fff;
-    box-shadow: 7px 7px 0 #800000;
-  }
-  
-  #cardi .brutalist-card__button:active {
-    transform: translate(5px, 5px);
-    box-shadow: none;
-  }
-  section.cardo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 4vw; /* Adjust the spacing between cards */
-    justify-content: center;
-    align-items: center;
-    padding: 10vh;
-    margin: 0;
-  }
-  
-  #cardi {
-    margin: auto; /* Center individual cards if fewer than 4 in a row */
-  }
-  
+  --cyan: #00f0ff;
+  --magenta: #ff2a6d;
+  --dark-surface: #12101e;
+  --dark-bg: #0a0a14;
+
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  padding: 0;
+  background: linear-gradient(170deg, var(--dark-surface), var(--dark-bg));
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  font-family: "Rajdhani", sans-serif;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 1.2rem),
+    calc(100% - 1.2rem) 100%,
+    0 100%
+  );
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#cardi:hover {
+  border-color: rgba(0, 240, 255, 0.3);
+  box-shadow:
+    0 0 15px rgba(0, 240, 255, 0.1),
+    0 0 40px rgba(0, 240, 255, 0.04);
+}
+
+/* Notch accent line */
+#cardi::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  right: -7px;
+  height: 3px;
+  width: 22.63px;
+  background: var(--cyan);
+  transform: rotate(-45deg);
+  box-shadow: 0 0 8px var(--cyan);
+  z-index: 10;
+}
+
+/* ── Header ── */
+#cardi .brutalist-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.04), transparent);
+}
+
+#cardi .brutalist-card__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+}
+
+#cardi .brutalist-card__icon svg {
+  height: 1.1rem;
+  width: 1.1rem;
+  fill: var(--cyan);
+  filter: drop-shadow(0 0 4px rgba(0, 240, 255, 0.4));
+}
+
+#cardi .brutalist-card__alert {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  color: var(--cyan);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+}
+
+/* ── Message body ── */
+#cardi .brutalist-card__message {
+  padding: 1.25rem 1.25rem 1rem;
+  color: rgba(212, 218, 232, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(255, 42, 109, 0.1);
+}
+
+/* ── Actions ── */
+#cardi .brutalist-card__actions {
+  padding: 1rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+#cardi .brutalist-card__button {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  text-align: center;
+  font-family: "VT323", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+/* Primary button (Check it) */
+#cardi .brutalist-card__button--mark {
+  background: transparent;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  box-shadow: none;
+}
+
+#cardi .brutalist-card__button--mark:hover {
+  background: rgba(0, 240, 255, 0.08);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.2), inset 0 0 12px rgba(0, 240, 255, 0.04);
+  color: var(--cyan);
+  text-shadow: 0 0 6px rgba(0, 240, 255, 0.4);
+  transform: translateY(-1px);
+  border-color: var(--cyan);
+}
+
+/* Secondary button (Okay) */
+#cardi .brutalist-card__button--read {
+  background: rgba(255, 42, 109, 0.06);
+  border: 1px solid rgba(255, 42, 109, 0.3);
+  color: var(--magenta);
+  box-shadow: none;
+}
+
+#cardi .brutalist-card__button--read:hover {
+  background: rgba(255, 42, 109, 0.12);
+  border-color: var(--magenta);
+  box-shadow: 0 0 12px rgba(255, 42, 109, 0.2), inset 0 0 12px rgba(255, 42, 109, 0.04);
+  text-shadow: 0 0 6px rgba(255, 42, 109, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Sweep shine on hover */
+#cardi .brutalist-card__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 240, 255, 0.08),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+#cardi .brutalist-card__button:hover::before {
+  left: 100%;
+}
+
+#cardi .brutalist-card__button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
   

@@ -186,13 +186,13 @@ export default function TPB({ name }) {
   };
 
   return (
-    <div className='test'>
+    <div className=''>
      {/*  <form onSubmit={handleSubmit}>
         <input type="file" accept=".wav" onChange={handleFileChange} />
         <button type="submit">Upload and Detect Note</button>
       </form> */}
       {/* {note && <p>Detected Note: {note}</p>} */}
-      <h1>Try playing the note  {name}</h1>
+      {/* <h1>Try playing the note  {name}</h1>
       <GlitchingButton name={isRecording ? 'Stop Recording' : 'Start Recording'} handleClick={isRecording ? stopRecording : startRecording} aria={"true"}></GlitchingButton>
 
      
@@ -200,9 +200,9 @@ export default function TPB({ name }) {
         <div>
           <audio controls src={URL.createObjectURL(audioBlob)}></audio>
           <GlitchingButton name={"Upload and Detect Note"} handleClick={handleUpload}></GlitchingButton>
-          <button onClick={handleUpload}>Upload and Detect Note</button>
-        </div>
-      )}
+          <button onClick={handleUpload}>Upload and Detect Note</button> */}
+        {/* </div>
+      )} */}
     </div>
   );
 }

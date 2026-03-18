@@ -1,20 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap");
 
 body {
-  background: #111;
+  background: #0a0a12;
+}
+
+/* ── Cyberpunk scanline overlay ── */
+#celeste::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 255, 0.015) 2px,
+    rgba(0, 255, 255, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 50;
 }
 
 #celeste {
-  --grey: #575858;
-  --bluegrey: #270b1e;
-  --dark: #222;
-  --highlight: #50505d;
-  --text: #eee;
-  --rgba: 0,0,0;
-  --rgba2: 36,36,42;
-  --bg: url("https://c.l3n.co/F19HwD.png");
+  --cyan: #00f0ff;
+  --magenta: #ff2a6d;
+  --yellow: #f5e642;
+  --dark-bg: #0d0b1a;
+  --panel-bg: #110e1f;
+  --text: #d4dae8;
+  --text-dim: #6b7394;
+  --border: #1b1833;
+  --glow-cyan: 0 0 8px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.15);
+  --glow-magenta: 0 0 8px rgba(255, 42, 109, 0.5), 0 0 20px rgba(255, 42, 109, 0.15);
   --img1: url("https://r4.wallpaperflare.com/wallpaper/372/651/621/guitar-electric-guitar-wallpaper-4980787da1da9d5b86c708efa00196dd.jpg");
-  --border: #35353d;
 
   position: absolute;
   top: 50%;
@@ -22,12 +39,24 @@ body {
   transform: translate(-50%, -50%);
 
   margin: 0;
-  background: #0d0d0d url("https://c.l3n.co/F1vLm7.png");
-  width: min(80%, 1200px);
-  padding: clamp(12px, 2vw, 20px);
-  border: 1px solid var(--border);
+  background: var(--dark-bg);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(0, 240, 255, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(255, 42, 109, 0.05) 0%, transparent 60%);
+  width: min(85%, 1200px);
+  padding: clamp(14px, 2vw, 22px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  box-shadow: var(--glow-cyan), inset 0 0 60px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   box-sizing: border-box;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 24px) 0,
+    100% 24px,
+    100% 100%,
+    24px 100%,
+    0 calc(100% - 24px)
+  );
 }
 
 .celeste2 {
@@ -35,22 +64,17 @@ body {
   position: relative;
 }
 
+/* ── Corner accent lines ── */
 .top-left {
   position: absolute;
   top: clamp(10px, 2vw, 20px);
   left: clamp(10px, 2vw, 20px);
   bottom: clamp(10px, 2vw, 20px);
   width: 80%;
-  background-image: radial-gradient(
-    circle at top left,
-    #111,
-    var(--bluegrey) 10%,
-    var(--highlight) 20%,
-    rgba(0,0,0,0) 40%
-  );
-  clip-path: polygon(100% 0, 0 0, 0 100%, 3% 100%, 3% 3%, 100% 3%);
+  background-image: linear-gradient(135deg, var(--cyan) 0%, transparent 40%);
+  clip-path: polygon(100% 0, 0 0, 0 100%, 2.5% 100%, 2.5% 2.5%, 100% 2.5%);
   z-index: 5;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .bottom-right {
@@ -59,16 +83,10 @@ body {
   bottom: clamp(10px, 2vw, 20px);
   right: clamp(10px, 2vw, 20px);
   width: 80%;
-  background-image: radial-gradient(
-    circle at bottom right,
-    #111,
-    var(--bluegrey) 10%,
-    var(--highlight) 20%,
-    rgba(0,0,0,0) 40%
-  );
-  clip-path: polygon(97% 0, 97% 97%, 0 97%, 0 100%, 100% 100%, 100% 0%);
+  background-image: linear-gradient(315deg, var(--magenta) 0%, transparent 40%);
+  clip-path: polygon(97.5% 0, 97.5% 97.5%, 0 97.5%, 0 100%, 100% 100%, 100% 0%);
   z-index: 5;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .celeste3 {
@@ -78,14 +96,22 @@ body {
 }
 
 .celeste4 {
-  background: rgb(21 8 19 / 95%);
-  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(13, 11, 26, 0.97) 0%, rgba(17, 14, 31, 0.95) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  border-left: 2px solid var(--cyan);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: clamp(20px, 4vw, 40px);
   position: relative;
   height: auto;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 16px),
+    calc(100% - 16px) 100%,
+    0 100%
+  );
 }
 
 .celeste4::after {
@@ -95,27 +121,34 @@ body {
   background-image: var(--img1);
   background-position: center;
   background-size: cover;
-  opacity: 0.2;
+  opacity: 0.08;
+  mix-blend-mode: luminosity;
   pointer-events: none;
 }
 
+/* ── Content text area ── */
 .celeste-write {
-  padding: clamp(16px, 3vw, 30px) clamp(16px, 3vw, 30px) clamp(70px, 12vw, 150px);
+  padding: clamp(20px, 3vw, 35px) clamp(20px, 3vw, 35px) clamp(70px, 12vw, 150px);
   color: var(--text);
-  font-family: Roboto, sans-serif;
-  font-weight: 200;
-  font-size: clamp(12px, 1.5vw, 16px);
-  line-height: clamp(1.4, 1.5, 1.6);
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 1.5vw, 17px);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
   text-align: justify;
   position: relative;
   z-index: 6;
 }
 
 .celeste-write b {
-  background: var(--highlight);
-  padding: 2px;
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.15), rgba(255, 42, 109, 0.15));
+  color: var(--cyan);
+  padding: 1px 6px;
+  border-left: 2px solid var(--cyan);
+  font-weight: 600;
 }
 
+/* ── Bottom info bar ── */
 .celeste5 {
   display: flex;
   justify-content: space-between;
@@ -123,8 +156,12 @@ body {
   position: relative;
   z-index: 6;
   gap: clamp(10px, 2vw, 20px);
+  border-top: 1px solid rgba(0, 240, 255, 0.08);
+  padding-top: clamp(10px, 2vw, 20px);
+  margin: 0 clamp(16px, 3vw, 30px);
 }
 
+/* ── Orbiting icon ── */
 .celeste-iconn {
   position: relative;
   margin-left: clamp(-30px, -4vw, -60px);
@@ -132,7 +169,8 @@ body {
   border-radius: 100%;
   width: clamp(70px, 10vw, 100px);
   height: clamp(70px, 10vw, 100px);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: var(--glow-cyan);
   outline-offset: clamp(20px, 4vw, 40px);
   z-index: 100;
 }
@@ -142,12 +180,19 @@ body {
   height: clamp(70px, 10vw, 100px);
   border-radius: 100%;
   background-size: cover;
-  filter: grayscale(100%);
-  outline: 2px solid var(--border);
+  filter: grayscale(60%) brightness(0.8) contrast(1.2);
+  outline: 2px solid rgba(0, 240, 255, 0.3);
   outline-offset: 10px;
   position: relative;
   background-position: center;
   z-index: 100;
+  transition: filter 0.4s ease;
+}
+
+.celeste-iconnn:hover {
+  filter: grayscale(0%) brightness(1) contrast(1.1);
+  outline-color: var(--magenta);
+  box-shadow: var(--glow-magenta);
 }
 
 .celeste-iconnnn {
@@ -167,8 +212,9 @@ body {
   left: 0;
   width: clamp(6px, 1vw, 10px);
   height: clamp(6px, 1vw, 10px);
-  background: var(--border);
+  background: var(--cyan);
   border-radius: 50%;
+  box-shadow: 0 0 6px var(--cyan), 0 0 12px var(--cyan);
   z-index: 100;
 }
 
@@ -199,27 +245,43 @@ body {
   left: 0;
   width: clamp(6px, 1vw, 10px);
   height: clamp(6px, 1vw, 10px);
-  background: red;
+  background: var(--magenta);
   border-radius: 50%;
+  box-shadow: 0 0 6px var(--magenta), 0 0 14px var(--magenta);
   z-index: 100;
 }
 
+/* ── Lyrics / Next lesson section ── */
 .celeste-lyrics {
-  font-family: "Courier Prime", monospace;
+  font-family: "Share Tech Mono", monospace;
   font-weight: 500;
   font-size: clamp(10px, 1.2vw, 13px);
-  color: var(--text);
+  color: var(--text-dim);
   text-transform: uppercase;
-  letter-spacing: clamp(0.5px, 0.15vw, 1px);
+  letter-spacing: clamp(1px, 0.2vw, 3px);
 }
 
 .celeste-lyrics b {
-  color: var(--highlight);
+  color: var(--cyan);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+.celeste-lyrics h1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: clamp(14px, 2vw, 22px);
+  color: var(--text);
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+  margin: 6px 0;
+  letter-spacing: 0.05em;
 }
 
 .celeste-lyrics sup {
   display: block;
   margin-left: clamp(-35px, -5vw, -70px);
+  color: var(--magenta);
+  font-size: clamp(9px, 1vw, 11px);
+  letter-spacing: 0.15em;
 }
 
 .celeste-lyrics sub {
@@ -227,8 +289,50 @@ body {
   margin-left: clamp(25px, 4vw, 60px);
 }
 
+.celeste-lyrics sub a {
+  color: var(--cyan);
+  text-decoration: none;
+  padding: 4px 12px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  background: rgba(0, 240, 255, 0.05);
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.celeste-lyrics sub a:hover {
+  background: rgba(0, 240, 255, 0.12);
+  box-shadow: var(--glow-cyan);
+  color: #fff;
+  text-shadow: 0 0 8px var(--cyan);
+}
+
+/* ── Page wrapper ── */
 @media (max-width: 1000px) {
   .lessonss {
     margin-top: 20%;
   }
+}
+
+.lessonss {
+  padding: 6%;
+}
+
+/* ── Glitch flicker on the title ── */
+.lessonss .titel1 h2 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cyan, #00f0ff);
+  text-shadow:
+    0 0 7px rgba(0, 240, 255, 0.6),
+    0 0 20px rgba(0, 240, 255, 0.25),
+    2px 2px 0 rgba(255, 42, 109, 0.3);
+  animation: glitch-flicker 4s infinite;
+}
+
+@keyframes glitch-flicker {
+  0%, 93%, 95%, 100% { opacity: 1; }
+  94% { opacity: 0.7; transform: translateX(-2px); }
+  94.5% { opacity: 0.9; transform: translateX(1px); }
 }

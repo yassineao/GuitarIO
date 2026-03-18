@@ -1,135 +1,315 @@
-/* GuitarLessons.css */
+/* GuitarLessons.css — Cyberpunk Theme */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap");
+
 :root {
-  --color-cyber:#f8659b;
+  --cp-cyan: #00f0ff;
+  --cp-magenta: #ff2a6d;
+  --cp-yellow: #f5e642;
+  --cp-dark: #0a0a12;
+  --cp-panel: #0d0b1a;
+  --cp-surface: #110e1f;
+  --cp-border: rgba(0, 240, 255, 0.15);
+  --cp-text: #d4dae8;
+  --cp-text-dim: #6b7394;
+  --cp-glow-cyan: 0 0 8px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.15);
+  --cp-glow-magenta: 0 0 8px rgba(255, 42, 109, 0.5), 0 0 20px rgba(255, 42, 109, 0.15);
 }
+
 #guitarLessonPage {
   display: flex;
   min-height: 100vh;
-  font-family: 'Arial', sans-serif;
-    background: url('https://r4.wallpaperflare.com/wallpaper/448/174/357/neon-4k-hd-best-for-desktop-wallpaper-b896bd6800903c48d09c01fed852c41a.jpg');
-   background-size: cover;
-    background-position-x: center;
-  }
+  font-family: "Rajdhani", sans-serif;
+  background: var(--cp-dark);
+  background-image:
+    radial-gradient(ellipse at 10% 20%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(255, 42, 109, 0.04) 0%, transparent 50%);
+  position: relative;
+}
 
-/* Sidebar styles */
+/* Scanline overlay */
+#guitarLessonPage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 240, 255, 0.012) 2px,
+    rgba(0, 240, 255, 0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* ── Sidebar ── */
 #guitarLessonPage .sidebar {
-  width: 250px;
-  background-color: #160821d4;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  border-radius: 0; /* sharp edges */
+  width: 280px;
+  background: linear-gradient(180deg, var(--cp-panel) 0%, rgba(13, 11, 26, 0.95) 100%);
+  padding: 24px 20px;
+  border-right: 1px solid var(--cp-border);
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
+  position: relative;
+}
+
+/* Sidebar accent line */
+#guitarLessonPage .sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--cp-cyan), transparent 40%, transparent 60%, var(--cp-magenta));
+  box-shadow: var(--cp-glow-cyan);
 }
 
 #guitarLessonPage .sidebar h2 {
-      margin-top: 33%;
+  margin-top: 33%;
   max-width: fit-content;
-  color: var(--color-cyber);
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cp-cyan);
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--cp-border);
 }
 
 #guitarLessonPage .chapter-button {
   width: 100%;
-  padding: 10px;
-      clip-path: polygon(100% 0, 100% 69%, 92% 100%, 0% 100%, 0 0);
-  background-color: var(--color-cyber);
-  color: #1b1b1b;
-  border: none;
-  border-radius: 0; /* sharp edges */
+  padding: 11px 14px;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.08) 0%, rgba(255, 42, 109, 0.04) 100%);
+  color: var(--cp-text);
+  border: 1px solid var(--cp-border);
   cursor: pointer;
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
   text-align: left;
-  transition: background-color 0.3s, opacity 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#guitarLessonPage .chapter-button::before {
+  content: "▸";
+  margin-right: 8px;
+  color: var(--cp-cyan);
+  font-size: 0.8em;
+}
+
+#guitarLessonPage .chapter-button:hover {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.18) 0%, rgba(255, 42, 109, 0.08) 100%);
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: var(--cp-glow-cyan);
+  color: #fff;
+  text-shadow: 0 0 6px rgba(0, 240, 255, 0.3);
 }
 
 #guitarLessonPage .chapter-button:disabled {
-  background-color: #555;
-  opacity: 0.5;
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
+  opacity: 0.35;
   cursor: not-allowed;
+  color: var(--cp-text-dim);
 }
 
-/* Main content styles */
+#guitarLessonPage .chapter-button:disabled::before {
+  content: "◆";
+  color: var(--cp-text-dim);
+}
+
+/* ── Main content ── */
 #guitarLessonPage .content {
-  color: #d0d0d0;
+  color: var(--cp-text);
   flex-direction: column;
   flex: 1;
   align-items: center;
-  justify-content: center; /* Add this line */
-  padding: 20px;
+  justify-content: center;
+  padding: 40px;
   display: flex;
+  position: relative;
 }
 
-/* Header styles */
+/* Decorative grid pattern */
+#guitarLessonPage .content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* ── Header ── */
 #guitarLessonPage .header {
   max-width: fit-content;
-    text-align: center;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
   font-size: 2.5rem;
-  color: #ffffff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow:
+    0 0 10px rgba(0, 240, 255, 0.5),
+    0 0 30px rgba(0, 240, 255, 0.2),
+    3px 3px 0 rgba(255, 42, 109, 0.25);
   margin-bottom: 10px;
-  border-radius: 0; 
-      display: contents;
+  display: contents;
+  animation: title-flicker 5s infinite;
 }
 
-/* Subtitle styles */
+@keyframes title-flicker {
+  0%, 92%, 94%, 100% { opacity: 1; }
+  93% { opacity: 0.75; }
+  93.5% { opacity: 0.95; }
+}
+
+/* ── Subtitle ── */
 #guitarLessonPage .subtitle {
-  font-size: 1.2rem;
-  color: #99ccff;
-  margin-bottom: 30px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cp-magenta);
+  text-shadow: 0 0 8px rgba(255, 42, 109, 0.3);
+  margin-bottom: 36px;
+  position: relative;
 }
 
-/* Lesson box styles */
+#guitarLessonPage .subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cp-cyan), transparent);
+  box-shadow: 0 0 8px var(--cp-cyan);
+}
+
+/* ── Lesson box ── */
 #guitarLessonPage .lesson-box {
-     text-align: center;
-    background: #160620;
-    border-radius: 0;
-    max-width: 700px;
-    padding: 46px;
-    box-shadow: 0 0 15px #66ffcc4d;
+  text-align: center;
+  background: linear-gradient(180deg, var(--cp-surface) 0%, var(--cp-panel) 100%);
+  max-width: 700px;
+  width: 100%;
+  padding: 50px;
+  border: 1px solid var(--cp-border);
+  box-shadow:
+    var(--cp-glow-cyan),
+    inset 0 1px 0 rgba(0, 240, 255, 0.08);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 20px) 0,
+    100% 20px,
+    100% 100%,
+    20px 100%,
+    0 calc(100% - 20px)
+  );
+  position: relative;
 }
 
-/* Lesson title */
+/* Corner decorations */
+#guitarLessonPage .lesson-box::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid var(--cp-cyan);
+  border-left: 2px solid var(--cp-cyan);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#guitarLessonPage .lesson-box::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid var(--cp-magenta);
+  border-right: 2px solid var(--cp-magenta);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ── Lesson title ── */
 #guitarLessonPage .lesson-title {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: var(--color-cyber);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+  color: var(--cp-cyan);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
 }
 
-/* Lesson content */
+/* ── Lesson content ── */
 #guitarLessonPage .lesson-content {
   font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: var(--cp-text-dim);
 }
 
-/* Start button */
+/* ── Start button ── */
 #guitarLessonPage .start-button {
-  background-color: var(--color-cyber);
-  color: #1b1b1b;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0; /* sharp edges */
-  font-size: 1rem;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.12) 0%, rgba(255, 42, 109, 0.08) 100%);
+  color: var(--cp-cyan);
+  padding: 12px 32px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   cursor: pointer;
-  box-shadow: 0 0 8px var(--color-cyber);
-  transition: background-color 0.3s, box-shadow 0.3s;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 #guitarLessonPage .start-button:hover {
-  background-color: var(--color-cyber);
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.25) 0%, rgba(255, 42, 109, 0.15) 100%);
+  box-shadow: var(--cp-glow-cyan);
+  color: #fff;
+  text-shadow: 0 0 8px var(--cp-cyan);
+  border-color: var(--cp-cyan);
 }
+
+#guitarLessonPage .start-button:disabled {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--cp-text-dim);
+  cursor: not-allowed;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* ── Chapter list ── */
 #guitarLessonPage .bonobo {
   margin-top: 50%;
-  listStyle: 'none';
-  
+  list-style: none;
   padding: 0;
 }
+
 /* =========================
    MOBILE OPTIMIZATION
-   Add this at the end
    ========================= */
-
 @media (max-width: 600px) {
 
   #guitarLessonPage {
@@ -137,69 +317,68 @@
     min-height: 100vh;
   }
 
-  /* Sidebar becomes top navigation */
   #guitarLessonPage .sidebar {
     width: 100%;
-    padding: 12px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     margin-top: 30%;
+    border-right: none;
+    border-bottom: 1px solid var(--cp-border);
+  }
+
+  #guitarLessonPage .sidebar::after {
+    display: none;
   }
 
   #guitarLessonPage .sidebar h2 {
     margin-top: 0;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 12px;
   }
 
-  /* Chapter buttons smaller */
   #guitarLessonPage .chapter-button {
-    font-size: 0.9rem;
-    padding: 8px;
+    font-size: 0.85rem;
+    padding: 9px 12px;
     margin-bottom: 6px;
   }
 
-  /* Main content spacing */
   #guitarLessonPage .content {
-    padding: 16px;
+    padding: 20px 16px;
     justify-content: flex-start;
   }
 
-  /* Header smaller */
   #guitarLessonPage .header {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   #guitarLessonPage .subtitle {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 24px;
   }
 
-  /* Lesson box shrinks */
   #guitarLessonPage .lesson-box {
     width: 100%;
     max-width: 100%;
-    padding: 20px;
+    padding: 24px;
     box-sizing: border-box;
   }
 
   #guitarLessonPage .lesson-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   #guitarLessonPage .lesson-content {
     font-size: 0.9rem;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
-  /* Start button mobile size */
   #guitarLessonPage .start-button {
     width: 100%;
-    font-size: 0.9rem;
-    padding: 10px;
+    font-size: 0.85rem;
+    padding: 12px;
   }
 
-  /* Fix large spacing */
   #guitarLessonPage .bonobo {
     margin-top: 10px;
   }
