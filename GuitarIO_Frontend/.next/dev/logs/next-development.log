@@ -997,3 +997,127 @@ Import trace for requested module:
 [02:47:02.204] Browser LOG     Decoded name: {"exp":1773849900,"iat":1773849000,"role":"ROLE_USER","sub":"yassine.amri.ouazzani@gmail.com","uid":35,"user":"el matador"}
 [02:47:02.204] Browser LOG     Decoded name: el matador
 [02:47:04.272] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849002752} /_vercel/insights/view
+[02:51:50.545] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:51:50.545] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849289027} /_vercel/insights/view
+[02:51:52.251] Server  LOG     [dotenv@17.2.4] injecting env (0) from .env.local -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+[02:52:06.773] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849305235} /_vercel/insights/view
+[02:52:06.773] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[02:52:06.773] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:53:32.204] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849390565} /_vercel/insights/view
+[02:53:34.056] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849392477} /_vercel/insights/view
+[02:53:39.073] Browser ERROR   Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ChaptersLessons`.  
+    at li
+    at ChaptersLessons (webpack-internal:///(pages-dir-browser)/./components/lessons/chapterList.js:12:28)
+    at ProtectedRoute (webpack-internal:///(pages-dir-browser)/./components/protectedContent.js:14:27)
+    at ChaptersListPage (webpack-internal:///(pages-dir-browser)/./pages/Chapters.jsx:34:66)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[02:53:39.073] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:53:39.073] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849397547} /_vercel/insights/view
+[02:53:46.190] Server  ERROR   C:\Users\yassu\GuitarIO\GuitarIO_Frontend\node_modules\next\dist\compiled\next-server\pages-api.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:53:46.198] Server  ERROR   C:\Users\yassu\GuitarIO\GuitarIO_Frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:53:46.206] Server  ERROR   C:\Users\yassu\GuitarIO\GuitarIO_Frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:53:46.208] Server  ERROR   C:\Users\yassu\GuitarIO\GuitarIO_Frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:53:46.209] Server  ERROR   C:\Users\yassu\GuitarIO\GuitarIO_Frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:53:46.211] Server  ERROR   C:\Users\yassu\GuitarIO\GuitarIO_Frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:53:46.219] Server  ERROR    ⨯ TypeError: fetch failed
+[02:53:46.224] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:53:46.224] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/Chapters/Music%20Theory/1 color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/Chapters/Music%20Theory/1","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849404702} /_vercel/insights/view
+[02:53:59.767] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849418241} /_vercel/insights/view
+[02:53:59.767] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[02:53:59.767] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:54:04.638] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849423100} /_vercel/insights/view
+[02:54:32.206] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773849450688} /_vercel/insights/view
+[03:40:53.099] Server  LOG        Reload env: .env
+[03:41:45.001] Server  ERROR   Warning: Invalid DOM property `class`. Did you mean `className`?
+    at section
+    at div
+    at div
+    at Home (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\index.jsx:8:43)
+    at div
+    at AuthProvider (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\api\AuthContext.js:7:32)
+    at App (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\_app.tsx:25:31)
+    at StyleRegistry (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\node_modules\styled-jsx\dist\index\index.js:449:36)
+    at PathnameContextProviderAdapter (webpack://next/src/shared/lib/router/adapters.tsx:70:3)
+    at AppContainer (webpack://next/src/server/render.tsx:737:27)
+    at AppContainerWithIsomorphicFiberStructure (webpack://next/src/server/render.tsx:785:11)
+    at div
+    at Body (webpack://next/src/server/render.tsx:1254:19)
+[03:41:45.730] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[03:41:45.730] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[03:41:45.730] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773852284201} /_vercel/insights/view
+[03:41:48.286] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773852286755} /_vercel/insights/view
+[03:41:48.286] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[03:41:52.604] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773852291074} /_vercel/insights/view
+[03:42:22.739] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773852321212} /_vercel/insights/view
+[03:43:20.838] Server  LOG        Reload env: .env.local
+[03:43:25.517] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[03:43:25.517] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","r":"","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773852383999} /_vercel/insights/view
+[03:43:26.828] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[03:43:32.865] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1773852391334} /_vercel/insights/view
+[03:43:32.865] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)

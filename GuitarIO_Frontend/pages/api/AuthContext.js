@@ -74,6 +74,7 @@ export function AuthProvider({ children }) {
     }
     setUser(null);
     setConnected(false);
+    location.reload();
   };
 
   return (

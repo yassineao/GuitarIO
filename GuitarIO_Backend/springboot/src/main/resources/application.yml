@@ -11,8 +11,11 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update        # dev only; prefer migrations later
-    show-sql: true            # helpful for debugging
+      ddl-auto: update
+    show-sql: true
     open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    defer-datasource-initialization: false
     properties:
       hibernate.format_sql: true
+      hibernate.temp.use_jdbc_metadata_defaults: false
