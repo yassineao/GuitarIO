@@ -28,6 +28,7 @@ body {
 
 body.main-layout {
   overflow: auto;
+  overflow-x: hidden ;
 }
 
 ul {
