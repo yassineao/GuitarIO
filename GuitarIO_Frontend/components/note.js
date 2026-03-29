@@ -7,40 +7,53 @@ const Note = ({ name, ext }) => {
   const chartRef = useRef(null);
   const soundRef = useRef(null);
 
-  return (
-    <li
-      className="item"
-      style={{
-        backgroundImage:
-          "url('https://r4.wallpaperflare.com/wallpaper/23/920/850/the-sun-music-palm-trees-background-wallpaper-c9f0384d517a6ddbe617b8af7051962d.jpg')",
-      }}
-    >
-      <div className="overlay">
-        <h2 className="class-name">Note: {chordLabel}</h2>
-      </div>
+  // Force refresh by changing key when chordLabel changes
+  const chordKey = useMemo(() => chordLabel, [chordLabel]);
 
+  useEffect(() => {
+    // Try both 'chord' and 'data-chord' for compatibility
+    if (chartRef.current) {
+      chartRef.current.setAttribute('data-chord', chordLabel);
+      chartRef.current.setAttribute('chord', chordLabel);
+    }
+    if (soundRef.current) {
+      soundRef.current.setAttribute('data-chord', chordLabel);
+      soundRef.current.setAttribute('chord', chordLabel);
+    }
+    if (window.ScalesChordsAPI && window.ScalesChordsAPI.render) {
+      window.ScalesChordsAPI.render(chartRef.current);
+      window.ScalesChordsAPI.render(soundRef.current);
+    }
+  }, [chordLabel]);
+
+  return (
+    <div>
       <div className="content">
         <div className="description">
           <div className="ima">
             <ins
+              key={chordKey}
               ref={chartRef}
               className="scales_chords_api"
+              data-chord={chordLabel}
               chord={chordLabel}
               instrument="guitar"
             ></ins>
           </div>
         </div>
-<div className="play-button">
-        <ins
-          ref={soundRef}
-          className="scales_chords_api"
-          chord={chordLabel}
-          output="sound"
-        ></ins>
-
+        <p className="play-label">Want to hear how it sounds?</p>
+        <div className="play-button">
+          <ins
+            key={chordKey + '-sound'}
+            ref={soundRef}
+            className="scales_chords_api"
+            data-chord={chordLabel}
+            chord={chordLabel}
+            output="sound"
+          ></ins>
+        </div>
       </div>
-      </div>
-    </li>
+    </div>
   );
 };
 
