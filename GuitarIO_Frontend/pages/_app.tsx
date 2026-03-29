@@ -28,7 +28,6 @@ export default function App({ Component, pageProps }: AppProps) {
    
 
       <AuthProvider>
-        <div className="main-layout">
           <header className="header" id="header">
             <Navbar />
           </header>
@@ -37,10 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
        
 
         
-        </div>
-        <footer className="footer" id="footer">
-  <Footer />
-</footer>
+        
         <Analytics />
       </AuthProvider>
     </>

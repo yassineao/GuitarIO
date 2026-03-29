@@ -2,10 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/options": "pages/options.js",
+  "/notes/[id]": "pages/notes/[id].js",
   "/notes": "pages/notes.js",
-  "/login": "pages/login.js",
-  "/majorNotes": "pages/majorNotes.js",
-  "/": "pages/index.js",
-  "/notes/[id]": "pages/notes/[id].js"
+  "/options": "pages/options.js"
 }

@@ -1,206 +1,88 @@
-import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Note from '../../components/note';
 
-import Link from 'next/link';
-export default function Notes({ name }) {
-  const router = useRouter();
+const chordss = [
+  "", "m", "dim", "aug", "maj7", "7", "m7", "dim7",
+  "m(maj7)", "m7b5", "sus2", "sus4", "6/9", "9", "11", "13", "5"
+];
 
-  
-  const id = name;
-  const [documents, setDocuments] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  // Display default content if name is 'default' or empty
+export default function Notes({ name }) {
+  const [selectedChord, setSelectedChord] = useState(chordss[0]);
+
+  // Trigger ScalesChordsAPI re-scan whenever the selected chord changes
+  useEffect(() => {
+    if (window.ScalesChordsAPI) {
+      window.ScalesChordsAPI.scan();
+    }
+  }, [selectedChord, name]);
+
   if (name === 'default' || !name) {
     return <div>This is the default content.</div>;
   }
 
-  // Get the ASCII value of the character
-  let charCode = name.charCodeAt(0);
-  let charCode1 = name.charCodeAt(0);
-  // Add 1 to the ASCII value
-  charCode++;
-  charCode1--;
-  // Check if the new character goes beyond 'g'
-  if (charCode > 'g'.charCodeAt(0)) {
-      charCode = 'a'.charCodeAt(0); // Wrap around to 'a'
-  }
-  if (charCode1 < 'a'.charCodeAt(0)) {
-    charCode1 = 'g'.charCodeAt(0); // Wrap around to 'a'
-}
-  // Convert back to a character
-  let newCharacter = String.fromCharCode(charCode);
-  let newCharacter1 = String.fromCharCode(charCode1);
-  const handleRedirect = () => {
-    window.location.href = `/notes/${newCharacter}`; // Replace with the desired URL
-};const handleRedirect1 = () => {
-  window.location.href = `/notes/${newCharacter1}`; // Replace with the desired URL
-};
-  
-  const uppercaseId = id ? String(id).toUpperCase() : "";
-  const chordss = [
-    "",
-    "m",
-    "dim",
-    "aug",
-    "maj7",
-    "7",
-    "m7",
-    "dim7",
-    "m(maj7)",
-    "m7b5",
-    "sus2",
-    "sus4",
-    "6/9",
-    "9",
-    "11",
-    "13",
-    "5"
-  ];
+  // Previous / next note navigation (a → b → … → g → a)
+  const charCode = name.charCodeAt(0);
+  const nextChar = String.fromCharCode(charCode >= 'g'.charCodeAt(0) ? 'a'.charCodeAt(0) : charCode + 1);
+  const prevChar = String.fromCharCode(charCode <= 'a'.charCodeAt(0) ? 'g'.charCodeAt(0) : charCode - 1);
 
-  const updateChord = () => {
-    if (window.ScalesChordsAPI) {
-      window.ScalesChordsAPI.scan();
-    }
-  };
+  const uppercaseId = String(name).toUpperCase();
 
-
-  useEffect(() => {
-    const activate = (e) => {
-      const slider = document.querySelector("#unique-slider .slider");
-      const items = slider.querySelectorAll(".item");
-      let newIndex = currentIndex;
-
-      if (e.target.closest(".next")) {
-        slider.append(items[0]);
-        newIndex = (currentIndex + 1) % items.length;
-      } else if (e.target.closest(".prev")) {
-        slider.prepend(items[items.length - 1]);
-        newIndex = (currentIndex - 1 + items.length) % items.length;
-      }
-
-      setCurrentIndex(newIndex);
-      updateChord();
-    };
-
-    document.addEventListener("click", activate);
-
-    // Initialize the chord for the first item
-    updateChord();
-
-    return () => {
-      document.removeEventListener("click", activate);
-    };
-  }, [currentIndex]);
-
-  useEffect(() => {
-    // Trigger an update on chord when `id` changes
-    updateChord();
-  }, [id, currentIndex]);
-
-  
   return (
-    <div >
-      <section id='titel'>
-      <div className="nav" id='1'>
-          <button  onClick={handleRedirect1}>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 19L8 12L15 5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-          <h1 className="home__title1">
-          <div data-gliitch={uppercaseId} className="gliitch">
-            {uppercaseId}
-          </div>
+    <div className="major-notes-cyber">
+
+      {/* ── Title + note navigation ── */}
+      <div className="major-notes-title">
+        <button onClick={() => window.location.href = `/notes/${prevChar}`}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+        <h1>
+          Note: {uppercaseId}
+        
         </h1>
-        <button  onClick={handleRedirect}>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 5L16 12L9 19"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      
-      </section>
 
-      <section id="unique-slider">
-        <ul className="slider">
-          {chordss.map((chord, index) => (
-            <Note key={index} name={name} ext={chord} />
+        <button onClick={() => window.location.href = `/notes/${nextChar}`}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      {/* ── Chord display ── */}
+      <div className="major-notes-chord">
+        <div>
+          {chordss.map((chord) => (
+            <div
+              key={chord}
+              style={{ display: selectedChord === chord ? 'block' : 'none' }}
+            >
+              <Note name={name} ext={chord} />
+            </div>
           ))}
-        </ul>
-        <nav className="nav">
-          <button className="btn prev">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 19L8 12L15 5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
+        </div>
+      </div>
 
-          <button className="btn next">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 5L16 12L9 19"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+      {/* ── Chord selector buttons ── */}
+      <div className="major-notes-buttons">
+        {chordss.map((chord) => (
+          <button
+            key={chord}
+            onClick={() => setSelectedChord(chord)}
+          >
+            {chord === "" ? "Major" : chord}
           </button>
-        </nav>
-      </section>
+        ))}
+      </div>
+
     </div>
   );
 }
 
 export async function getServerSideProps(context) {
-  const { id } = context.params; // Extract the id from the route parameters
-  const name = id || 'default'; // Ensure a default value if id is not present
-
+  const { id } = context.params;
   return {
-    props: {
-      name,
-    },
+    props: { name: id || 'default' },
   };
 }

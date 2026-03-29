@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
@@ -43,7 +44,8 @@ export default function Document() {
     }}
   />
       </body>
-      
+   
+  <Footer />
     </Html>
   );
 }

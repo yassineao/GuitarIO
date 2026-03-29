@@ -1,20 +1,13 @@
-[00:00:13.861] Server  LOG      ✓ Ready in 13.1s
-[00:00:21.895] Server  LOG      ○ Compiling / ...
-[00:00:23.220] Server  ERROR   Warning: Invalid DOM property `class`. Did you mean `className`?
-    at section
-    at div
-    at div
-    at Home (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\index.jsx:8:43)
-    at div
-    at AuthProvider (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\api\AuthContext.js:7:32)
-    at App (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\_app.tsx:25:31)
-    at StyleRegistry (C:\Users\yassu\GuitarIO\GuitarIO_Frontend\node_modules\styled-jsx\dist\index\index.js:449:36)
-    at PathnameContextProviderAdapter (webpack://next/src/shared/lib/router/adapters.tsx:70:3)
-    at AppContainer (webpack://next/src/server/render.tsx:737:27)
-    at AppContainerWithIsomorphicFiberStructure (webpack://next/src/server/render.tsx:785:11)
-    at div
-    at Body (webpack://next/src/server/render.tsx:1254:19)
-[00:00:25.736] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+[00:00:02.645] Server  LOG      ✓ Ready in 2s
+[00:00:02.666] Server  WARN     ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:00:04.018] Server  WARN     ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:00:06.384] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:06.384] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/login","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822073489} /_vercel/insights/view
+[00:00:19.354] Server  LOG        Reload env: .env.local
+[00:00:39.744] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:39.744] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/login","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822106851} /_vercel/insights/view
+[00:05:38.657] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822405744} /_vercel/insights/view
+[00:05:38.658] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
     at div
     at section
     at div
@@ -29,1189 +22,14 @@
     at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
     at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
     at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-[00:00:29.967] Browser LOG     [Vercel Web Analytics] Failed to load script from https://va.vercel-scripts.com/v1/script.debug.js. Please check if any ad blockers are enabled and try again.
-[00:00:32.365] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:00:40.301] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:40.301] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774787677195} /_vercel/insights/view
-[00:02:53.063] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:02:53.063] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774787809962} /_vercel/insights/view
-[00:05:28.738] Browser ERROR   uncaughtError: ReferenceError: useEffect is not defined
-[00:05:28.738] Browser ERROR   uncaughtError: ReferenceError: useEffect is not defined
-[00:05:28.738] Browser ERROR   The above error occurred in the <MajorNotes> component:
-
-    at MajorNotes (webpack-internal:///(pages-dir-browser)/./pages/majorNotes.js:32:5)
-    at div
-    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
-    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
-    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
-    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
-    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
-    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
-    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
-    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-
-React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
-[00:06:03.286] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:06:03.286] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774788000182} /_vercel/insights/view
-[00:09:56.714] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:09:56.714] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774788233618} /_vercel/insights/view
-[00:38:08.999] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:38:08.999] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774789925891} /_vercel/insights/view
-[00:38:40.238] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:38:40.238] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774789957139} /_vercel/insights/view
-[00:41:36.286] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:41:36.286] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790133190} /_vercel/insights/view
-[00:42:12.052] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:42:12.052] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790168955} /_vercel/insights/view
-[00:43:04.718] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:43:04.719] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790221622} /_vercel/insights/view
-[00:43:21.529] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:43:21.529] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790238429} /_vercel/insights/view
-[00:44:34.670] Server  ERROR    ⨯ ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:17:1]
- 14 │         // For now, it just ensures the Note component updates when selectedChord changes
- 15 │       }, [selectedChord]);
- 16 │     
- 17 │ ╭─▶   return (
- 18 │ │       <div style={{
- 19 │ │         display: 'grid',
- 20 │ │         gridTemplateColumns: '1fr 1fr',
- 21 │ │         gap: '2rem',
- 22 │ │         minHeight: '80vh',
- 23 │ │         alignItems: 'center',
- 24 │ │         background: '#0a0a14',
- 25 │ │         padding: '2rem',
- 26 │ │         borderRadius: '1.5rem',
- 27 │ │         boxShadow: '0 0 40px #00f0ff44',
- 28 │ │       }}>
- 29 │ │         {/* Left: Grid of notes */}
- 30 │ │         <div style={{
- 31 │ │           display: 'grid',
- 32 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 33 │ │           gap: '1.2rem',
- 34 │ │           justifyItems: 'center',
- 35 │ │         }}>
- 36 │ │           {basicGuitarChords.map((chord) => (
- 37 │ │             <button
- 38 │ │               key={chord}
- 39 │ │               onClick={() => setSelectedChord(chord)}
- 40 │ │               className="gliitch"
- 41 │ │               data-gliitch={chord}
- 42 │ │               style={{
- 43 │ │                 fontSize: '2rem',
- 44 │ │                 padding: '1.2rem 2.2rem',
- 45 │ │                 border: selectedChord === chord ? '2px solid #00f0ff' : '2px solid #222',
- 46 │ │                 background: selectedChord === chord ? '#181a2b' : '#12101e',
- 47 │ │                 color: '#00f0ff',
- 48 │ │                 borderRadius: '1rem',
- 49 │ │                 marginBottom: '0.5rem',
- 50 │ │                 cursor: 'pointer',
- 51 │ │                 boxShadow: selectedChord === chord ? '0 0 16px #00f0ff' : '0 0 8px #222',
- 52 │ │                 transition: 'all 0.2s',
- 53 │ │                 width: '100%',
- 54 │ │                 fontFamily: 'Orbitron, sans-serif',
- 55 │ │               }}
- 56 │ │             >
- 57 │ │               {chord}
- 58 │ │             </button>
- 59 │ │           ))}
- 60 │ │         </div>
- 61 │ │   
- 62 │ │         {/* Right: Selected note display */}
- 63 │ │         <div style={{
- 64 │ │           display: 'flex',
- 65 │ │           flexDirection: 'column',
- 66 │ │           alignItems: 'center',
- 67 │ │           background: '#181a2b',
- 68 │ │           borderRadius: '1.5rem',
- 69 │ │           padding: '2rem',
- 70 │ │           boxShadow: '0 0 24px #00f0ff33',
- 71 │ │         }}>
- 72 │ │           <h2 className="gliitch" data-gliitch={selectedChord} style={{ color: '#00f0ff', fontSize: '2.5rem', marginBottom: '1.5rem', fontFamily: 'Orbitron, sans-serif' }}>{selectedChord}</h2>
- 73 │ │           <Note name={selectedChord} ext={""} />
- 74 │ │         </div>
- 75 │ │       </div>
- 76 │ ╰─▶   );
- 77 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:77:1]
- 74 │       </div>
- 75 │     </div>
- 76 │   );
- 77 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[00:44:34.740] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:17:1]
- 14 │         // For now, it just ensures the Note component updates when selectedChord changes
- 15 │       }, [selectedChord]);
- 16 │     
- 17 │ ╭─▶   return (
- 18 │ │       <div style={{
- 19 │ │         display: 'grid',
- 20 │ │         gridTemplateColumns: '1fr 1fr',
- 21 │ │         gap: '2rem',
- 22 │ │         minHeight: '80vh',
- 23 │ │         alignItems: 'center',
- 24 │ │         background: '#0a0a14',
- 25 │ │         padding: '2rem',
- 26 │ │         borderRadius: '1.5rem',
- 27 │ │         boxShadow: '0 0 40px #00f0ff44',
- 28 │ │       }}>
- 29 │ │         {/* Left: Grid of notes */}
- 30 │ │         <div style={{
- 31 │ │           display: 'grid',
- 32 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 33 │ │           gap: '1.2rem',
- 34 │ │           justifyItems: 'center',
- 35 │ │         }}>
- 36 │ │           {basicGuitarChords.map((chord) => (
- 37 │ │             <button
- 38 │ │               key={chord}
- 39 │ │               onClick={() => setSelectedChord(chord)}
- 40 │ │               className="gliitch"
- 41 │ │               data-gliitch={chord}
- 42 │ │               style={{
- 43 │ │                 fontSize: '2rem',
- 44 │ │                 padding: '1.2rem 2.2rem',
- 45 │ │                 border: selectedChord === chord ? '2px solid #00f0ff' : '2px solid #222',
- 46 │ │                 background: selectedChord === chord ? '#181a2b' : '#12101e',
- 47 │ │                 color: '#00f0ff',
- 48 │ │                 borderRadius: '1rem',
- 49 │ │                 marginBottom: '0.5rem',
- 50 │ │                 cursor: 'pointer',
- 51 │ │                 boxShadow: selectedChord === chord ? '0 0 16px #00f0ff' : '0 0 8px #222',
- 52 │ │                 transition: 'all 0.2s',
- 53 │ │                 width: '100%',
- 54 │ │                 fontFamily: 'Orbitron, sans-serif',
- 55 │ │               }}
- 56 │ │             >
- 57 │ │               {chord}
- 58 │ │             </button>
- 59 │ │           ))}
- 60 │ │         </div>
- 61 │ │   
- 62 │ │         {/* Right: Selected note display */}
- 63 │ │         <div style={{
- 64 │ │           display: 'flex',
- 65 │ │           flexDirection: 'column',
- 66 │ │           alignItems: 'center',
- 67 │ │           background: '#181a2b',
- 68 │ │           borderRadius: '1.5rem',
- 69 │ │           padding: '2rem',
- 70 │ │           boxShadow: '0 0 24px #00f0ff33',
- 71 │ │         }}>
- 72 │ │           <h2 className="gliitch" data-gliitch={selectedChord} style={{ color: '#00f0ff', fontSize: '2.5rem', marginBottom: '1.5rem', fontFamily: 'Orbitron, sans-serif' }}>{selectedChord}</h2>
- 73 │ │           <Note name={selectedChord} ext={""} />
- 74 │ │         </div>
- 75 │ │       </div>
- 76 │ ╰─▶   );
- 77 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:77:1]
- 74 │       </div>
- 75 │     </div>
- 76 │   );
- 77 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[00:44:34.848] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:17:1]
- 14 │         // For now, it just ensures the Note component updates when selectedChord changes
- 15 │       }, [selectedChord]);
- 16 │     
- 17 │ ╭─▶   return (
- 18 │ │       <div style={{
- 19 │ │         display: 'grid',
- 20 │ │         gridTemplateColumns: '1fr 1fr',
- 21 │ │         gap: '2rem',
- 22 │ │         minHeight: '80vh',
- 23 │ │         alignItems: 'center',
- 24 │ │         background: '#0a0a14',
- 25 │ │         padding: '2rem',
- 26 │ │         borderRadius: '1.5rem',
- 27 │ │         boxShadow: '0 0 40px #00f0ff44',
- 28 │ │       }}>
- 29 │ │         {/* Left: Grid of notes */}
- 30 │ │         <div style={{
- 31 │ │           display: 'grid',
- 32 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 33 │ │           gap: '1.2rem',
- 34 │ │           justifyItems: 'center',
- 35 │ │         }}>
- 36 │ │           {basicGuitarChords.map((chord) => (
- 37 │ │             <button
- 38 │ │               key={chord}
- 39 │ │               onClick={() => setSelectedChord(chord)}
- 40 │ │               className="gliitch"
- 41 │ │               data-gliitch={chord}
- 42 │ │               style={{
- 43 │ │                 fontSize: '2rem',
- 44 │ │                 padding: '1.2rem 2.2rem',
- 45 │ │                 border: selectedChord === chord ? '2px solid #00f0ff' : '2px solid #222',
- 46 │ │                 background: selectedChord === chord ? '#181a2b' : '#12101e',
- 47 │ │                 color: '#00f0ff',
- 48 │ │                 borderRadius: '1rem',
- 49 │ │                 marginBottom: '0.5rem',
- 50 │ │                 cursor: 'pointer',
- 51 │ │                 boxShadow: selectedChord === chord ? '0 0 16px #00f0ff' : '0 0 8px #222',
- 52 │ │                 transition: 'all 0.2s',
- 53 │ │                 width: '100%',
- 54 │ │                 fontFamily: 'Orbitron, sans-serif',
- 55 │ │               }}
- 56 │ │             >
- 57 │ │               {chord}
- 58 │ │             </button>
- 59 │ │           ))}
- 60 │ │         </div>
- 61 │ │   
- 62 │ │         {/* Right: Selected note display */}
- 63 │ │         <div style={{
- 64 │ │           display: 'flex',
- 65 │ │           flexDirection: 'column',
- 66 │ │           alignItems: 'center',
- 67 │ │           background: '#181a2b',
- 68 │ │           borderRadius: '1.5rem',
- 69 │ │           padding: '2rem',
- 70 │ │           boxShadow: '0 0 24px #00f0ff33',
- 71 │ │         }}>
- 72 │ │           <h2 className="gliitch" data-gliitch={selectedChord} style={{ color: '#00f0ff', fontSize: '2.5rem', marginBottom: '1.5rem', fontFamily: 'Orbitron, sans-serif' }}>{selectedChord}</h2>
- 73 │ │           <Note name={selectedChord} ext={""} />
- 74 │ │         </div>
- 75 │ │       </div>
- 76 │ ╰─▶   );
- 77 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:77:1]
- 74 │       </div>
- 75 │     </div>
- 76 │   );
- 77 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/majorNotes.js
-[00:45:00.513] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:17:1]
- 14 │         // For now, it just ensures the Note component updates when selectedChord changes
- 15 │       }, [selectedChord]);
- 16 │     
- 17 │ ╭─▶   return (
- 18 │ │       <div style={{
- 19 │ │         display: 'grid',
- 20 │ │         gridTemplateColumns: '1fr 1fr',
- 21 │ │         gap: '2rem',
- 22 │ │         minHeight: '80vh',
- 23 │ │         alignItems: 'center',
- 24 │ │         background: '#0a0a14',
- 25 │ │         padding: '2rem',
- 26 │ │         borderRadius: '1.5rem',
- 27 │ │         boxShadow: '0 0 40px #00f0ff44',
- 28 │ │       }}>
- 29 │ │         {/* Left: Grid of notes */}
- 30 │ │         <div style={{
- 31 │ │           display: 'grid',
- 32 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 33 │ │           gap: '1.2rem',
- 34 │ │           justifyItems: 'center',
- 35 │ │         }}>
- 36 │ │           {basicGuitarChords.map((chord) => (
- 37 │ │             <button
- 38 │ │               key={chord}
- 39 │ │               onClick={() => setSelectedChord(chord)}
- 40 │ │               className="gliitch"
- 41 │ │               data-gliitch={chord}
- 42 │ │               style={{
- 43 │ │                 fontSize: '2rem',
- 44 │ │                 padding: '1.2rem 2.2rem',
- 45 │ │                 border: selectedChord === chord ? '2px solid #00f0ff' : '2px solid #222',
- 46 │ │                 background: selectedChord === chord ? '#181a2b' : '#12101e',
- 47 │ │                 color: '#00f0ff',
- 48 │ │                 borderRadius: '1rem',
- 49 │ │                 marginBottom: '0.5rem',
- 50 │ │                 cursor: 'pointer',
- 51 │ │                 boxShadow: selectedChord === chord ? '0 0 16px #00f0ff' : '0 0 8px #222',
- 52 │ │                 transition: 'all 0.2s',
- 53 │ │                 width: '100%',
- 54 │ │                 fontFamily: 'Orbitron, sans-serif',
- 55 │ │               }}
- 56 │ │             >
- 57 │ │               {chord}
- 58 │ │             </button>
- 59 │ │           ))}
- 60 │ │         </div>
- 61 │ │   
- 62 │ │         {/* Right: Selected note display */}
- 63 │ │         <div style={{
- 64 │ │           display: 'flex',
- 65 │ │           flexDirection: 'column',
- 66 │ │           alignItems: 'center',
- 67 │ │           background: '#181a2b',
- 68 │ │           borderRadius: '1.5rem',
- 69 │ │           padding: '2rem',
- 70 │ │           boxShadow: '0 0 24px #00f0ff33',
- 71 │ │         }}>
- 72 │ │           <h2 className="gliitch" data-gliitch={selectedChord} style={{ color: '#00f0ff', fontSize: '2.5rem', marginBottom: '1.5rem', fontFamily: 'Orbitron, sans-serif' }}>{selectedChord}</h2>
- 73 │ │           <Note name={selectedChord} ext={""} />
- 74 │ │         </div>
- 75 │ │       </div>
- 76 │ ╰─▶   );
- 77 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:77:1]
- 74 │       </div>
- 75 │     </div>
- 76 │   );
- 77 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[00:46:47.337] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:46:47.337] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790444237} /_vercel/insights/view
-[00:48:40.126] Browser ERROR   uncaughtError: ReferenceError: useEffect is not defined
-[00:48:40.126] Browser ERROR   uncaughtError: ReferenceError: useEffect is not defined
-[00:48:40.126] Browser ERROR   The above error occurred in the <MajorNotes> component:
-
-    at MajorNotes (webpack-internal:///(pages-dir-browser)/./pages/majorNotes.js:28:94)
-    at div
-    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
-    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
-    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
-    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
-    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
-    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
-    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
-    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-
-React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
-[00:48:57.986] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:48:57.986] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790574881} /_vercel/insights/view
-[00:49:16.779] Browser ERROR   Warning: Extra attributes from the server: %s%s id 
-    at ins
-    at div
-    at div
-    at div
-    at div
-    at Note (webpack-internal:///(pages-dir-browser)/./components/note.js:14:17)
-    at div
-    at div
-    at MajorNotes (webpack-internal:///(pages-dir-browser)/./pages/majorNotes.js:29:94)
-    at div
-    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
-    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
-    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
-    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
-    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
-    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
-    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
-    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-[00:49:16.779] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:49:16.779] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790593684} /_vercel/insights/view
-[00:51:20.459] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:51:20.459] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790717362} /_vercel/insights/view
-[00:51:48.121] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:51:48.121] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790745022} /_vercel/insights/view
-[00:52:16.906] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:52:16.906] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790773800} /_vercel/insights/view
-[00:54:21.023] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:54:21.023] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790897917} /_vercel/insights/view
-[00:55:41.184] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:55:41.184] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774790978088} /_vercel/insights/view
-[00:59:47.454] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:59:47.454] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774791224354} /_vercel/insights/view
-[01:00:38.250] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:00:38.250] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774791275151} /_vercel/insights/view
-[01:01:23.378] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:01:23.378] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774791320279} /_vercel/insights/view
-[01:04:40.938] Server  ERROR    ⨯ ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[01:04:41.733] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/majorNotes.js
-[01:05:10.640] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[01:07:37.693] Server  ERROR    ⨯ ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[01:07:37.751] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/majorNotes.js
-[01:08:55.588] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[01:08:55.747] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[01:08:56.101] Server  ERROR    ⨯ ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[01:08:56.694] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/majorNotes.js
-[01:08:57.681] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-
-Caused by:
-    Syntax Error
-[01:08:57.812] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[01:08:58.465] Server  LOG      ○ Compiling /_error ...
-[01:09:44.055] Browser ERROR   ./pages/majorNotes.js
-Error:   × Return statement is not allowed here
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:21:1]
- 18 │         setNoteMap(map);
- 19 │       }, []);
- 20 │     
- 21 │ ╭─▶   return (
- 22 │ │       <div style={{
- 23 │ │         display: 'grid',
- 24 │ │         gridTemplateColumns: '1fr 1fr',
- 25 │ │         gap: '2rem',
- 26 │ │         minHeight: '80vh',
- 27 │ │         alignItems: 'center',
- 28 │ │         background: '#0a0a14',
- 29 │ │         padding: '2rem',
- 30 │ │         borderRadius: '1.5rem',
- 31 │ │         boxShadow: '0 0 40px #00f0ff44',
- 32 │ │       }}>
- 33 │ │         {/* Right: Selected note display */}
- 34 │ │         <div style={{
- 35 │ │           flexDirection: 'column',
- 36 │ │           alignItems: 'center',
- 37 │ │           background: '#181a2b',
- 38 │ │           borderRadius: '1.5rem',
- 39 │ │           padding: '2rem',
- 40 │ │           boxShadow: '0 0 24px #00f0ff33',
- 41 │ │           maxWidth: '80%',
- 42 │ │         }}>
- 43 │ │           <h1>{selectedChord}</h1>
- 44 │ │           {noteMap[selectedChord]}
- 45 │ │         </div>
- 46 │ │         {/* Left: Grid of notes */}
- 47 │ │         <div style={{
- 48 │ │           display: 'grid',
- 49 │ │           gridTemplateColumns: 'repeat(2, 1fr)',
- 50 │ │           gap: '1.2rem',
- 51 │ │           justifyItems: 'center',
- 52 │ │         }}>
- 53 │ │           {basicGuitarChords.map((chord) => (
- 54 │ │             <button
- 55 │ │               key={chord}
- 56 │ │               onClick={() => setSelectedChord(chord)}
- 57 │ │             >
- 58 │ │               {chord}
- 59 │ │             </button>
- 60 │ │           ))}
- 61 │ │         </div>
- 62 │ │       </div>
- 63 │ ╰─▶   );
- 64 │     }
-    ╰────
-  × Expression expected
-    ╭─[C:\Users\yassu\GuitarIO\GuitarIO_Frontend\pages\majorNotes.js:64:1]
- 61 │       </div>
- 62 │     </div>
- 63 │   );
- 64 │ }
-    · ─
-    ╰────
-
-Caused by:
-    Syntax Error
-[01:09:44.120] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[01:09:44.267] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[01:09:45.298] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:09:45.298] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774791822203} /_vercel/insights/view
-[01:09:48.650] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:09:48.650] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774791825553} /_vercel/insights/view
-[01:13:01.511] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:13:01.511] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792018405} /_vercel/insights/view
-[01:17:11.019] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:17:11.019] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792267916} /_vercel/insights/view
-[01:20:30.036] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792466930} /_vercel/insights/view
-[01:20:30.036] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[01:20:32.559] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792469455} /_vercel/insights/view
-[01:20:32.559] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+[00:05:38.658] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:05:41.426] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822408514} /_vercel/insights/view
+[00:06:43.035] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:43.035] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822470139} /_vercel/insights/view
+[00:06:44.682] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822471759} /_vercel/insights/view
+[00:06:44.683] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:06:45.669] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822472762} /_vercel/insights/view
+[00:06:45.669] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
     at div
     at div
     at div
@@ -1228,13 +46,202 @@ Caused by:
     at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
     at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
     at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
-[01:20:55.093] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/login","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792491991} /_vercel/insights/view
-[01:20:57.491] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792494395} /_vercel/insights/view
-[01:21:01.450] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792498352} /_vercel/insights/view
-[01:21:09.426] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792506325} /_vercel/insights/view
-[01:21:22.478] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:21:22.478] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/a color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/a","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792519379} /_vercel/insights/view
-[01:21:26.262] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:21:26.262] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792523166} /_vercel/insights/view
-[01:21:30.478] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[01:21:30.478] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774792527378} /_vercel/insights/view
+[00:06:48.421] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822475527} /_vercel/insights/view
+[00:06:50.850] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:50.850] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822477951} /_vercel/insights/view
+[00:13:13.012] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822860105} /_vercel/insights/view
+[00:13:13.013] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:13:14.201] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822861292} /_vercel/insights/view
+[00:13:14.201] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at div
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:61:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:14:35.214] Browser LOG     Refreshing page data due to server-side change
+[00:14:35.951] Browser LOG     Refreshing page data due to server-side change
+[00:14:38.488] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822945578} /_vercel/insights/view
+[00:15:02.528] Browser LOG     Refreshing page data due to server-side change
+[00:15:02.535] Browser LOG     Refreshing page data due to server-side change
+[00:15:03.958] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:03.958] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822971063} /_vercel/insights/view
+[00:15:12.952] Browser LOG     Refreshing page data due to server-side change
+[00:15:24.571] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822991650} /_vercel/insights/view
+[00:15:24.571] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:15:25.610] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822992712} /_vercel/insights/view
+[00:15:26.017] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774822993088} /_vercel/insights/view
+[00:15:26.344] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:15:34.699] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:34.700] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823001805} /_vercel/insights/view
+[00:16:00.031] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823027125} /_vercel/insights/view
+[00:16:00.031] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:16:02.629] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823029724} /_vercel/insights/view
+[00:16:02.629] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at div
+    at div
+    at Card (webpack-internal:///(pages-dir-browser)/./components/card.js:11:17)
+    at section
+    at div
+    at Notes
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:16:05.107] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823032208} /_vercel/insights/view
+[00:16:09.265] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823036371} /_vercel/insights/view
+[00:16:21.036] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:21.036] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823048139} /_vercel/insights/view
+[00:16:23.027] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:23.027] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823050133} /_vercel/insights/view
+[00:16:32.446] Browser LOG     Refreshing page data due to server-side change
+[00:16:32.448] Browser LOG     Refreshing page data due to server-side change
+[00:16:36.335] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:36.335] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823063441} /_vercel/insights/view
+[00:16:42.833] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823069927} /_vercel/insights/view
+[00:16:42.833] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at div
+    at div
+    at Card (webpack-internal:///(pages-dir-browser)/./components/card.js:11:17)
+    at section
+    at div
+    at Notes
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:16:42.833] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:16:45.091] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:45.091] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823072196} /_vercel/insights/view
+[00:16:50.843] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823077944} /_vercel/insights/view
+[00:16:50.843] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:16:52.650] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823079750} /_vercel/insights/view
+[00:16:52.650] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at section
+    at div
+    at div
+    at Home (webpack-internal:///(pages-dir-browser)/./pages/index.jsx:23:84)
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:16:58.833] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823085940} /_vercel/insights/view
+[00:16:59.516] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823086618} /_vercel/insights/view
+[00:17:01.296] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823088402} /_vercel/insights/view
+[00:17:35.306] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:17:35.306] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823122407} /_vercel/insights/view
+[00:17:51.592] Browser LOG     Refreshing page data due to server-side change
+[00:17:52.588] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:17:52.588] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823139695} /_vercel/insights/view
+[00:17:56.018] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:17:56.739] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823143830} /_vercel/insights/view
+[00:17:56.739] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at div
+    at div
+    at Card (webpack-internal:///(pages-dir-browser)/./components/card.js:11:17)
+    at section
+    at div
+    at Notes
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:17:58.163] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/play-song color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/play-song","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823145265} /_vercel/insights/view
+[00:18:02.604] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823149697} /_vercel/insights/view
+[00:18:04.883] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823151991} /_vercel/insights/view
+[00:18:06.441] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#home color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/#home","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823153547} /_vercel/insights/view
+[00:18:29.351] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823176445} /_vercel/insights/view
+[00:18:30.590] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823177697} /_vercel/insights/view
+[00:18:35.477] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:18:35.477] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823182577} /_vercel/insights/view
+[00:20:42.844] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:20:42.844] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823309949} /_vercel/insights/view
+[00:21:59.604] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:21:59.605] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/majorNotes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/majorNotes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823386704} /_vercel/insights/view
+[00:24:12.536] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:24:12.536] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823519640} /_vercel/insights/view
+[00:25:25.645] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/options color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/options","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823592726} /_vercel/insights/view
+[00:25:25.645] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:25:29.024] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:29.024] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/a color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/a","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823596128} /_vercel/insights/view
+[00:25:32.238] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:32.238] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823599343} /_vercel/insights/view
+[00:25:35.347] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:35.347] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/c color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/c","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823602453} /_vercel/insights/view
+[00:25:37.528] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:37.528] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/d color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/d","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823604636} /_vercel/insights/view
+[00:26:00.651] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823627742} /_vercel/insights/view
+[00:26:00.651] Browser ERROR   Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className 
+    at div
+    at div
+    at div
+    at Card (webpack-internal:///(pages-dir-browser)/./components/card.js:11:17)
+    at section
+    at div
+    at Notes
+    at AuthProvider (webpack-internal:///(pages-dir-browser)/./pages/api/AuthContext.js:17:25)
+    at App (webpack-internal:///(pages-dir-browser)/./pages/_app.tsx:59:16)
+    at PathnameContextProviderAdapter (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/shared/lib/router/adapters.js:78:43)
+    at PagesDevOverlayErrorBoundary (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-error-boundary.js:25:9)
+    at PagesDevOverlayBridge (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup.js:44:34)
+    at Container (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:75:1)
+    at AppContainer (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:171:25)
+    at Root (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/index.js:390:17)
+[00:26:00.651] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:26:03.413] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:26:03.413] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/d color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/d","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823630517} /_vercel/insights/view
+[00:27:43.212] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:43.212] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/e color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/e","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823730316} /_vercel/insights/view
+[00:28:09.114] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:28:09.114] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/e color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/e","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823756221} /_vercel/insights/view
+[00:28:46.288] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:28:46.288] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/f color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/f","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823793393} /_vercel/insights/view
+[00:30:04.619] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:30:04.619] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/g color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/g","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823871726} /_vercel/insights/view
+[00:30:40.364] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:30:40.364] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/g color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/g","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823907467} /_vercel/insights/view
+[00:31:58.464] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:58.464] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/a color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/a","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823985556} /_vercel/insights/view
+[00:32:00.304] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:32:00.304] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/notes/b color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/notes/b","sdkn":"@vercel/analytics/react","sdkv":"1.6.1","sv":"0.1.3","ts":1774823987410} /_vercel/insights/view
