@@ -315,6 +315,8 @@ body {
 
 .lessonss {
   padding: 6%;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 /* ── Glitch flicker on the title ── */

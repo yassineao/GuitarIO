@@ -11,7 +11,6 @@ const quickLinks = [
 const practiceLinks = [
   { label: "Chapters", href: "/Chapters" },
   { label: "Major Notes", href: "/majorNotes" },
-  { label: "Protected", href: "/protected" },
 ];
 
 const Footer = () => {

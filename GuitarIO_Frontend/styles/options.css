@@ -75,7 +75,7 @@
     clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
     position: absolute;
     inset: 1px;
-    background-color: #160016;
+    background-color: #000000;
     z-index: 1;
 }
 
