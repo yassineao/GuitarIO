@@ -97,6 +97,7 @@
 .miid {
     place-items: center;
         padding-top: 10%;
+            height: 90vh;
     }
   #formi .heading {
     display: block;

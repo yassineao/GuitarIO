@@ -1,25 +1,52 @@
 .home {
   position: relative;
- width: 100%;
+  width: 100%;
   height: 100vh;   /* full window height */
-      align-content: center;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.home-page {
+  width: 100%;
+  overflow: hidden;
+  background: #050009;
 }
 
 .home__container {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
   padding-top: 3.5rem;
+  display: grid;
+  place-items: center;
 }
 
 .home__data {
   text-align: center;
 }
 .category__container.container.grid {
-    margin-top: 6%;
+  margin-top: 6%;
+  margin-inline: auto;
+  gap: 4rem;
 }
 
 @media (max-width: 600px) {
+  .category {
+    height: auto;
+    min-height: 46vh;
+    padding: 3rem 0 4rem;
+  }
+
   .category__container.container.grid {
     grid-template-columns: 1fr;
     margin-top: 13%;
+    justify-items: center;
+  }
+
+  .category__card {
+    margin-inline: 1rem;
+    width: min(100%, 280px);
   }
 }
 .home__title {

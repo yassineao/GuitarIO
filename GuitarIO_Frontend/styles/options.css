@@ -231,35 +231,37 @@ h1.home__titlee {
 .opt {
     align-content: center;
     overflow: hidden;
-    position: fixed; /* Change to fixed to cover the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - var(--nav-height));
 }
 
 .opt::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('https://r4.wallpaperflare.com/wallpaper/973/238/547/vaporwave-vapor-1980s-80scity-wallpaper-a8e67cca5fbc17896ef0f98212692bf0.jpg');
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(5, 0, 12, 0.92) 0%, rgba(8, 0, 20, 0.72) 42%, rgba(0, 0, 0, 0.88) 100%),
+        radial-gradient(circle at 18% 25%, rgba(255, 0, 255, 0.35), transparent 34%),
+        radial-gradient(circle at 82% 18%, rgba(0, 255, 247, 0.22), transparent 30%),
+        url('/guitar.jpg');
     background-size: cover;
-    z-index: -1; /* Ensures the background stays behind the content */
-    transform: scale(1.1); /* Scale to cover edges when blurred */
+    background-position: center right;
+    z-index: -2;
+    transform: scale(1.04);
 }
 
 .opt::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
-    z-index: -1; /* Keep the dark overlay behind the content */
+    inset: 0;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.46));
+    background-size: 58px 58px, 58px 58px, 100% 100%;
+    z-index: -1;
+    opacity: 0.75;
 }
 #unique-neon-btn .container {
     height: auto !important;
@@ -340,4 +342,126 @@ h1.home__titlee {
 
 #unique-neon-btn .neon-btn:nth-of-type(5) {
     margin-left: clamp(160px, 50vw, 550px);
+}
+
+.options-page {
+    position: relative;
+    min-height: calc(100vh - var(--nav-height));
+    overflow: hidden;
+    padding-top: var(--nav-height);
+    background:
+        radial-gradient(circle at 15% 18%, rgba(255, 0, 255, 0.26), transparent 26rem),
+        radial-gradient(circle at 90% 12%, rgba(0, 255, 247, 0.18), transparent 24rem),
+        #050009;
+}
+
+.options-page::before {
+    content: "";
+    position: absolute;
+    left: 4vw;
+    bottom: 6rem;
+    width: min(24vw, 260px);
+    aspect-ratio: 1;
+    border: 2px solid rgba(216, 255, 55, 0.42);
+    transform: rotate(12deg);
+    box-shadow:
+        0 0 22px rgba(216, 255, 55, 0.26),
+        inset 0 0 30px rgba(255, 0, 255, 0.14);
+    pointer-events: none;
+}
+
+.options-page::after {
+    content: "SELECT MODE";
+    position: absolute;
+    right: clamp(1rem, 5vw, 4rem);
+    top: calc(var(--nav-height) + 1.3rem);
+    color: rgba(216, 255, 55, 0.48);
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(0.55rem, 1vw, 0.85rem);
+    line-height: 1.8;
+    text-shadow: 0 0 14px rgba(216, 255, 55, 0.45);
+    pointer-events: none;
+}
+
+.options-page .home__titlee {
+    position: relative;
+    z-index: 2;
+    margin: 2rem auto 0;
+    text-align: center;
+}
+
+.options-page .opt {
+    margin-top: -4rem;
+    padding: 5rem 1rem 7rem;
+}
+
+.options-page #unique-neon-btn {
+    position: relative;
+    z-index: 2;
+    min-height: 620px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.options-page #unique-neon-btn .container {
+    margin-top: 2rem;
+    transform-origin: top left;
+}
+
+.options-page #glotch,
+.options-page #glotch::after {
+    position: absolute;
+    right: clamp(1rem, 5vw, 4rem);
+    top: auto;
+    bottom: 1.5rem;
+}
+
+@media (max-width: 700px) {
+    .options-page {
+        overflow-x: hidden;
+    }
+
+    .options-page::before,
+    .options-page::after {
+        display: none;
+    }
+
+    .opt::before {
+        background-position: 62% center;
+    }
+
+    .options-page .opt {
+        margin-top: 0;
+        padding: 2rem 0.75rem 6rem;
+    }
+
+    .options-page #unique-neon-btn {
+        min-height: 560px;
+    }
+
+    .options-page #unique-neon-btn .container {
+        width: 100%;
+        max-width: 100%;
+        gap: 1rem;
+        margin-top: 1rem;
+        transform: none;
+        justify-content: center;
+    }
+
+    .options-page #unique-neon-btn .neon-btn,
+    .options-page #unique-neon-btn .input-btn:checked + .neon-btn {
+        width: min(100%, 320px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .options-page #glotch,
+    .options-page #glotch::after {
+        left: 50%;
+        right: auto;
+        width: min(88vw, 300px);
+        transform: translateX(-50%);
+        text-align: center;
+        padding-inline: 1rem;
+    }
 }

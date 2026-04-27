@@ -1,0 +1,94 @@
+.progress-arena {
+  position: relative;
+  padding: 5rem 0 6rem;
+  background:
+    linear-gradient(180deg, rgba(5, 0, 10, 1), rgba(26, 2, 32, 1)),
+    repeating-linear-gradient(90deg, rgba(255, 0, 255, 0.08) 0 1px, transparent 1px 80px);
+}
+
+.progress-arena__container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.progress-arena__copy {
+  color: #fff;
+}
+
+.progress-arena__title {
+  margin: 0;
+  text-align: left;
+}
+
+.progress-arena__text {
+  max-width: 620px;
+  margin-top: 1.4rem;
+  color: #d9d2df;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-transform: none;
+}
+
+.progress-arena__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.progress-arena__stat {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(10, 0, 25, 0.82);
+  border: 3px solid #d8ff37;
+  box-shadow: 6px 6px 0 #00fff7;
+}
+
+.progress-arena__stat strong {
+  color: #ff4ff3;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  line-height: 1.2;
+  text-shadow: 0 0 16px rgba(255, 79, 243, 0.8);
+}
+
+.progress-arena__stat span {
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .progress-arena__container {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-arena__copy,
+  .progress-arena__title {
+    text-align: center;
+  }
+
+  .progress-arena__text {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .progress-arena {
+    padding: 4rem 0;
+  }
+
+  .progress-arena__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-arena__stat {
+    min-height: 118px;
+  }
+}

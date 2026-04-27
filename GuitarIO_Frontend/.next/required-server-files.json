@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\yassu\\GuitarTuto",
+    "outputFileTracingRoot": "C:\\Users\\yassu\\GuitarIO\\GuitarIO_Frontend",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -289,11 +289,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "C:\\Users\\yassu\\GuitarTuto"
+      "root": "C:\\Users\\yassu\\GuitarIO\\GuitarIO_Frontend"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\yassu\\GuitarTuto",
+  "appDir": "C:\\Users\\yassu\\GuitarIO\\GuitarIO_Frontend",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

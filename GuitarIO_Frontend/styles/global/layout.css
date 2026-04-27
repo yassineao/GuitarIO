@@ -31,7 +31,8 @@ main {
 
 .container {
   max-width: 1024px;
-  margin-inline: 1.5rem;
+  width: min(100% - 2rem, 1024px);
+  margin-inline: auto;
 }
 
 .grid {
@@ -58,14 +59,3 @@ main {
   overflow: hidden;
 }
 
-#site-footer {
-  background-color: #000000;
-  color: #fff;
-  text-align: center;
-  padding: 2px 10px;
-  font-size: 14px;
-}
-
-#site-footer p {
-  margin: 0;
-}

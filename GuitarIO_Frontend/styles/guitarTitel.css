@@ -1,12 +1,6 @@
         #guitar-title {
   font-family: "Exo 2", sans-serif;
-  background: linear-gradient(
-    90deg,
-    #dd546e,
-    		#92406e,
-    #202146,
-    #170c32
-  );
+  
 }
 
 #guitar-title .header {

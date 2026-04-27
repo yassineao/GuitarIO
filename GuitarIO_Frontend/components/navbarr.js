@@ -69,7 +69,7 @@ const Navbar = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           {/* Brand */}
           <Link href="/#home" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">GuitarIO</span>
+            <span className="footer__logo">GuitarIO</span>
           </Link>
 
           {/* Right side actions */}

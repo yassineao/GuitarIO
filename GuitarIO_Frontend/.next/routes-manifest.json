@@ -145,12 +145,6 @@
       "namedRegex": "^/play\\-song(?:/)?$"
     },
     {
-      "page": "/protected",
-      "regex": "^/protected(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/protected(?:/)?$"
-    },
-    {
       "page": "/register",
       "regex": "^/register(?:/)?$",
       "routeKeys": {},
@@ -161,12 +155,6 @@
       "regex": "^/RequireAuth(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/RequireAuth(?:/)?$"
-    },
-    {
-      "page": "/test",
-      "regex": "^/test(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/test(?:/)?$"
     }
   ],
   "dataRoutes": [
@@ -176,16 +164,16 @@
         "nxtPchapter": "nxtPchapter",
         "nxtPlesson": "nxtPlesson"
       },
-      "dataRouteRegex": "^/_next/data/OWpM48Thtc6Lb2rqdy\\-e3/Chapters/([^/]+?)/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/OWpM48Thtc6Lb2rqdy\\-e3/Chapters/(?<nxtPchapter>[^/]+?)/(?<nxtPlesson>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/dFR2uVjCQTq9_G\\-WcUItt/Chapters/([^/]+?)/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/dFR2uVjCQTq9_G\\-WcUItt/Chapters/(?<nxtPchapter>[^/]+?)/(?<nxtPlesson>[^/]+?)\\.json$"
     },
     {
       "page": "/notes/[id]",
       "routeKeys": {
         "nxtPid": "nxtPid"
       },
-      "dataRouteRegex": "^/_next/data/OWpM48Thtc6Lb2rqdy\\-e3/notes/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/OWpM48Thtc6Lb2rqdy\\-e3/notes/(?<nxtPid>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/dFR2uVjCQTq9_G\\-WcUItt/notes/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/dFR2uVjCQTq9_G\\-WcUItt/notes/(?<nxtPid>[^/]+?)\\.json$"
     }
   ],
   "rsc": {

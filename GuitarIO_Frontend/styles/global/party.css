@@ -6,9 +6,13 @@
   background-size: cover;
   background-position: center;
 
-  height: 65vh;
-  margin-top: 8%;
+  min-height: 65vh;
+  margin-top: 0;
   overflow: hidden;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  
 }
 
 .party::before {
@@ -28,8 +32,8 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-
-  row-gap: 5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .party__container .section__title {
@@ -38,7 +42,8 @@
 
 .party__data {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 0;
+  width: 100%;
 }
 
 .party__description {
@@ -51,6 +56,7 @@
 
   margin: 2rem auto;
   padding: 1.25rem;
+  max-width: 900px;
 
   background: rgba(10, 0, 25, 0.8);
 
@@ -131,4 +137,37 @@
     10px 10px 0px #ff00ff;
 
   color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .party {
+    height: auto;
+    min-height: 65vh;
+    margin-top: 0;
+    padding: 4rem 0;
+  }
+
+  .party__container {
+    row-gap: 2rem;
+  }
+
+  .party__data {
+    margin-top: 0;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .party__description {
+    font-size: 0.6rem;
+    line-height: 1.8;
+    box-shadow:
+      0.18rem 0.18rem 0 #00fff7,
+      0.36rem 0.36rem 0 #ff00ff;
+  }
+
+  .retro-pixel-button {
+    width: 100%;
+    max-width: 280px;
+    line-height: 1.5;
+  }
 }

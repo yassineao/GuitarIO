@@ -1,24 +1,47 @@
 .category {
   position: relative;
-  height: 46vh;
+  min-height: 100vh;
+  padding: 2rem 0 4rem;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.category__subtitle {
+  margin-top: 1rem;
+  color: #fff;
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
 }
 
 .category__container {
-  padding-top: 4rem;
-  grid-template-columns: 228px;
+  padding-top: 3rem;
+  grid-template-columns: repeat(3, minmax(0, 254px));
   justify-content: center;
-  row-gap: 6rem;
-  position: flex;
+  justify-items: center;
+  gap: 6rem 2rem;
 }
 
 .category__card {
   position: relative;
-  background-color: var(--container-color);
+  background: linear-gradient(180deg, var(--container-color), #111);
+  border: 1px solid transparent;
   border-radius: 2rem;
-  padding: 4.5rem 2.25rem 2rem;
+  padding: 4.8rem 2.25rem 2rem;
   box-shadow: 0 4px 16px hsla(22, 10%, 2%, 0.3);
   text-align: center;
-  transition: background 0.3s;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.category__card:hover {
+  transform: translateY(-0.75rem);
+  border-color: var(--first-color);
+  box-shadow: 0 0 25px hsla(310, 100%, 50%, 0.45);
 }
 
 .category__img {
@@ -30,15 +53,53 @@
   transition: transform 0.3s;
 }
 
+.category__card:hover .category__img {
+  transform: translateY(-0.6rem) scale(1.08);
+}
+
+.category__level {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--first-color);
+  border-radius: 999px;
+  color: var(--first-color);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
 .category__title {
   font-size: var(--h3-font-size);
   font-weight: var(--font-semi-bold);
   color: var(--first-color);
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .category__description {
   font-size: var(--small-font-size);
+  line-height: 1.6;
+  min-height: 4rem;
+}
+
+.category__button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--first-color);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 18px hsla(310, 100%, 50%, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category__button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 28px hsla(310, 100%, 50%, 0.8);
 }
 
 .category__star {
@@ -47,10 +108,6 @@
   top: 3.5rem;
   right: 0.5rem;
   transform: rotate(15deg);
-}
-
-.category__card:hover .category__img {
-  transform: translateY(-0.5rem);
 }
 
 .category .shape__small {
