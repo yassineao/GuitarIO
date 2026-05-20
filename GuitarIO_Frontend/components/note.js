@@ -1,30 +1,71 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import TPB from "./testPlayingButton";
 
 const Note = ({ name, ext }) => {
   const chordLabel = useMemo(() => `${name}${ext ?? ""}`, [name, ext]);
+  const [renderKey, setRenderKey] = useState(0);
 
   const chartRef = useRef(null);
   const soundRef = useRef(null);
+  const retryRef = useRef(null);
 
   // Force refresh by changing key when chordLabel changes
-  const chordKey = useMemo(() => chordLabel, [chordLabel]);
+  const chordKey = useMemo(() => `${chordLabel}-${renderKey}`, [chordLabel, renderKey]);
 
   useEffect(() => {
-    // Try both 'chord' and 'data-chord' for compatibility
-    if (chartRef.current) {
-      chartRef.current.setAttribute('data-chord', chordLabel);
-      chartRef.current.setAttribute('chord', chordLabel);
-    }
-    if (soundRef.current) {
-      soundRef.current.setAttribute('data-chord', chordLabel);
-      soundRef.current.setAttribute('chord', chordLabel);
-    }
-    if (window.ScalesChordsAPI && window.ScalesChordsAPI.render) {
-      window.ScalesChordsAPI.render(chartRef.current);
-      window.ScalesChordsAPI.render(soundRef.current);
-    }
+    setRenderKey((currentKey) => currentKey + 1);
   }, [chordLabel]);
+
+  useEffect(() => {
+    const applyAttributes = () => {
+      // Try both 'chord' and 'data-chord' for compatibility.
+      if (chartRef.current) {
+        chartRef.current.setAttribute("data-chord", chordLabel);
+        chartRef.current.setAttribute("chord", chordLabel);
+      }
+      if (soundRef.current) {
+        soundRef.current.setAttribute("data-chord", chordLabel);
+        soundRef.current.setAttribute("chord", chordLabel);
+      }
+    };
+
+    const renderChord = () => {
+      applyAttributes();
+
+      const api = window.ScalesChordsAPI;
+      if (!api) {
+        return false;
+      }
+
+      if (typeof api.render === "function") {
+        api.render(chartRef.current);
+        api.render(soundRef.current);
+      } else if (typeof api.scan === "function") {
+        api.scan();
+      }
+
+      return true;
+    };
+
+    const scheduleRender = () => {
+      window.requestAnimationFrame(() => {
+        if (renderChord()) {
+          return;
+        }
+
+        retryRef.current = window.setTimeout(renderChord, 250);
+      });
+    };
+
+    scheduleRender();
+    window.addEventListener("scaleschords:ready", scheduleRender);
+
+    return () => {
+      window.removeEventListener("scaleschords:ready", scheduleRender);
+      if (retryRef.current) {
+        window.clearTimeout(retryRef.current);
+      }
+    };
+  }, [chordLabel, renderKey]);
 
   return (
     <div className="chord-note">
@@ -44,7 +85,7 @@ const Note = ({ name, ext }) => {
         <p className="chord-note__label">Want to hear how it sounds?</p>
         <div className="chord-note__sound">
           <ins
-            key={chordKey + '-sound'}
+            key={`${chordKey}-sound`}
             ref={soundRef}
             className="scales_chords_api"
             data-chord={chordLabel}

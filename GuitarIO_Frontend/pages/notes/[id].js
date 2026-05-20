@@ -1,88 +1,128 @@
-import { useState, useEffect } from 'react';
-import Note from '../../components/note';
+import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/router";
+import Note from "../../components/note";
 
-const chordss = [
-  "", "m", "dim", "aug", "maj7", "7", "m7", "dim7",
-  "m(maj7)", "m7b5", "sus2", "sus4", "6/9", "9", "11", "13", "5"
+const chordVariations = [
+  { ext: "", label: "Major", group: "Core", hint: "The clean home-base sound." },
+  { ext: "m", label: "Minor", group: "Core", hint: "Darker and softer color." },
+  { ext: "dim", label: "Dim", group: "Tension", hint: "Nervous, unstable sound." },
+  { ext: "aug", label: "Aug", group: "Tension", hint: "Bright, floating tension." },
+  { ext: "maj7", label: "Maj7", group: "Color", hint: "Smooth and dreamy." },
+  { ext: "7", label: "7", group: "Blues", hint: "Classic dominant pull." },
+  { ext: "m7", label: "m7", group: "Color", hint: "Soft minor with extra depth." },
+  { ext: "dim7", label: "Dim7", group: "Tension", hint: "Strong passing chord." },
+  { ext: "m(maj7)", label: "mMaj7", group: "Color", hint: "Cinematic minor color." },
+  { ext: "m7b5", label: "m7b5", group: "Jazz", hint: "Half-diminished flavor." },
+  { ext: "sus2", label: "Sus2", group: "Open", hint: "Suspended and airy." },
+  { ext: "sus4", label: "Sus4", group: "Open", hint: "Suspended with lift." },
+  { ext: "6/9", label: "6/9", group: "Color", hint: "Warm extended chord." },
+  { ext: "9", label: "9", group: "Extended", hint: "Funky dominant color." },
+  { ext: "11", label: "11", group: "Extended", hint: "Wide and modern." },
+  { ext: "13", label: "13", group: "Extended", hint: "Rich dominant sound." },
+  { ext: "5", label: "Power", group: "Rock", hint: "Simple two-note power chord." },
 ];
 
-export default function Notes({ name }) {
-  const [selectedChord, setSelectedChord] = useState(chordss[0]);
+const validNotes = ["a", "b", "c", "d", "e", "f", "g"];
 
-  // Trigger ScalesChordsAPI re-scan whenever the selected chord changes
+export default function Notes({ name }) {
+  const router = useRouter();
+  const [selectedChord, setSelectedChord] = useState(chordVariations[0].ext);
+
   useEffect(() => {
     if (window.ScalesChordsAPI) {
       window.ScalesChordsAPI.scan();
     }
   }, [selectedChord, name]);
 
-  if (name === 'default' || !name) {
-    return <div>This is the default content.</div>;
+  const normalizedName = String(name || "").toLowerCase();
+  const noteIndex = validNotes.indexOf(normalizedName);
+
+  const selectedVariation = useMemo(
+    () =>
+      chordVariations.find((variation) => variation.ext === selectedChord) ||
+      chordVariations[0],
+    [selectedChord]
+  );
+
+  if (noteIndex === -1) {
+    return (
+      <main className="note-variations-page">
+        <section className="container note-variations-hero">
+          <span className="note-variations-eyebrow">Chord finder</span>
+          <h1>Unknown note</h1>
+          <p>Choose a note from A to G to explore chord variations.</p>
+        </section>
+      </main>
+    );
   }
 
-  // Previous / next note navigation (a → b → … → g → a)
-  const charCode = name.charCodeAt(0);
-  const nextChar = String.fromCharCode(charCode >= 'g'.charCodeAt(0) ? 'a'.charCodeAt(0) : charCode + 1);
-  const prevChar = String.fromCharCode(charCode <= 'a'.charCodeAt(0) ? 'g'.charCodeAt(0) : charCode - 1);
-
-  const uppercaseId = String(name).toUpperCase();
+  const nextChar = validNotes[(noteIndex + 1) % validNotes.length];
+  const prevChar = validNotes[(noteIndex - 1 + validNotes.length) % validNotes.length];
+  const uppercaseId = normalizedName.toUpperCase();
+  const chordName = `${uppercaseId}${selectedVariation.ext}`;
 
   return (
-    <div className="major-notes-cyber">
+    <main className="note-variations-page">
+      <section className="container note-variations-hero">
+        <span className="note-variations-eyebrow">Variation lab</span>
+        <h1>{chordName || uppercaseId}</h1>
+        <p>
+          Explore {uppercaseId} chord shapes from simple open sounds to richer colors and tension chords.
+        </p>
 
-      {/* ── Title + note navigation ── */}
-      <div className="major-notes-title">
-        <button onClick={() => window.location.href = `/notes/${prevChar}`}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-
-        <h1>
-          Note: {uppercaseId}
-        
-        </h1>
-
-        <button onClick={() => window.location.href = `/notes/${nextChar}`}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-      </div>
-
-      {/* ── Chord display ── */}
-      <div className="major-notes-chord">
-        <div>
-          {chordss.map((chord) => (
-            <div
-              key={chord}
-              style={{ display: selectedChord === chord ? 'block' : 'none' }}
-            >
-              <Note name={name} ext={chord} />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ── Chord selector buttons ── */}
-      <div className="major-notes-buttons">
-        {chordss.map((chord) => (
-          <button
-            key={chord}
-            onClick={() => setSelectedChord(chord)}
-          >
-            {chord === "" ? "Major" : chord}
+        <div className="note-variations-nav" aria-label="Note navigation">
+          <button type="button" onClick={() => router.push(`/notes/${prevChar}`)}>
+            Previous {prevChar.toUpperCase()}
           </button>
-        ))}
-      </div>
+          <button type="button" onClick={() => router.push(`/notes/${nextChar}`)}>
+            Next {nextChar.toUpperCase()}
+          </button>
+        </div>
+      </section>
 
-    </div>
+      <section className="container note-variations-workspace">
+        <div className="note-variations-preview">
+          <div className="note-variations-preview__header">
+            <span>Diagram</span>
+            <small>{selectedVariation.group}</small>
+          </div>
+
+          <Note name={normalizedName} ext={selectedVariation.ext} />
+        </div>
+
+        <aside className="note-variations-picker">
+          <div className="note-variations-picker__header">
+            <span>Chord type</span>
+            <p>{selectedVariation.hint}</p>
+          </div>
+
+          <div className="note-variations-grid">
+            {chordVariations.map((variation) => {
+              const isSelected = selectedChord === variation.ext;
+
+              return (
+                <button
+                  key={variation.ext || "major"}
+                  type="button"
+                  className={`note-variation-card${isSelected ? " note-variation-card--selected" : ""}`}
+                  onClick={() => setSelectedChord(variation.ext)}
+                >
+                  <span>{variation.group}</span>
+                  <strong>{variation.label}</strong>
+                  <small>{isSelected ? "Selected" : "Preview"}</small>
+                </button>
+              );
+            })}
+          </div>
+        </aside>
+      </section>
+    </main>
   );
 }
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
   return {
-    props: { name: id || 'default' },
+    props: { name: id || "default" },
   };
 }

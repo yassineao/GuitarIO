@@ -89,7 +89,6 @@ GuitarIO/
    Create a `.env.local` file with:
    ```env
    NEXT_PUBLIC_API_URL=http://localhost:8080
-   NEXT_PUBLIC_GEMINI_API_KEY=your-gemini-api-key
    POSTGRES_URL=your-postgres-connection-string
    POSTGRES_USER=your-db-user
    POSTGRES_PASSWORD=your-db-password
@@ -124,12 +123,15 @@ GuitarIO/
    Example:
    ```env
    JWT_SECRET=replace-with-a-32-char-secret
+   GEMINI_API_KEY=replace-with-your-server-side-gemini-key
    URLDATABASE=jdbc:postgresql://localhost:5432/guitario
    PGUSER=postgres
    PGPASSWORD=postgres
    ```
 
    On Koyeb, the backend now also accepts a managed Postgres `DATABASE_URL` in the form `postgres://user:password@host:5432/dbname`.
+
+   Keep `GEMINI_API_KEY` as a secret/sensitive environment variable in your hosting provider. Do not prefix Gemini keys with `NEXT_PUBLIC_`, because those variables are bundled into browser code.
 
 3. **Run Tests**
    ```bash

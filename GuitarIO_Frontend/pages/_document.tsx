@@ -5,6 +5,7 @@ declare global {
   interface Window {
     __SCALES_CHORDS_READY__?: boolean;
     ScalesChordsAPI?: {
+      render?: (element?: Element | null) => void;
       scan?: () => void;
     };
   }

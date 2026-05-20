@@ -1,4 +1,5 @@
-.major-notes-page {
+.major-notes-page,
+.note-variations-page {
   min-height: 100vh;
   color: #fff;
   background:
@@ -13,7 +14,8 @@
   text-transform: none;
 }
 
-.major-notes-page::before {
+.major-notes-page::before,
+.note-variations-page::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -25,22 +27,30 @@
 }
 
 .major-notes-hero,
-.major-notes-workspace {
+.major-notes-workspace,
+.note-variations-hero,
+.note-variations-workspace {
   position: relative;
   z-index: 1;
 }
 
-.major-notes-hero {
+.major-notes-hero,
+.note-variations-hero {
   display: grid;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
 }
 
 .major-notes-eyebrow,
+.note-variations-eyebrow,
 .major-notes-preview__header span,
 .major-notes-picker__header span,
+.note-variations-preview__header span,
+.note-variations-picker__header span,
 .major-note-card span,
-.major-note-card small {
+.major-note-card small,
+.note-variation-card span,
+.note-variation-card small {
   color: #d8ff37;
   font-family: "Press Start 2P", monospace;
   font-size: 0.62rem;
@@ -48,7 +58,8 @@
   text-transform: uppercase;
 }
 
-.major-notes-hero h1 {
+.major-notes-hero h1,
+.note-variations-hero h1 {
   color: #fff;
   font-family: var(--second-font);
   font-size: clamp(2.7rem, 8vw, 6rem);
@@ -61,7 +72,9 @@
 }
 
 .major-notes-hero p,
+.note-variations-hero p,
 .major-notes-picker__header p,
+.note-variations-picker__header p,
 .chord-note__label {
   color: #d8d3df;
   font-family: "Nunito Sans", sans-serif;
@@ -69,12 +82,14 @@
   margin: 0;
 }
 
-.major-notes-hero p {
+.major-notes-hero p,
+.note-variations-hero p {
   max-width: 620px;
   font-size: 1.05rem;
 }
 
-.major-notes-workspace {
+.major-notes-workspace,
+.note-variations-workspace {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.05fr);
   gap: 1.25rem;
@@ -82,13 +97,16 @@
 }
 
 .major-notes-preview,
-.major-notes-picker {
+.major-notes-picker,
+.note-variations-preview,
+.note-variations-picker {
   background: rgba(5, 3, 12, 0.84);
   border: 1px solid rgba(0, 255, 247, 0.3);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.42);
 }
 
-.major-notes-preview {
+.major-notes-preview,
+.note-variations-preview {
   display: grid;
   gap: 1.25rem;
   align-content: start;
@@ -97,14 +115,17 @@
 }
 
 .major-notes-preview__header,
-.major-notes-picker__header {
+.major-notes-picker__header,
+.note-variations-preview__header,
+.note-variations-picker__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
-.major-notes-preview__header small {
+.major-notes-preview__header small,
+.note-variations-preview__header small {
   color: #9ee8e5;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -163,29 +184,34 @@
   padding: 0.65rem 0.85rem;
 }
 
-.major-notes-picker {
+.major-notes-picker,
+.note-variations-picker {
   display: grid;
   gap: 1.25rem;
   align-content: start;
   padding: 1.25rem;
 }
 
-.major-notes-picker__header {
+.major-notes-picker__header,
+.note-variations-picker__header {
   align-items: flex-start;
 }
 
-.major-notes-picker__header p {
+.major-notes-picker__header p,
+.note-variations-picker__header p {
   max-width: 360px;
   text-align: right;
 }
 
-.major-notes-grid {
+.major-notes-grid,
+.note-variations-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.85rem;
 }
 
-.major-note-card {
+.major-note-card,
+.note-variation-card {
   position: relative;
   display: grid;
   min-height: 145px;
@@ -204,7 +230,8 @@
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
-.major-note-card::after {
+.major-note-card::after,
+.note-variation-card::after {
   content: "";
   position: absolute;
   inset: auto 0 0;
@@ -213,14 +240,16 @@
   opacity: 0.45;
 }
 
-.major-note-card strong {
+.major-note-card strong,
+.note-variation-card strong {
   color: #fff;
   font-family: var(--second-font);
   font-size: clamp(1.7rem, 4vw, 3rem);
   line-height: 1;
 }
 
-.major-note-card small {
+.major-note-card small,
+.note-variation-card small {
   align-self: end;
   color: #9ee8e5;
   font-size: 0.52rem;
@@ -228,51 +257,95 @@
 }
 
 .major-note-card:hover,
-.major-note-card:focus-visible {
+.major-note-card:focus-visible,
+.note-variation-card:hover,
+.note-variation-card:focus-visible {
   border-color: rgba(0, 255, 247, 0.72);
   transform: translateY(-4px);
   outline: none;
 }
 
-.major-note-card--selected {
+.major-note-card--selected,
+.note-variation-card--selected {
   border-color: #d8ff37;
   box-shadow:
     0 0 0 2px rgba(216, 255, 55, 0.18),
     0 0 30px rgba(0, 255, 247, 0.24);
 }
 
-.major-note-card--selected small {
+.major-note-card--selected small,
+.note-variation-card--selected small {
   color: #d8ff37;
 }
 
+.note-variations-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.note-variations-nav button {
+  min-height: 42px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.58rem;
+  line-height: 1.45;
+  padding: 0.7rem 0.9rem;
+  text-transform: uppercase;
+}
+
+.note-variations-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.note-variation-card {
+  min-height: 124px;
+}
+
+.note-variation-card strong {
+  font-size: clamp(1.25rem, 2.4vw, 2rem);
+}
+
 @media (max-width: 960px) {
-  .major-notes-workspace {
+  .major-notes-workspace,
+  .note-variations-workspace {
     grid-template-columns: 1fr;
   }
 
-  .major-notes-preview {
+  .major-notes-preview,
+  .note-variations-preview {
     min-height: auto;
   }
 }
 
 @media (max-width: 620px) {
-  .major-notes-page {
+  .major-notes-page,
+  .note-variations-page {
     padding-top: calc(var(--nav-height, 80px) + 1rem);
   }
 
-  .major-notes-picker__header {
+  .major-notes-picker__header,
+  .note-variations-picker__header {
     flex-direction: column;
   }
 
-  .major-notes-picker__header p {
+  .major-notes-picker__header p,
+  .note-variations-picker__header p {
     text-align: left;
   }
 
-  .major-notes-grid {
+  .major-notes-grid,
+  .note-variations-grid {
     grid-template-columns: 1fr;
   }
 
-  .major-note-card {
+  .major-note-card,
+  .note-variation-card {
     min-height: 118px;
   }
 }
