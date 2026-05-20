@@ -38,7 +38,7 @@ public class UserController {
                     Map.of("uid", u.getId(), "role", u.getRole(),"user",u.getUsername()),
                     Duration.ofMinutes(15));
             String refresh = jwt.generateToken(u.getEmail(),
-                    Map.of("uid", u.getId(), "role", u.getRole(),"user",u.getUsername()),
+                    Map.of("uid", u.getId(), "role", u.getRole(),"user",u.getUsername(), "type", "refresh"),
                     Duration.ofDays(7));
             return ResponseEntity.status(HttpStatus.CREATED).body(new TokenResponse(access, refresh));
         } catch (IllegalArgumentException ex) {
@@ -63,7 +63,7 @@ public class UserController {
                     Map.of("uid", u.getId(), "role", u.getRole(),"user",u.getUsername()),
                     Duration.ofMinutes(15));
             String refresh = jwt.generateToken(u.getEmail(),
-                    Map.of("uid", u.getId(), "role", u.getRole(),"user",u.getUsername()),
+                    Map.of("uid", u.getId(), "role", u.getRole(),"user",u.getUsername(), "type", "refresh"),
                     Duration.ofDays(7));
             return ResponseEntity.ok(new TokenResponse(access, refresh));
         } catch (IllegalArgumentException ex) {
@@ -80,7 +80,7 @@ public class UserController {
             }
             String email = claims.getSubject();
             String access = jwt.generateToken(email,
-                    Map.of("uid", claims.get("uid")),
+                    Map.of("uid", claims.get("uid"), "role", claims.get("role"), "user", claims.get("user")),
                     Duration.ofMinutes(15));
             return ResponseEntity.ok(new TokenResponse(access, body.refreshToken()));
         } catch (Exception e) {

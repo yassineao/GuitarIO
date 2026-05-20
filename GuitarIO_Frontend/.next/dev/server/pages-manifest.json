@@ -4,8 +4,5 @@
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
   "/login": "pages/login.js",
-  "/play-song": "pages/play-song.js",
-  "/notes/[id]": "pages/notes/[id].js",
-  "/teaching": "pages/teaching.js",
-  "/options": "pages/options.js"
+  "/notes/[id]": "pages/notes/[id].js"
 }

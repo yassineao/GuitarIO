@@ -48,10 +48,11 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cfg = new CorsConfiguration();
-        cfg.setAllowedOrigins(List.of(
+        cfg.setAllowedOriginPatterns(List.of(
                 "http://localhost:3000",   // Next.js dev
                 "http://localhost:5173",    // Vite (if you still use it)
-                 "https://guitar-io.vercel.app/" // add prod origin(s)
+                "https://guitar-io.vercel.app",
+                "https://*.vercel.app"
         ));
         cfg.setAllowedMethods(List.of("GET","POST","PUT","DELETE","PATCH","OPTIONS"));
         cfg.setAllowedHeaders(List.of("*"));

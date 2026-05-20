@@ -1,261 +1,325 @@
 # GuitarIO
 
-A comprehensive guitar learning platform that combines interactive lessons, AI-powered assistance, and modern web technologies to help musicians master the guitar.
+GuitarIO is a guitar learning app with a Next.js frontend and a Spring Boot backend. It includes structured lessons, chord and note tools, authentication, and a RAG-powered AI teaching assistant that answers from lesson content.
 
-## 🌐 Live Demo
+## Current Flow
 
-Experience GuitarIO live: [https://guitar-io.vercel.app/](https://guitar-io.vercel.app/)
+The app is split into two services:
 
-## 🚀 Features
+- `GuitarIO_Frontend`: Next.js UI, pages, lesson views, note/chord experiences, and small API helpers/proxies.
+- `GuitarIO_Backend/springboot`: Spring Boot API for auth, lessons, user progress, music data, embeddings, and RAG.
 
-- **Interactive Guitar Lessons**: Structured learning path with chapters and exercises
-- **Chord Diagrams & Charts**: Visual chord representations for guitar and piano
-- **Tab Rendering & Playback**: Display and play guitar tablature using AlphaTab
-- **AI-Powered Chat**: Get help from AI assistants for music theory and practice
-- **Song Integration**: Connect with Songsterr API for additional song resources
-- **User Authentication**: Secure login and registration system
-- **Responsive Design**: Modern UI built with Next.js and Tailwind CSS
+Frontend requests use `GuitarIO_Frontend/lib/api-url.js`. Set `NEXT_PUBLIC_API_URL` to the backend URL and the frontend will call the backend the same way login does.
 
-## 🛠️ Tech Stack
+The Gemini key is server-side only. Keep it as `GEMINI_API_KEY` in backend/server environments. Never put Gemini keys in public browser environment variables.
 
-### Frontend
-- **Framework**: Next.js 16 with React 18
-- **Styling**: Tailwind CSS with custom components
-- **UI Library**: NextUI
-- **State Management**: React hooks and SWR
-- **Audio**: Tone.js for music playback
-- **Charts**: Custom chord visualization components
-- **Database**: Vercel Postgres with Prisma ORM
+## Features
 
-### Backend
-- **Framework**: Spring Boot 3.5.5
-- **Language**: Java 21
-- **Database**: PostgreSQL
-- **Security**: Spring Security
-- **ORM**: Spring Data JPA (Hibernate)
+- Login and registration with JWT-backed Spring Security.
+- Lesson chapters and individual lesson pages.
+- AI Teaching page that calls `POST /rag/ask`.
+- RAG flow using lesson embeddings, pgvector similarity search, and Google GenAI through Spring AI.
+- Major notes and dynamic note pages such as `/notes/b`.
+- Chord, scale, tag, strumming pattern, music theory, and song exercise APIs.
+- Songsterr and tab-related frontend API routes.
 
-### Key Dependencies
-- **AI Integration**: Google AI SDK, OpenAI
-- **Music Processing**: AlphaTab, ChordPro, ChordSheet.js
-- **Authentication**: JWT, bcrypt
-- **HTTP Client**: Axios
-- **Drag & Drop**: React DnD
+## Tech Stack
 
-## 📁 Project Structure
+Frontend:
 
-```
-GuitarIO/
-├── GuitarIO_Backend/
-│   └── springboot/          # Spring Boot authentication service
-│       ├── src/main/java/org/authentification/
-│       ├── Dockerfile
-│       └── pom.xml
-└── GuitarIO_Frontend/       # Next.js web application
-    ├── components/          # React components
-    │   ├── cyberpunk/       # Main app components
-    │   └── lessons/         # Lesson-related components
-    ├── pages/               # Next.js pages and API routes
-    │   ├── api/            # Backend API endpoints
-    │   └── Chapters/       # Lesson chapters
-    ├── public/             # Static assets
-    ├── styles/             # CSS stylesheets
-    └── package.json
-```
+- Next.js 16
+- React 18
+- CSS modules/global styles used by existing pages
+- Jest and React Testing Library
+- Vercel-friendly environment variables
 
-## 🚀 Getting Started
+Backend:
 
-### Prerequisites
-- Node.js 18+ and pnpm
 - Java 21
-- PostgreSQL database
-- Docker (optional, for containerized deployment)
+- Spring Boot 3.5.5
+- Spring Security
+- Spring Data JPA
+- PostgreSQL
+- pgvector through Spring AI
+- Google GenAI chat and embeddings
+- Maven
 
-### Frontend Setup
+## Project Structure
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd GuitarIO/GuitarIO_Frontend
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   # or
-   npm install
-   ```
-
-3. **Environment Configuration**
-   Create a `.env.local` file with:
-   ```env
-   NEXT_PUBLIC_API_URL=http://localhost:8080
-   POSTGRES_URL=your-postgres-connection-string
-   POSTGRES_USER=your-db-user
-   POSTGRES_PASSWORD=your-db-password
-   POSTGRES_DATABASE=your-db-name
-   JWT_SECRET=your-jwt-secret
-   ```
-
-4. **Database Setup**
-   ```bash
-   pnpm run seed
-   ```
-
-5. **Run Tests**
-   ```bash
-   pnpm run test
-   ```
-   For test coverage:
-   ```bash
-   pnpm run test:coverage
-   ```
-
-### Backend Setup
-
-1. **Navigate to backend directory**
-   ```bash
-   cd ../GuitarIO_Backend/springboot
-   ```
-
-2. **Configure Database**
-   Set environment variables for PostgreSQL and JWT before starting the app. For local development you can keep using `URLDATABASE`, but cloud platforms like Koyeb typically provide `DATABASE_URL` plus `PGUSER` and `PGPASSWORD`.
-
-   Example:
-   ```env
-   JWT_SECRET=replace-with-a-32-char-secret
-   GEMINI_API_KEY=replace-with-your-server-side-gemini-key
-   URLDATABASE=jdbc:postgresql://localhost:5432/guitario
-   PGUSER=postgres
-   PGPASSWORD=postgres
-   ```
-
-   On Koyeb, the backend now also accepts a managed Postgres `DATABASE_URL` in the form `postgres://user:password@host:5432/dbname`.
-
-   Keep `GEMINI_API_KEY` as a secret/sensitive environment variable in your hosting provider. Do not prefix Gemini keys with `NEXT_PUBLIC_`, because those variables are bundled into browser code.
-
-3. **Run Tests**
-   ```bash
-   ./mvnw test
-   ```
-
-4. **Run Spring Boot Application**
-   ```bash
-   ./mvnw spring-boot:run
-   ```
-   The API will be available at [http://localhost:8080](http://localhost:8080)
-
-## 🐳 Docker Deployment
-
-### Backend
-```bash
-cd GuitarIO_Backend
-docker build -t guitar-io-backend .
-docker run -e JWT_SECRET=replace-with-a-32-char-secret -e URLDATABASE=jdbc:postgresql://host.docker.internal:5432/guitario -e PGUSER=postgres -e PGPASSWORD=postgres -p 8000:8000 guitar-io-backend
+```text
+GuitarIO/
+|-- GuitarIO_Backend/
+|   `-- springboot/
+|       |-- src/main/java/org/authentification/
+|       |   |-- controller/
+|       |   |-- dto/
+|       |   |-- entity/
+|       |   |-- repository/
+|       |   `-- service/
+|       |-- src/main/resources/application.yml
+|       |-- .env.example
+|       |-- Dockerfile
+|       `-- pom.xml
+|-- GuitarIO_Frontend/
+|   |-- components/
+|   |-- lib/
+|   |-- pages/
+|   |-- public/
+|   |-- styles/
+|   |-- .env.example
+|   `-- package.json
+`-- README.md
 ```
 
-### Frontend
-```bash
-cd GuitarIO_Frontend
-docker build -t guitar-io-frontend .
-docker run -p 3000:3000 guitar-io-frontend
+## Prerequisites
+
+- Node.js 18+
+- npm or pnpm
+- Java 21
+- PostgreSQL
+- pgvector enabled in PostgreSQL for lesson similarity search
+- Gemini API key for AI/RAG
+- Docker optional
+
+## Environment Setup
+
+Real `.env` files are ignored by git. Use the committed example files as templates.
+
+Frontend local env:
+
+```powershell
+Copy-Item GuitarIO_Frontend\.env.example GuitarIO_Frontend\.env.local
 ```
 
-## 📚 Available Scripts
+Minimum frontend values:
 
-### Frontend
-- `pnpm run dev` / `npm run dev` - Start development server
-- `pnpm run build` / `npm run build` - Build for production
-- `pnpm run start` / `npm start` - Start production server
-- `pnpm run lint` / `npm run lint` - Run ESLint
-- `pnpm run seed` / `npm run seed` - Seed the database
-- `npm test` / `pnpm run test` - Run tests
-- `npm run test:coverage` / `pnpm run test:coverage` - Run tests with coverage
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8080
+API_URL=http://localhost:8080
+NEXT_PUBLIC_PYTHON_API_URL=http://localhost:5000
+PYTHON_API_URL=http://localhost:5000
+```
 
-### Backend
-- `./mvnw clean compile` - Compile the project
-- `./mvnw spring-boot:run` - Run the application
-- `./mvnw test` - Run tests
-- `./mvnw package` - Package for deployment
+Backend local env:
 
-## 🔧 API Endpoints
+```powershell
+Copy-Item GuitarIO_Backend\springboot\.env.example GuitarIO_Backend\springboot\.env
+```
 
-### Authentication
-- `POST /api/login` - User login
-- `POST /api/register` - User registration
+Minimum backend values:
 
-### Music Data
-- `GET /api/chord` - Get chord information
-- `GET /api/tabs` - Get guitar tabs
-- `GET /api/songsterr` - Songsterr API integration
+```env
+JWT_SECRET=replace-with-a-32-char-secret
+GEMINI_API_KEY=replace-with-your-server-side-gemini-key
+URLDATABASE=jdbc:postgresql://localhost:5432/guitario
+PGUSER=postgres
+PGPASSWORD=postgres
+```
 
-### Lessons
-- `GET /api/lessons` - Get available lessons
-- `GET /api/lessons/[id]` - Get specific lesson
+For cloud deployment, set those values in the provider dashboard as secrets/sensitive variables. If a real Gemini key was ever committed or shown publicly, rotate it in Google AI Studio or Google Cloud.
 
-### AI Chat
-- `POST /api/chat` - Interact with AI assistant
+## Run Locally
 
-## � Testing
+Start the backend:
 
-### Backend Tests
-- **Unit Tests**: Service layer testing with Mockito
-  - `UserServiceTest`: User registration, authentication, and validation
-  - `JwtServiceTest`: JWT token generation and parsing
-- **Integration Tests**: Controller testing with Spring Boot Test
-  - `UserControllerTest`: Authentication endpoints (register, login)
+```powershell
+cd GuitarIO_Backend\springboot
+.\mvnw.cmd spring-boot:run
+```
 
-### Frontend Tests
-- **Component Tests**: React component testing with Jest and React Testing Library
-  - `Note.test.js`: Note component rendering and props
-  - `ChordChart.test.js`: Chord chart component functionality
-- **API Tests**: Authentication API testing
-  - `login.test.js`: Login API function testing with mocked fetch
+The backend defaults to `http://localhost:8080`.
 
-### Running Tests
+Start the frontend in another terminal:
 
-**Frontend:**
-```bash
+```powershell
 cd GuitarIO_Frontend
-npm install  # or pnpm install
+npm install
+npm run dev
+```
+
+The frontend runs at `http://localhost:3000`.
+
+## RAG Teaching Assistant
+
+The teaching assistant lives on the frontend at:
+
+```text
+/teaching
+```
+
+Frontend helper:
+
+```text
+GuitarIO_Frontend/pages/api/rag.js
+```
+
+Backend endpoint:
+
+```http
+POST /rag/ask
+```
+
+Request body:
+
+```json
+{
+  "question": "How should I practice B major?",
+  "limit": 4
+}
+```
+
+Response shape:
+
+```json
+{
+  "answer": "Practice-focused answer from the assistant.",
+  "sources": [
+    {
+      "id": 1,
+      "title": "Lesson #1",
+      "chapter": "Basics",
+      "number": 1,
+      "description": "Lesson description"
+    }
+  ]
+}
+```
+
+How it works:
+
+1. The backend validates the question.
+2. `EmbeddingService` creates an embedding using Gemini.
+3. `LessonRepository.findSimilarLessons` searches lesson embeddings with pgvector.
+4. `RagService` builds a grounded teaching prompt from the retrieved lessons and user progress.
+5. Spring AI calls Google GenAI and returns an answer plus lesson sources.
+
+## Important API Routes
+
+Backend:
+
+- `GET /health`
+- `POST /auth/register`
+- `POST /auth/login`
+- `POST /auth/refresh`
+- `GET /lessons`
+- `POST /lessons`
+- `POST /lessons/assign`
+- `GET /lessons/lesson/{chapter}/{number}`
+- `GET /lessons/chapters-with-numbers`
+- `POST /rag/ask`
+- `GET /chords`
+- `GET /scales`
+- `GET /tags`
+- `GET /music-theory`
+- `GET /strumming-patterns`
+- `GET /song-exercises`
+
+Frontend pages:
+
+- `/`
+- `/options`
+- `/teaching`
+- `/majorNotes`
+- `/notes`
+- `/notes/[id]`
+- `/Chapters`
+- `/Chapters/[chapter]/[lesson]`
+- `/login`
+- `/register`
+
+## Scripts
+
+Frontend:
+
+```powershell
+cd GuitarIO_Frontend
+npm run dev
+npm run build
+npm run start
 npm test
 npm run test:coverage
 ```
 
-**Backend:**
-```bash
-cd GuitarIO_Backend/springboot
-./mvnw test
+Backend:
+
+```powershell
+cd GuitarIO_Backend\springboot
+.\mvnw.cmd clean compile
+.\mvnw.cmd test
+.\mvnw.cmd package
+.\mvnw.cmd spring-boot:run
 ```
 
-### Test Coverage
-- Backend: Service layer and basic controller functionality
-- Frontend: React components and API utilities
-- All tests include proper mocking and edge case handling
+## Docker
 
-## �🤝 Contributing
+Build and run the Spring Boot backend:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+```powershell
+cd GuitarIO_Backend\springboot
+docker build -t guitar-io-backend .
+docker run --rm -p 8000:8000 `
+  -e PORT=8000 `
+  -e JWT_SECRET=replace-with-a-32-char-secret `
+  -e GEMINI_API_KEY=replace-with-your-server-side-gemini-key `
+  -e URLDATABASE=jdbc:postgresql://host.docker.internal:5432/guitario `
+  -e PGUSER=postgres `
+  -e PGPASSWORD=postgres `
+  guitar-io-backend
+```
 
-## 📄 License
+When using Docker, point the frontend to:
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+API_URL=http://localhost:8000
+```
 
-## 🙏 Acknowledgments
+## Deployment Notes
 
-- [AlphaTab](https://www.alphatab.net/) for guitar tablature rendering
-- [VexFlow](https://vexflow.com/) for music notation
-- [Next.js](https://nextjs.org/) for the React framework
-- [Spring Boot](https://spring.io/projects/spring-boot) for the backend framework
-- [Songsterr](https://www.songsterr.com/) for guitar tab resources
+Backend:
 
-## 📞 Support
+- Set `PORT` if your host requires a specific port.
+- Set `JWT_SECRET`, `GEMINI_API_KEY`, database URL/user/password as sensitive env vars.
+- Koyeb-style `DATABASE_URL` is supported when provided as `postgres://user:password@host:5432/dbname`.
+- The Dockerfile currently uses `public.ecr.aws/docker/library/maven:3.9.9-eclipse-temurin-21` for both build and runtime to avoid Docker Hub TLS timeouts and the separate `eclipse-temurin:21-jre` pull that timed out before.
 
-For questions or support, please open an issue on GitHub or contact the development team.
+Frontend:
 
----
+- Set `NEXT_PUBLIC_API_URL` to the deployed backend URL.
+- Do not put Gemini keys in `NEXT_PUBLIC_*` variables.
+- `GEMINI_API_KEY` may be used only by server-side Next.js API routes such as `pages/api/chat.js`.
 
-**Happy Playing! 🎸**
+## Security Rules
+
+- Commit `.env.example` files only.
+- Never commit `.env`, `.env.local`, real database credentials, JWT secrets, or API keys.
+- Keep `GEMINI_API_KEY` server-side.
+- Rotate any key that was pasted into chat, committed, logged, or exposed in a browser bundle.
+- Keep production `JWT_SECRET` long, random, and different from local development.
+
+## Verification
+
+Useful checks after changes:
+
+```powershell
+cd GuitarIO_Frontend
+npm run build
+```
+
+```powershell
+cd GuitarIO_Backend\springboot
+.\mvnw.cmd clean compile
+```
+
+To scan for Gemini-related env usage:
+
+```powershell
+rg -n "GEMINI" .
+```
+
+## Notes For Future Work
+
+- Keep frontend backend calls going through `lib/api-url.js`.
+- Keep RAG behavior in `RagService`, `EmbeddingService`, and `LessonRepository`.
+- If lesson content changes, regenerate/store embeddings so retrieval stays useful.
+- Prefer backend endpoints for authenticated or secret-bearing work.

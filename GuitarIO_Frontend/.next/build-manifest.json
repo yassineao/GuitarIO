@@ -4,8 +4,8 @@
   ],
   "devFiles": [],
   "lowPriorityFiles": [
-    "static/C-r-mIXK6qFxtH6_ZUHm6/_buildManifest.js",
-    "static/C-r-mIXK6qFxtH6_ZUHm6/_ssgManifest.js"
+    "static/iVZosvlymxKVDDLrwals3/_buildManifest.js",
+    "static/iVZosvlymxKVDDLrwals3/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
@@ -34,7 +34,7 @@
       "static/chunks/webpack-5c10eb8a92fb1ad9.js",
       "static/chunks/framework-86a364e9483bf768.js",
       "static/chunks/main-1fe6263b67429f05.js",
-      "static/chunks/pages/RequireAuth-1e12c57a3922b8d4.js"
+      "static/chunks/pages/RequireAuth-e902662fba16d919.js"
     ],
     "/_app": [
       "static/chunks/webpack-5c10eb8a92fb1ad9.js",
@@ -97,7 +97,7 @@
       "static/chunks/webpack-5c10eb8a92fb1ad9.js",
       "static/chunks/framework-86a364e9483bf768.js",
       "static/chunks/main-1fe6263b67429f05.js",
-      "static/chunks/pages/teaching-b7a62f970919d001.js"
+      "static/chunks/pages/teaching-445f3540491dd2b0.js"
     ]
   }
 }
