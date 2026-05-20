@@ -27,10 +27,10 @@ const Note = ({ name, ext }) => {
   }, [chordLabel]);
 
   return (
-    <div>
-      <div className="content">
-        <div className="description">
-          <div className="ima">
+    <div className="chord-note">
+      <div className="chord-note__content">
+        <div className="chord-note__diagram">
+          <div className="chord-note__image">
             <ins
               key={chordKey}
               ref={chartRef}
@@ -41,8 +41,8 @@ const Note = ({ name, ext }) => {
             ></ins>
           </div>
         </div>
-        <p className="play-label">Want to hear how it sounds?</p>
-        <div className="play-button">
+        <p className="chord-note__label">Want to hear how it sounds?</p>
+        <div className="chord-note__sound">
           <ins
             key={chordKey + '-sound'}
             ref={soundRef}

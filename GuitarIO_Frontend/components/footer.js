@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import PageComments from "./PageComments";
 
 const quickLinks = [
   { label: "Home", href: "/#home" },
@@ -58,6 +59,8 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+
+      <PageComments />
 
       <div className="footer__bottom container">
         <p>&copy; 2026 GuitarIO. All rights reserved.</p>

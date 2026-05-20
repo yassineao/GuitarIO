@@ -1,0 +1,399 @@
+.teaching-page {
+  min-height: 100vh;
+  color: #f8f8fb;
+  background:
+    linear-gradient(135deg, rgba(5, 5, 8, 0.96), rgba(19, 5, 26, 0.96)),
+    repeating-linear-gradient(90deg, rgba(0, 255, 247, 0.08) 0 1px, transparent 1px 78px);
+  padding: calc(var(--nav-height, 80px) + 2rem) 0 4rem;
+  text-transform: none;
+}
+
+.teaching-shell {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.teaching-header {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 760px;
+}
+
+.teaching-eyebrow,
+.teaching-section-heading span,
+.rag-form__topline span,
+.rag-panel__header span,
+.rag-sources > span {
+  color: #d8ff37;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.62rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.teaching-header h1 {
+  color: #fff;
+  font-family: var(--second-font);
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(0, 255, 247, 0.35);
+}
+
+.teaching-header p,
+.teaching-section-heading p {
+  max-width: 620px;
+  color: #d7d4df;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.teaching-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.rag-form,
+.rag-panel,
+.topic-card {
+  background: rgba(7, 5, 14, 0.86);
+  border: 1px solid rgba(0, 255, 247, 0.34);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
+}
+
+.rag-form,
+.rag-panel {
+  min-height: 460px;
+  padding: 1.25rem;
+}
+
+.rag-form {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 1rem;
+}
+
+.rag-form__topline,
+.rag-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.rag-form__topline small,
+.rag-panel__header small {
+  color: #9ee8e5;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.86rem;
+}
+
+.rag-form textarea {
+  width: 100%;
+  min-height: 190px;
+  color: #fff;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.035)),
+    rgba(0, 0, 0, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  outline: none;
+  padding: 1rem;
+  resize: vertical;
+  text-transform: none;
+}
+
+.rag-form textarea:focus {
+  border-color: #d8ff37;
+  box-shadow: 0 0 0 3px rgba(216, 255, 55, 0.14);
+}
+
+.rag-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.rag-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.rag-suggestions button {
+  color: #dfe7ec;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  text-transform: none;
+}
+
+.rag-suggestions button:hover,
+.rag-suggestions button:focus-visible {
+  border-color: rgba(0, 255, 247, 0.7);
+  color: #fff;
+}
+
+.rag-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.rag-actions button,
+.back-link a {
+  min-height: 44px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.62rem;
+  line-height: 1.45;
+  padding: 0.75rem 1rem;
+}
+
+.rag-actions button[type="submit"] {
+  flex: 1;
+  color: #100018;
+  background: #d8ff37;
+  border: 2px solid #fff;
+  box-shadow: 4px 4px 0 #00fff7;
+}
+
+.rag-actions .rag-clear {
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.rag-actions button:disabled,
+.rag-suggestions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.rag-panel {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
+.rag-empty,
+.rag-state,
+.rag-error,
+.rag-answer {
+  align-self: stretch;
+  color: #eceaf2;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.7;
+}
+
+.rag-empty,
+.rag-state,
+.rag-error {
+  display: grid;
+  place-content: center;
+  gap: 0.75rem;
+  min-height: 320px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.rag-empty strong {
+  color: #fff;
+  font-family: var(--second-font);
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+.rag-empty p,
+.rag-state p,
+.rag-answer p {
+  margin: 0;
+}
+
+.rag-error {
+  color: #ffd6df;
+  background: rgba(255, 49, 91, 0.12);
+  border: 1px solid rgba(255, 49, 91, 0.4);
+  border-radius: 6px;
+}
+
+.rag-loader {
+  width: 54px;
+  height: 8px;
+  margin-inline: auto;
+  background: repeating-linear-gradient(90deg, #00fff7 0 8px, transparent 8px 13px);
+  box-shadow: 0 0 18px rgba(0, 255, 247, 0.7);
+}
+
+.rag-answer {
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+  overflow-wrap: anywhere;
+}
+
+.rag-answer > p {
+  color: #f3eef8;
+  background: rgba(255, 255, 255, 0.045);
+  border-left: 3px solid #d8ff37;
+  border-radius: 0 6px 6px 0;
+  font-size: 1rem;
+  padding: 1rem;
+  white-space: pre-wrap;
+}
+
+.rag-sources {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.rag-sources ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+}
+
+.rag-sources li {
+  display: grid;
+  gap: 0.25rem;
+  color: #fff;
+  background: rgba(0, 255, 247, 0.08);
+  border: 1px solid rgba(0, 255, 247, 0.24);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.rag-sources strong {
+  font-size: 0.95rem;
+}
+
+.rag-sources small {
+  color: #b9b6c7;
+  font-size: 0.86rem;
+}
+
+.teaching-topics {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.teaching-section-heading {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.teaching-section-heading h2 {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  color: #fff;
+  font-family: var(--second-font);
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.teaching-section-heading h2:hover {
+  transform: none;
+  text-shadow: none;
+}
+
+.topic-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.topic-card {
+  display: grid;
+  gap: 0.65rem;
+  min-height: 190px;
+  padding: 1rem;
+}
+
+.topic-card h3 {
+  color: #00fff7;
+  font-family: var(--second-font);
+  font-size: 1.2rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.topic-card p {
+  color: #cfcbd8;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.back-link {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-link a {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+@media (max-width: 980px) {
+  .teaching-workspace,
+  .topic-list {
+    grid-template-columns: 1fr;
+  }
+
+  .rag-form,
+  .rag-panel {
+    min-height: auto;
+  }
+
+  .topic-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .teaching-page {
+    padding-top: calc(var(--nav-height, 80px) + 1rem);
+  }
+
+  .teaching-header h1 {
+    font-size: 2.35rem;
+  }
+
+  .rag-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .rag-actions button {
+    width: 100%;
+  }
+
+  .rag-empty,
+  .rag-state,
+  .rag-error {
+    min-height: 240px;
+    padding: 1.25rem;
+  }
+}

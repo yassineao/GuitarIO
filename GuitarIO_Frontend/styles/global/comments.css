@@ -1,0 +1,228 @@
+.page-comments {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.24);
+  border-top: 1px solid rgba(0, 255, 247, 0.18);
+  padding-block: 1.25rem;
+}
+
+.page-comments__inner {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.55fr) minmax(240px, 0.8fr) minmax(240px, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.page-comments__header {
+  text-align: left;
+}
+
+.page-comments__eyebrow {
+  display: inline-flex;
+  color: #d8ff37;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.52rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px rgba(216, 255, 55, 0.6);
+}
+
+.page-comments h2 {
+  color: #fff;
+  font-family: var(--second-font);
+  font-size: clamp(1.15rem, 3vw, 1.8rem);
+  line-height: 1;
+  margin: 0;
+  width: auto;
+  max-width: none;
+  letter-spacing: 0;
+  text-align: left;
+  text-shadow:
+    0 0 12px rgba(255, 0, 255, 0.74),
+    0 0 22px rgba(0, 255, 247, 0.42);
+}
+
+.page-comments h2:hover {
+  transform: none;
+  text-shadow:
+    0 0 12px rgba(255, 0, 255, 0.74),
+    0 0 22px rgba(0, 255, 247, 0.42);
+}
+
+.page-comments__form,
+.page-comments__item,
+.page-comments__empty {
+  background: rgba(10, 0, 25, 0.42);
+  border: 1px solid rgba(0, 255, 247, 0.34);
+  box-shadow: none;
+}
+
+.page-comments__form {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.8rem;
+}
+
+.page-comments__field {
+  display: grid;
+  gap: 0.55rem;
+  color: #d9d2df;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.82rem;
+  text-align: left;
+  text-transform: none;
+}
+
+.page-comments__field span {
+  color: #00fff7;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.5rem;
+  line-height: 1.5;
+}
+
+.page-comments__field input,
+.page-comments__field textarea {
+  width: 100%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.56);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  padding: 0.58rem 0.65rem;
+  outline: none;
+  text-transform: none;
+}
+
+.page-comments__field textarea {
+  min-height: 68px;
+  resize: vertical;
+}
+
+.page-comments__field input:focus,
+.page-comments__field textarea:focus {
+  border-color: #d8ff37;
+  box-shadow: 0 0 0 3px rgba(216, 255, 55, 0.16);
+}
+
+.page-comments__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.page-comments__actions small {
+  color: #a99fb5;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.75rem;
+  text-transform: none;
+}
+
+.page-comments__actions button,
+.page-comments__delete {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  color: #100018;
+  background: #d8ff37;
+  border: 1px solid #fff;
+  box-shadow: 3px 3px 0 #00fff7;
+  cursor: pointer;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.5rem;
+  line-height: 1.4;
+  padding: 0.45rem 0.65rem;
+}
+
+.page-comments__list {
+  display: grid;
+  gap: 0.55rem;
+  max-height: 210px;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+}
+
+.page-comments__empty,
+.page-comments__item {
+  margin: 0;
+  padding: 0.7rem;
+}
+
+.page-comments__empty {
+  color: #d9d2df;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: left;
+  text-transform: none;
+}
+
+.page-comments__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+}
+
+.page-comments__meta strong {
+  color: #fff;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.5rem;
+  line-height: 1.5;
+}
+
+.page-comments__meta time {
+  color: #00fff7;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.72rem;
+  text-transform: none;
+}
+
+.page-comments__item p {
+  color: #e9e0ef;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  margin: 0 0 0.55rem;
+  overflow-wrap: anywhere;
+  text-align: left;
+  text-transform: none;
+}
+
+.page-comments__delete {
+  min-height: 26px;
+  padding: 0.35rem 0.5rem;
+  color: #fff;
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+  .page-comments {
+    padding-block: 1rem;
+  }
+
+  .page-comments__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .page-comments__header,
+  .page-comments h2,
+  .page-comments__empty {
+    text-align: center;
+  }
+
+  .page-comments__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .page-comments__actions button {
+    width: 100%;
+  }
+}

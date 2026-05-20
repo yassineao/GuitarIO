@@ -61,6 +61,7 @@ const Navbar = () => {
     { label: "Learn", href: "/options", activeMatch: "/options" },
     { label: "Search", href: "/notes", activeMatch: "/notes" },
     { label: "Play", href: "/play-song", activeMatch: "/play-song" },
+    { label: "AI Teaching", href: "/teaching", activeMatch: "/teaching" },
   ];
 
   return (

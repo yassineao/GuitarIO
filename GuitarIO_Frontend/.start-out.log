@@ -1,7 +1,0 @@
-   ▲ Next.js 16.0.10
-   - Local:         http://127.0.0.1:3002
-   - Network:       http://127.0.0.1:3002
-
- ✓ Starting...
- ✓ Ready in 691ms
-[dotenv@17.2.4] injecting env (0) from .env.local -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit

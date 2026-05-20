@@ -9,6 +9,7 @@ import "@/styles/formi.css";
 import "@/styles/cyber.css";
 import "@/styles/guitarLesson.css";
 import "@/styles/lesson.css";
+import "@/styles/teaching.css";
 
 import type { AppProps } from "next/app";
 import { Analytics } from "@vercel/analytics/react";

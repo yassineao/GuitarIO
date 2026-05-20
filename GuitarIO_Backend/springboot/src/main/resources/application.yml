@@ -9,6 +9,15 @@ spring:
       keepaliveTime: 300000   # 5 min
       idle-timeout: 600000    # 10 min
 
+  ai:
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY}
+        vertex-ai: false
+        embedding:
+          api-key: ${GEMINI_API_KEY}
+          vertex-ai: false
+
   jpa:
     hibernate:
       ddl-auto: update

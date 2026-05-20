@@ -1,99 +1,99 @@
-import { useState } from 'react';
+import { useMemo, useState } from "react";
+import { useRouter } from "next/router";
+
+const learningOptions = [
+  {
+    id: "ai-teaching",
+    label: "AI Teaching",
+    href: "/teaching",
+    eyebrow: "New",
+    description: "Ask your guitar assistant for drills, rhythm help, and lesson-grounded answers.",
+  },
+  {
+    id: "lessons",
+    label: "Lessons",
+    href: "/Chapters",
+    eyebrow: "Path",
+    description: "Move through structured GuitarIO chapters and keep building step by step.",
+  },
+  {
+    id: "chords",
+    label: "Learn Chords",
+    href: "/majorNotes",
+    eyebrow: "Shapes",
+    description: "Practice core chord shapes and get comfortable with fretboard positions.",
+  },
+  {
+    id: "song",
+    label: "Play a Song",
+    href: "/play-song",
+    eyebrow: "Practice",
+    description: "Put chords and rhythm together with a song-focused practice mode.",
+  },
+  {
+    id: "search",
+    label: "Search Chords",
+    href: "/notes/a",
+    eyebrow: "Lookup",
+    description: "Find chords fast when you need a reference during practice.",
+  },
+];
 
 const Options = () => {
-  const [selectedValue, setSelectedValue] = useState(null);
+  const router = useRouter();
+  const [selectedId, setSelectedId] = useState(learningOptions[0].id);
 
-  const handleChange = (event) => {
-    setSelectedValue(event.target.value); // Set the selected value
-  };
+  const selectedOption = useMemo(
+    () => learningOptions.find((option) => option.id === selectedId),
+    [selectedId]
+  );
 
-  const handleClick = () => {
-    const link = getLink();
-    if (link !== '#') {
-      window.location.href = link;
-    }
-  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  const getLink = () => {
-    switch (selectedValue) {
-      case 'valueIs-1':
-        return '/majorNotes';
-      case 'valueIs-2':
-        return '/Chapters';
-      case 'valueIs-3':
-        return '/play-song';
-      case 'valueIs-4':
-        return '/notes/a';
-      default:
-        return '#';
+    if (selectedOption?.href) {
+      router.push(selectedOption.href);
     }
   };
 
   return (
-    <div id="unique-neon-btn">
-      <form action="" className="container">
-        <input
-          className="input-btn"
-          type="radio"
-          id="valueIs-1"
-          name="valueIs-radio"
-          value="valueIs-1"
-          onChange={handleChange}
-        />
-        <label className="neon-btn" htmlFor="valueIs-1">
-          <span className="span"></span>
-          <span className="txt">Learn Chords</span>
-        </label>
+    <form className="options-board" onSubmit={handleSubmit}>
+      <div className="options-board__header">
+        <span>Choose mode</span>
+        <p>{selectedOption?.description}</p>
+      </div>
 
-     
+      <div className="options-grid" role="radiogroup" aria-label="Learning options">
+        {learningOptions.map((option) => {
+          const isSelected = selectedId === option.id;
 
-        <input
-          className="input-btn"
-          type="radio"
-          id="valueIs-3"
-          name="valueIs-radio"
-          value="valueIs-3"
-          onChange={handleChange}
-        />
-        <label className="neon-btn" htmlFor="valueIs-3">
-          <span className="span"></span>
-          <span className="txt">Try Playing a song</span>
-        </label>
+          return (
+            <label
+              className={`option-card${isSelected ? " option-card--selected" : ""}`}
+              key={option.id}
+              htmlFor={option.id}
+            >
+              <input
+                type="radio"
+                id={option.id}
+                name="learning-option"
+                value={option.id}
+                checked={isSelected}
+                onChange={() => setSelectedId(option.id)}
+              />
+              <span className="option-card__eyebrow">{option.eyebrow}</span>
+              <strong>{option.label}</strong>
+              <p>{option.description}</p>
+              <span className="option-card__status">{isSelected ? "Selected" : "Choose"}</span>
+            </label>
+          );
+        })}
+      </div>
 
-        <input
-          className="input-btn"
-          type="radio"
-          id="valueIs-4"
-          name="valueIs-radio"
-          value="valueIs-4"
-          onChange={handleChange}
-        />
-        <label className="neon-btn" htmlFor="valueIs-4">
-          <span className="span"></span>
-          <span className="txt">Search for chords</span>
-        </label>
-           <input
-          className="input-btn"
-          type="radio"
-          id="valueIs-2"
-          name="valueIs-radio"
-          value="valueIs-2"
-          onChange={handleChange}
-        />
-        <label className="neon-btn" htmlFor="valueIs-2">
-          <span className="span"></span>
-          <span className="txt">Lessons </span>
-        </label>
-      </form>
-
-      <button
-        id="glotch"
-        disabled={!selectedValue}
-        onClick={handleClick}
-      >
-        NEXT
-      </button>
-    </div>
+      <div className="options-board__actions">
+        <button type="submit">Next</button>
+      </div>
+    </form>
   );
 };
 
