@@ -72,7 +72,7 @@ public class DataSourceConfig {
         if (hasText(host) && hasText(databaseName)) {
             int port = environment.getProperty("PGPORT", Integer.class, 5432);
             String jdbcUrl = String.format("jdbc:postgresql://%s:%d/%s", host, port, databaseName);
-            return new DatabaseSettings(jdbcUrl, explicitUsername, explicitPassword);
+            return new DatabaseSettings(withPostgresCompatibilityParameters(jdbcUrl), explicitUsername, explicitPassword);
         }
 
         throw new IllegalStateException(
@@ -117,7 +117,7 @@ public class DataSourceConfig {
             }
         }
 
-        return new DatabaseSettings(jdbcUrl.toString(), username, password);
+        return new DatabaseSettings(withPostgresCompatibilityParameters(jdbcUrl.toString()), username, password);
     }
 
     private String toJdbcUrl(String url) {
@@ -126,7 +126,7 @@ public class DataSourceConfig {
         }
 
         if (url.startsWith("jdbc:")) {
-            return url;
+            return withPostgresCompatibilityParameters(url);
         }
 
         if (url.startsWith("postgres://") || url.startsWith("postgresql://")) {
@@ -134,6 +134,19 @@ public class DataSourceConfig {
         }
 
         return url;
+    }
+
+    private String withPostgresCompatibilityParameters(String jdbcUrl) {
+        if (!hasText(jdbcUrl) || !jdbcUrl.startsWith("jdbc:postgresql:")) {
+            return jdbcUrl;
+        }
+
+        if (jdbcUrl.matches(".*[?&]prepareThreshold=.*")) {
+            return jdbcUrl;
+        }
+
+        String separator = jdbcUrl.contains("?") ? "&" : "?";
+        return jdbcUrl + separator + "prepareThreshold=0";
     }
 
     private String firstNonBlank(String... values) {

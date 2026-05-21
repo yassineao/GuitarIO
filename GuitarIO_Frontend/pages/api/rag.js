@@ -23,6 +23,30 @@ function getRefreshToken() {
   return localStorage.getItem("refreshToken") || "";
 }
 
+function isTokenExpiredOrUnreadable(token) {
+  if (!token) {
+    return true;
+  }
+
+  try {
+    const [, payload] = token.split(".");
+    if (!payload) {
+      return true;
+    }
+
+    const normalizedPayload = payload
+      .replace(/-/g, "+")
+      .replace(/_/g, "/")
+      .padEnd(Math.ceil(payload.length / 4) * 4, "=");
+    const decodedPayload = JSON.parse(atob(normalizedPayload));
+    const now = Date.now() / 1000;
+
+    return typeof decodedPayload.exp !== "number" || decodedPayload.exp <= now;
+  } catch {
+    return true;
+  }
+}
+
 function saveTokens(payload) {
   if (typeof window === "undefined" || !payload) {
     return;
@@ -96,8 +120,9 @@ export async function askTeachingAssistant(question, controller, setErrorMessage
   try {
     let token = getAccessToken();
     let res = await requestTeachingAnswer(question, token, controller);
+    const shouldRefresh = res.status === 401 && isTokenExpiredOrUnreadable(token);
 
-    if (res.status === 401) {
+    if (shouldRefresh) {
       token = await refreshAccessToken(controller);
       if (token) {
         res = await requestTeachingAnswer(question, token, controller);
@@ -109,7 +134,9 @@ export async function askTeachingAssistant(question, controller, setErrorMessage
     if (!res.ok) {
       const finalMessage =
         res.status === 401
-          ? "Please log in again to use the teaching assistant."
+          ? shouldRefresh
+            ? "Please log in again to use the teaching assistant."
+            : "The teaching assistant request was unauthorized. Your login was kept; please check the RAG API configuration."
           : typeof payload === "string"
             ? payload
             : payload?.message || payload?.error || "Unable to get teaching answer.";

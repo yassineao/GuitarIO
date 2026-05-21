@@ -17,9 +17,18 @@ import java.util.Map;
 
 @Service
 public class JwtService {
+    private static final int MIN_SECRET_LENGTH = 32;
+
     private final Key key;
 
-    public JwtService(@Value("${JWT_SECRET}") String secret) {
+    public JwtService(@Value("${jwt.secret}") String secret) {
+        if (secret == null || secret.isBlank()) {
+            throw new IllegalStateException("JWT secret is missing. Set JWT_SECRET in the backend environment.");
+        }
+        if (secret.getBytes(StandardCharsets.UTF_8).length < MIN_SECRET_LENGTH) {
+            throw new IllegalStateException("JWT_SECRET must be at least 32 bytes for HS256 signing.");
+        }
+
         this.key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
     }
 

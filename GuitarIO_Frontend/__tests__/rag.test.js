@@ -10,6 +10,11 @@ function mockResponse({ ok, status, body }) {
   }
 }
 
+function mockJwtWithExpiry(exp) {
+  const payload = Buffer.from(JSON.stringify({ exp })).toString('base64url')
+  return `header.${payload}.signature`
+}
+
 describe('askTeachingAssistant', () => {
   const mockController = { signal: 'test-signal' }
   const mockSetErrorMessage = jest.fn()
@@ -137,5 +142,29 @@ describe('askTeachingAssistant', () => {
     expect(mockSetErrorMessage).toHaveBeenCalledWith(
       'Please log in again to use the teaching assistant.'
     )
+  })
+
+  test('does not clear tokens when RAG returns 401 for an unexpired access token', async () => {
+    const unexpiredToken = mockJwtWithExpiry(Math.floor(Date.now() / 1000) + 3600)
+    localStorage.setItem('accessToken', unexpiredToken)
+    localStorage.setItem('refreshToken', 'refresh-token-1')
+
+    global.fetch.mockResolvedValueOnce(mockResponse({
+      ok: false,
+      status: 401,
+      body: { error: 'Unauthorized' },
+    }))
+
+    await expect(askTeachingAssistant(
+      'Can you explain barre chords?',
+      mockController,
+      mockSetErrorMessage
+    )).rejects.toThrow(
+      'The teaching assistant request was unauthorized. Your login was kept; please check the RAG API configuration.'
+    )
+
+    expect(global.fetch).toHaveBeenCalledTimes(1)
+    expect(localStorage.getItem('accessToken')).toBe(unexpiredToken)
+    expect(localStorage.getItem('refreshToken')).toBe('refresh-token-1')
   })
 })

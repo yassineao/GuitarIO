@@ -13,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
                 "spring.datasource.password=",
                 "spring.jpa.hibernate.ddl-auto=create-drop",
                 "spring.jpa.show-sql=false",
+                "spring.sql.init.mode=never",
                 "spring.ai.google.genai.api-key=test-api-key",
                 "spring.ai.google.genai.embedding.api-key=test-api-key",
                 "server.port=0"

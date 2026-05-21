@@ -1,6 +1,9 @@
 server:
   port: ${PORT:8080}
 
+jwt:
+  secret: ${JWT_SECRET:}
+
 spring:
   datasource:
     hikari:
@@ -20,11 +23,9 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
     show-sql: true
     open-in-view: false
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     defer-datasource-initialization: false
     properties:
       hibernate.format_sql: true
-      hibernate.temp.use_jdbc_metadata_defaults: false

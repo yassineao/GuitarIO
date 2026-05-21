@@ -4,8 +4,8 @@
   ],
   "devFiles": [],
   "lowPriorityFiles": [
-    "static/iVZosvlymxKVDDLrwals3/_buildManifest.js",
-    "static/iVZosvlymxKVDDLrwals3/_ssgManifest.js"
+    "static/2GmpVqZ-1wxUETc8OrWvS/_buildManifest.js",
+    "static/2GmpVqZ-1wxUETc8OrWvS/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
@@ -97,7 +97,7 @@
       "static/chunks/webpack-5c10eb8a92fb1ad9.js",
       "static/chunks/framework-86a364e9483bf768.js",
       "static/chunks/main-1fe6263b67429f05.js",
-      "static/chunks/pages/teaching-445f3540491dd2b0.js"
+      "static/chunks/pages/teaching-69177129596e440c.js"
     ]
   }
 }
