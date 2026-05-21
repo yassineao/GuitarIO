@@ -11,6 +11,9 @@ spring:
       minimum-idle: 2
       keepaliveTime: 300000   # 5 min
       idle-timeout: 600000    # 10 min
+  sql:
+    init:
+      mode: ${SPRING_SQL_INIT_MODE:always}
 
   ai:
     google:

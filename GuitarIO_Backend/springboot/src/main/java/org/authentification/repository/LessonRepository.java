@@ -19,7 +19,13 @@ public interface LessonRepository extends JpaRepository<Lesson, Long> {
     List<Object[]> findChaptersWithNumbers();
     @Query(
             value = """
-            SELECT *
+            SELECT
+                id,
+                chapter,
+                number,
+                content,
+                difficulty_level AS "difficultyLevel",
+                description
             FROM lessons
             WHERE embedding IS NOT NULL
             ORDER BY embedding <=> CAST(:embedding AS vector)
@@ -27,8 +33,17 @@ public interface LessonRepository extends JpaRepository<Lesson, Long> {
         """,
             nativeQuery = true
     )
-    List<Lesson> findSimilarLessons(
+    List<RagLessonView> findSimilarLessonsForRag(
             @Param("embedding") String embedding,
             @Param("limit") int limit
     );
+
+    interface RagLessonView {
+        Long getId();
+        String getChapter();
+        Integer getNumber();
+        String getContent();
+        String getDifficultyLevel();
+        String getDescription();
+    }
 }

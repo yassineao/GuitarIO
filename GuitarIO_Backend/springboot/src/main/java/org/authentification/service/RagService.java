@@ -5,6 +5,7 @@ import org.authentification.dto.RagResponse;
 import org.authentification.entity.Lesson;
 import org.authentification.entity.UserLesson;
 import org.authentification.repository.LessonRepository;
+import org.authentification.repository.LessonRepository.RagLessonView;
 import org.authentification.repository.UserLessonRepository;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.http.HttpStatus;
@@ -44,7 +45,7 @@ public class RagService {
         int limit = normalizeLimit(request == null ? null : request.limit());
 
         String embedding = toPgVector(embeddingService.embed(question));
-        List<Lesson> relevantLessons = lessonRepo.findSimilarLessons(embedding, limit);
+        List<RagLessonView> relevantLessons = lessonRepo.findSimilarLessonsForRag(embedding, limit);
         List<UserLesson> userLessons = userLessonRepo.findByUserId(userId);
 
         String answer = chatModel.call(buildPrompt(question, relevantLessons, userLessons));
@@ -55,6 +56,20 @@ public class RagService {
                         .map(this::toSource)
                         .toList()
         );
+    }
+
+    public RagResponse.RagSource embedLesson(Long lessonId) {
+        if (lessonId == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "lessonId is required");
+        }
+
+        Lesson lesson = lessonRepo.findById(lessonId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Lesson not found"));
+
+        lesson.setEmbedding(embeddingService.embed(buildLessonEmbeddingText(lesson)));
+        Lesson savedLesson = lessonRepo.save(lesson);
+
+        return toSource(savedLesson);
     }
 
     private String normalizeQuestion(String question) {
@@ -76,7 +91,7 @@ public class RagService {
         return Math.max(1, Math.min(limit, MAX_LIMIT));
     }
 
-    private String buildPrompt(String question, List<Lesson> lessons, List<UserLesson> userLessons) {
+    private String buildPrompt(String question, List<RagLessonView> lessons, List<UserLesson> userLessons) {
         long assignedCount = userLessons.size();
         long completedCount = userLessons.stream()
                 .filter(userLesson -> Boolean.TRUE.equals(userLesson.getIsCompleted()))
@@ -105,14 +120,28 @@ public class RagService {
                 """.formatted(assignedCount, completedCount, context, question);
     }
 
-    private String buildLessonContext(List<Lesson> lessons) {
+    private String buildLessonEmbeddingText(Lesson lesson) {
+        return """
+                Chapter: %s
+                Lesson Number: %s
+                Description: %s
+                Content: %s
+                """.formatted(
+                blankToFallback(lesson.getChapter(), "Unknown"),
+                lesson.getNumber() == null ? "Unknown" : lesson.getNumber(),
+                blankToFallback(lesson.getDescription(), ""),
+                blankToFallback(lesson.getContent(), "")
+        );
+    }
+
+    private String buildLessonContext(List<RagLessonView> lessons) {
         if (lessons.isEmpty()) {
             return "No matching GuitarIO lessons were found.";
         }
 
         StringBuilder context = new StringBuilder();
         for (int i = 0; i < lessons.size(); i++) {
-            Lesson lesson = lessons.get(i);
+            RagLessonView lesson = lessons.get(i);
             String block = """
                     Source %d
                     Title: %s
@@ -148,7 +177,23 @@ public class RagService {
         );
     }
 
+    private RagResponse.RagSource toSource(RagLessonView lesson) {
+        return new RagResponse.RagSource(
+                lesson.getId(),
+                sourceTitle(lesson),
+                lesson.getChapter(),
+                lesson.getNumber(),
+                lesson.getDescription()
+        );
+    }
+
     private String sourceTitle(Lesson lesson) {
+        String chapter = blankToFallback(lesson.getChapter(), "Lesson");
+        Integer number = lesson.getNumber();
+        return number == null ? chapter : chapter + " #" + number;
+    }
+
+    private String sourceTitle(RagLessonView lesson) {
         String chapter = blankToFallback(lesson.getChapter(), "Lesson");
         Integer number = lesson.getNumber();
         return number == null ? chapter : chapter + " #" + number;

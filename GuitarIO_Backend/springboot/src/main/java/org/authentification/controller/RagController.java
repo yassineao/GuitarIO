@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -57,6 +58,41 @@ public class RagController {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(error("RAG_INTERNAL_ERROR", "RAG failed after authentication succeeded.", ex));
+        }
+    }
+
+    @PostMapping("/lessons/{lessonId}/embed")
+    public ResponseEntity<?> embedLesson(@PathVariable Long lessonId) {
+        try {
+            return ResponseEntity.ok(Map.of(
+                    "message", "Lesson embedding generated successfully.",
+                    "lesson", ragService.embedLesson(lessonId)
+            ));
+        } catch (ResponseStatusException ex) {
+            return ResponseEntity
+                    .status(ex.getStatusCode())
+                    .body(error("LESSON_EMBEDDING_REQUEST", ex.getReason(), ex));
+        } catch (Exception ex) {
+            boolean unauthorized = containsIgnoreCase(ex.getMessage(), "401")
+                    || containsIgnoreCase(ex.getMessage(), "unauthorized")
+                    || containsIgnoreCase(rootMessage(ex), "401")
+                    || containsIgnoreCase(rootMessage(ex), "unauthorized");
+
+            if (unauthorized) {
+                return ResponseEntity
+                        .status(HttpStatus.BAD_GATEWAY)
+                        .body(Map.of(
+                                "error", "DOWNSTREAM_AI_UNAUTHORIZED",
+                                "message", "The embedding endpoint was reached, but the AI provider rejected the configured API key.",
+                                "hint", "Check GEMINI_API_KEY, then restart the backend.",
+                                "exception", ex.getClass().getSimpleName(),
+                                "rootCause", rootMessage(ex)
+                        ));
+            }
+
+            return ResponseEntity
+                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(error("LESSON_EMBEDDING_INTERNAL_ERROR", "Lesson embedding failed after authentication succeeded.", ex));
         }
     }
 
