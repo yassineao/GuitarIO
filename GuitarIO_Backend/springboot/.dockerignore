@@ -4,6 +4,12 @@
 
 target/
 .idea/
+.mvn/wrapper/maven-wrapper.jar
 *.iml
 
 *.log
+.run-*.log
+predictions_out/
+
+*.png
+response.json

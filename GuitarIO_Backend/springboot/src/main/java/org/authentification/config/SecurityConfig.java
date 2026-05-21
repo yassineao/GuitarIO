@@ -38,8 +38,17 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(ex -> ex
-                        .authenticationEntryPoint((req, res, e) ->
-                                res.sendError(HttpServletResponse.SC_UNAUTHORIZED))
+                        .authenticationEntryPoint((req, res, e) -> {
+                            res.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                            res.setContentType("application/json");
+                            res.getWriter().write("""
+                                    {
+                                      "error": "APP_JWT_MISSING",
+                                      "message": "This endpoint requires authentication, but no valid Bearer token was found.",
+                                      "hint": "Send Authorization: Bearer <token> with the request."
+                                    }
+                                    """);
+                        })
                 )
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();

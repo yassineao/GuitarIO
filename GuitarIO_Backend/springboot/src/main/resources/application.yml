@@ -17,6 +17,9 @@ spring:
       genai:
         api-key: ${GEMINI_API_KEY}
         vertex-ai: false
+        chat:
+          options:
+            model: gemini-2.5-flash
         embedding:
           api-key: ${GEMINI_API_KEY}
           vertex-ai: false

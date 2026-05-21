@@ -57,7 +57,15 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             } catch (Exception e) {
                 e.printStackTrace(); // IMPORTANT: we need the real reason
                 SecurityContextHolder.clearContext();
-                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid or expired token");
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                response.setContentType("application/json");
+                response.getWriter().write("""
+                        {
+                          "error": "APP_JWT_INVALID_OR_EXPIRED",
+                          "message": "The Authorization Bearer token was rejected before reaching the controller.",
+                          "hint": "Log in again, copy the fresh access token, and send it as Authorization: Bearer <token>."
+                        }
+                        """);
                 return;
             }
         }
