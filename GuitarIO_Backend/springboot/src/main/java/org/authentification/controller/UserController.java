@@ -169,7 +169,25 @@ public class UserController {
 
     private boolean isSecureRequest(HttpServletRequest request) {
         String forwardedProto = request.getHeader("X-Forwarded-Proto");
-        return request.isSecure() || "https".equalsIgnoreCase(forwardedProto);
+        String forwarded = request.getHeader("Forwarded");
+        String forwardedSsl = request.getHeader("X-Forwarded-Ssl");
+        String origin = request.getHeader("Origin");
+        String referer = request.getHeader("Referer");
+
+        return request.isSecure()
+                || containsHttps(forwardedProto)
+                || containsHttps(forwarded)
+                || "on".equalsIgnoreCase(forwardedSsl)
+                || startsWithHttps(origin)
+                || startsWithHttps(referer);
+    }
+
+    private boolean containsHttps(String value) {
+        return value != null && value.toLowerCase().contains("https");
+    }
+
+    private boolean startsWithHttps(String value) {
+        return value != null && value.toLowerCase().startsWith("https://");
     }
 
     private String readCookie(HttpServletRequest request, String name) {

@@ -14,19 +14,29 @@ export default function TeachingAssistant({ teachingDocuments = [] }) {
   const [sources, setSources] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [grounded, setGrounded] = useState(null);
+  const [retrievalQuality, setRetrievalQuality] = useState(null);
+  const [notice, setNotice] = useState("");
 
   const clearConversation = () => {
     setQuestion("");
     setAnswer("");
     setSources([]);
     setError("");
+    setGrounded(null);
+    setRetrievalQuality(null);
+    setNotice("");
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     setAnswer("");
     setError("");
     setSources([]);
+    setGrounded(null);
+    setRetrievalQuality(null);
+    setNotice("");
 
     if (!question.trim()) {
       setError("Ask a question about guitar teaching first.");
@@ -39,8 +49,12 @@ export default function TeachingAssistant({ teachingDocuments = [] }) {
 
     try {
       const data = await askTeachingAssistant(question, controller, setError);
+
       setAnswer(data?.answer || "No answer returned.");
       setSources(data?.sources || []);
+      setGrounded(data?.grounded ?? null);
+      setRetrievalQuality(data?.retrievalQuality ?? null);
+      setNotice(data?.notice || "");
     } catch (err) {
       if (err?.name === "AbortError") {
         setError("Request timed out. Please try again.");
@@ -55,13 +69,25 @@ export default function TeachingAssistant({ teachingDocuments = [] }) {
     }
   };
 
+  const hasConversationContent =
+    question ||
+    answer ||
+    error ||
+    sources.length > 0 ||
+    grounded !== null ||
+    retrievalQuality !== null ||
+    notice;
+
   return (
     <main className="teaching-page">
       <section className="container teaching-shell">
         <div className="teaching-header">
           <span className="teaching-eyebrow">Practice desk</span>
           <h1>Guitar Teaching Assistant</h1>
-          <p>Ask a focused question and get a lesson-grounded answer from your GuitarIO backend.</p>
+          <p>
+            Ask a focused question and get a lesson-grounded answer from your
+            GuitarIO backend.
+          </p>
         </div>
 
         <div className="teaching-workspace">
@@ -96,11 +122,12 @@ export default function TeachingAssistant({ teachingDocuments = [] }) {
               <button type="submit" disabled={loading}>
                 {loading ? "Thinking..." : "Ask assistant"}
               </button>
+
               <button
                 type="button"
                 className="rag-clear"
                 onClick={clearConversation}
-                disabled={loading || (!question && !answer && !error)}
+                disabled={loading || !hasConversationContent}
               >
                 Clear
               </button>
@@ -110,6 +137,7 @@ export default function TeachingAssistant({ teachingDocuments = [] }) {
           <aside className="rag-panel" aria-live="polite">
             <div className="rag-panel__header">
               <span>Answer</span>
+
               {sources.length > 0 && (
                 <small>
                   {sources.length} source{sources.length === 1 ? "" : "s"}
@@ -129,13 +157,30 @@ export default function TeachingAssistant({ teachingDocuments = [] }) {
             {!loading && !error && !answer && (
               <div className="rag-empty">
                 <strong>Ready when you are.</strong>
-                <p>Try asking for a chord-change drill, a strumming pattern, or a short practice plan.</p>
+                <p>
+                  Try asking for a chord-change drill, a strumming pattern, or a
+                  short practice plan.
+                </p>
               </div>
             )}
 
             {!loading && answer && (
               <div className="rag-answer">
+                {grounded === false && (
+                  <div className="rag-warning">
+                    <strong>Not enough lesson context.</strong>
+                    {notice && <p>{notice}</p>}
+                  </div>
+                )}
+
                 <p>{answer}</p>
+
+                {typeof retrievalQuality === "number" && (
+                  <small className="rag-quality">
+                    Retrieval quality: {(retrievalQuality * 100).toFixed(0)}%
+                  </small>
+                )}
+
                 {sources.length > 0 && (
                   <div className="rag-sources">
                     <span>Sources used</span>
@@ -143,7 +188,15 @@ export default function TeachingAssistant({ teachingDocuments = [] }) {
                       {sources.map((source) => (
                         <li key={source.id || source.title}>
                           <strong>{source.title}</strong>
-                          {source.description && <small>{source.description}</small>}
+                          {typeof source.relevanceScore === "number" && (
+                            <small>
+                              Relevance:{" "}
+                              {(source.relevanceScore * 100).toFixed(0)}%
+                            </small>
+                          )}
+                          {source.description && (
+                            <small>{source.description}</small>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -160,6 +213,7 @@ export default function TeachingAssistant({ teachingDocuments = [] }) {
           <span>Lesson map</span>
           <h2>Teaching topics</h2>
         </div>
+
         <div className="topic-list">
           {teachingDocuments.map((doc) => (
             <article key={doc.id} className="topic-card">
@@ -168,6 +222,7 @@ export default function TeachingAssistant({ teachingDocuments = [] }) {
             </article>
           ))}
         </div>
+
         <div className="back-link">
           <Link href="/options">Back to Learn</Link>
         </div>

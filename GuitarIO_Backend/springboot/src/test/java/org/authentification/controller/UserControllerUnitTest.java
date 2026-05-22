@@ -53,6 +53,31 @@ class UserControllerUnitTest {
     }
 
     @Test
+    void login_ShouldSetCrossSiteCookieAttributes_WhenRequestComesFromHttpsFrontend() {
+        User user = user();
+        when(userService.findByEmailOrThrow("player@guitario.test")).thenReturn(user);
+        when(userService.checkPassword(user, "secret")).thenReturn(true);
+
+        MockHttpServletRequest request = new MockHttpServletRequest();
+        request.addHeader("Origin", "https://guitar-io.vercel.app");
+
+        ResponseEntity<?> response = userController.login(
+                new LoginRequest("player@guitario.test", "secret"),
+                request
+        );
+
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        String accessCookie = findSetCookie(response, "accessToken");
+        String refreshCookie = findSetCookie(response, "refreshToken");
+        assertNotNull(accessCookie);
+        assertNotNull(refreshCookie);
+        org.junit.jupiter.api.Assertions.assertTrue(accessCookie.contains("Secure"));
+        org.junit.jupiter.api.Assertions.assertTrue(accessCookie.contains("SameSite=None"));
+        org.junit.jupiter.api.Assertions.assertTrue(refreshCookie.contains("Secure"));
+        org.junit.jupiter.api.Assertions.assertTrue(refreshCookie.contains("SameSite=None"));
+    }
+
+    @Test
     void refresh_ShouldReturnNewAccessToken_WhenRefreshTokenIsValid() {
         String refreshToken = jwtService.generateToken(
                 "player@guitario.test",
@@ -90,9 +115,16 @@ class UserControllerUnitTest {
     }
 
     private String extractCookie(ResponseEntity<?> response, String name) {
+        String cookie = findSetCookie(response, name);
+        if (cookie == null) {
+            return null;
+        }
+        return cookie.substring((name + "=").length(), cookie.indexOf(';'));
+    }
+
+    private String findSetCookie(ResponseEntity<?> response, String name) {
         return response.getHeaders().getOrEmpty("Set-Cookie").stream()
                 .filter(header -> header.startsWith(name + "="))
-                .map(header -> header.substring((name + "=").length(), header.indexOf(';')))
                 .findFirst()
                 .orElse(null);
     }

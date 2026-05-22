@@ -29,7 +29,8 @@ public class RagService {
     private static final int MAX_CONTEXT_CHARS = 7_000;
     private static final int MAX_LESSON_CHARS = 1_400;
     private static final double MIN_RELEVANCE_SCORE = 0.55;
-    private static final Pattern SOURCE_CITATION_PATTERN = Pattern.compile("\\[Source\\s+(\\d+)]");
+    private static final Pattern SOURCE_CITATION_PATTERN =
+        Pattern.compile("\\[\\s*Source\\s*:?\\s*(\\d+)\\s*]", Pattern.CASE_INSENSITIVE);    
     private static final String WEAK_RETRIEVAL_NOTICE = "Retrieved lessons were not similar enough to ground an answer.";
 
     private final EmbeddingService embeddingService;
