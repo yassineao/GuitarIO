@@ -4,9 +4,13 @@ export default async function handler(req, res) {
   const { chapter, lesson } = req.query;
 
   const cookie = req.headers.cookie || "";
+  const params = new URLSearchParams({
+    chapter,
+    number: lesson,
+  });
 
   const backendUrl = buildServerApiUrl(
-    `/lessons/${encodeURIComponent(chapter)}/${encodeURIComponent(lesson)}`
+    `/lessons/content?${params.toString()}`
   );
 
   const r = await fetch(backendUrl, {

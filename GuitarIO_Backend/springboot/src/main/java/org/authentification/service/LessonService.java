@@ -100,10 +100,10 @@ public class LessonService {
     }
 
     public Map<String, String> getLessonContent(String chapter, Integer number) {
-        Lesson lesson = lessonRepo.findByChapterAndNumber(chapter, number)
+        String content = lessonRepo.findContentByChapterAndNumber(chapter, number)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Lesson not found"));
 
-        return Map.of("content", lesson.getContent());
+        return Map.of("content", content);
     }
 
     public Map<String, List<Integer>> getChaptersWithNumbers() {

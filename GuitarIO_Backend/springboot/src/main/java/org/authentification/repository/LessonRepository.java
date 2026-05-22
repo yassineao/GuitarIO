@@ -11,6 +11,17 @@ import java.util.Optional;
 
 public interface LessonRepository extends JpaRepository<Lesson, Long> {
     Optional<Lesson> findByChapterAndNumber(String chapter, Integer number);
+
+    @Query("""
+        SELECT l.content
+        FROM Lesson l
+        WHERE l.chapter = :chapter AND l.number = :number
+    """)
+    Optional<String> findContentByChapterAndNumber(
+            @Param("chapter") String chapter,
+            @Param("number") Integer number
+    );
+
     @Query("""
         SELECT l.chapter, l.number
         FROM Lesson l

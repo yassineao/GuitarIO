@@ -15,6 +15,15 @@ const fetcher = async (url) => {
   return res.json();
 };
 
+const lessonContentUrl = (chapter, number) => {
+  const params = new URLSearchParams({
+    chapter,
+    number: String(number),
+  });
+
+  return buildPublicApiUrl(`/lessons/content?${params.toString()}`);
+};
+
 export default function Chapters({ chapter, lesson }) {
   const router = useRouter();
   const { connected, loading: authLoading } = useAuth();
@@ -27,7 +36,7 @@ export default function Chapters({ chapter, lesson }) {
 
   // API key
   const key = !authLoading && connected
-    ? buildPublicApiUrl(`/lessons/${encodeURIComponent(title)}/${num}`)
+    ? lessonContentUrl(title, num)
     : null;
 
   const { data, error, isLoading } = useSWR(key, fetcher, {
@@ -53,7 +62,7 @@ const { data: chaptersIndex } = useSWR(
 
   const nextNum = num + 1;
   const nextHref = `/Chapters/${encodeURIComponent(title)}/${nextNum}`;
-  const nextKey = buildPublicApiUrl(`/lessons/${encodeURIComponent(title)}/${nextNum}`);
+  const nextKey = lessonContentUrl(title, nextNum);
 
 const lessonNumbers = chaptersIndex?.[title] || [];
 const hasNext = lessonNumbers.includes(nextNum);

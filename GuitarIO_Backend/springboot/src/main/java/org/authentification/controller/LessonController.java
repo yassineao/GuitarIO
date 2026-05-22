@@ -4,10 +4,13 @@ import org.authentification.entity.DifficultyLevel;
 import org.authentification.entity.Lesson;
 import org.authentification.entity.UserLesson;
 import org.authentification.service.LessonService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Map;
@@ -15,6 +18,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/lessons")
 public class LessonController {
+
+    private static final Logger log = LoggerFactory.getLogger(LessonController.class);
 
     private final LessonService lessonService;
 
@@ -51,7 +56,37 @@ public class LessonController {
             @PathVariable String chapter,
             @PathVariable Integer number
     ) {
-        return ResponseEntity.ok(lessonService.getLessonContent(chapter, number));
+        return getLessonResponse(chapter, number);
+    }
+
+    @GetMapping("/content")
+    public ResponseEntity<Map<String, String>> getLessonByQuery(
+            @RequestParam String chapter,
+            @RequestParam Integer number
+    ) {
+        return getLessonResponse(chapter, number);
+    }
+
+    private ResponseEntity<Map<String, String>> getLessonResponse(String chapter, Integer number) {
+        try {
+            return ResponseEntity.ok(lessonService.getLessonContent(chapter, number));
+        } catch (ResponseStatusException ex) {
+            log.warn("Could not fetch lesson chapter='{}' number={}: {}", chapter, number, ex.getReason());
+            return ResponseEntity.status(ex.getStatusCode()).body(Map.of(
+                    "error", "LESSON_LOOKUP_FAILED",
+                    "message", ex.getReason() == null ? "Lesson lookup failed" : ex.getReason(),
+                    "chapter", chapter,
+                    "number", String.valueOf(number)
+            ));
+        } catch (Exception ex) {
+            log.error("Unexpected error while fetching lesson chapter='{}' number={}", chapter, number, ex);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of(
+                    "error", "LESSON_UNEXPECTED_ERROR",
+                    "message", ex.getClass().getSimpleName() + ": " + ex.getMessage(),
+                    "chapter", chapter,
+                    "number", String.valueOf(number)
+            ));
+        }
     }
 
     @GetMapping("/chapters-with-numbers")
