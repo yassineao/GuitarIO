@@ -27,7 +27,7 @@ export default function Chapters({ chapter, lesson }) {
 
   // API key
   const key = !authLoading && connected
-    ? buildPublicApiUrl(`/lessons/lesson/${encodeURIComponent(title)}/${num}`)
+    ? buildPublicApiUrl(`/lessons/${encodeURIComponent(title)}/${num}`)
     : null;
 
   const { data, error, isLoading } = useSWR(key, fetcher, {
@@ -53,7 +53,7 @@ const { data: chaptersIndex } = useSWR(
 
   const nextNum = num + 1;
   const nextHref = `/Chapters/${encodeURIComponent(title)}/${nextNum}`;
-  const nextKey = buildPublicApiUrl(`/lessons/lesson/${encodeURIComponent(title)}/${nextNum}`);
+  const nextKey = buildPublicApiUrl(`/lessons/${encodeURIComponent(title)}/${nextNum}`);
 
 const lessonNumbers = chaptersIndex?.[title] || [];
 const hasNext = lessonNumbers.includes(nextNum);

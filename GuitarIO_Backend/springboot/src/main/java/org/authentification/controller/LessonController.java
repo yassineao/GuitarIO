@@ -46,7 +46,7 @@ public class LessonController {
         return ResponseEntity.status(HttpStatus.CREATED).body(userLesson);
     }
 
-    @GetMapping("/lesson/{chapter}/{number}")
+    @GetMapping({"/{chapter}/{number}", "/lesson/{chapter}/{number}"})
     public ResponseEntity<Map<String, String>> getLesson(
             @PathVariable String chapter,
             @PathVariable Integer number

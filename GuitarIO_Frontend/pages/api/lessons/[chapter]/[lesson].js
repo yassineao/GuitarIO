@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const cookie = req.headers.cookie || "";
 
   const backendUrl = buildServerApiUrl(
-    `/lessons/lesson/${encodeURIComponent(chapter)}/${encodeURIComponent(lesson)}`
+    `/lessons/${encodeURIComponent(chapter)}/${encodeURIComponent(lesson)}`
   );
 
   const r = await fetch(backendUrl, {
