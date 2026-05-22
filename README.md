@@ -24,7 +24,7 @@ A full-stack educational platform combining structured guitar curriculum with an
 - **Powered by Google Gemini 2.5 Flash**
 
 ### 🔐 Secure & Scalable
-- **JWT Authentication**: Stateless, secure token-based auth
+- **JWT Authentication**: Stateless auth with HttpOnly `accessToken` and `refreshToken` cookies
 - **Spring Security**: Role-based access control (RBAC)
 - **Production-Ready**: Docker support, optimized database indexes, load-tested
 
@@ -54,7 +54,7 @@ A full-stack educational platform combining structured guitar curriculum with an
 │  ├─ Interactive Music Tools                 │
 │  └─ AI Teaching Assistant Chat              │
 └────────────────────┬────────────────────────┘
-                     │ REST API (JWT Auth)
+                     │ REST API (HttpOnly cookie auth)
 ┌────────────────────▼────────────────────────┐
 │  Backend (Spring Boot 3.5.5, Java 21)       │
 │  ├─ 11 REST Controllers                     │
@@ -76,18 +76,19 @@ A full-stack educational platform combining structured guitar curriculum with an
 ```
 User Question → Embed (Google GenAI) → pgvector Search (Top 4-8 Lessons)
                                           ↓
-                    Build Context (User Progress + Lesson Content)
+                    Filter weak matches + build context
                                           ↓
-                    Chat Model (Gemini 2.5 Flash - Grounded)
+                    Chat Model (Gemini 2.5 Flash - cited + grounded)
                                           ↓
-                    Answer + Source Lessons (Transparent)
+                    Answer + cited sources, or safe fallback
 ```
 
 **Key Metrics:**
 - ⚡ **RAG Latency (P95)**: ~1.2 seconds (embedding + search + generation)
 - 🎯 **Embedding Dimension**: 768 (Google GenAI)
-- 📊 **Retrieved Lessons**: 4-8 per query (configurable)
+- 📊 **Retrieved Lessons**: 4-8 per query (configurable), filtered by relevance
 - 🛡️ **Context Limit**: 7,000 characters max (prevents token overflow)
+- 🛡️ **Grounding Guardrails**: weak retrieval fallback + citation validation
 
 ---
 
@@ -133,10 +134,13 @@ pnpm dev
 
 ### 4️⃣ Test the RAG
 ```bash
-# Login via frontend, then ask AI a question about guitar
-# Or directly call the API:
-curl -X POST http://localhost:8080/rag/ask \
-  -H "Authorization: Bearer YOUR_JWT_TOKEN" \
+# Login first; curl stores the HttpOnly cookies in cookies.txt
+curl -c cookies.txt -X POST http://localhost:8080/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": "you@example.com", "password": "your-password"}'
+
+# Then send the cookie jar automatically with the protected RAG request
+curl -b cookies.txt -X POST http://localhost:8080/rag/ask \
   -H "Content-Type: application/json" \
   -d '{"question": "How do I play an F major chord?", "limit": 4}'
 ```
@@ -207,8 +211,11 @@ See [README_DETAILED.md - Deployment Section](./README_DETAILED.md#setup--deploy
 
 | Endpoint | Method | Purpose | Auth |
 |----------|--------|---------|------|
-| `/auth/login` | POST | User login (returns JWT) | ❌ |
-| `/auth/register` | POST | User registration | ❌ |
+| `/auth/login` | POST | User login; sets HttpOnly auth cookies | ❌ |
+| `/auth/register` | POST | User registration; sets HttpOnly auth cookies | ❌ |
+| `/auth/me` | GET | Current authenticated user profile | ✅ |
+| `/auth/refresh` | POST | Refresh access cookie from refresh cookie | ❌ |
+| `/auth/logout` | POST | Clear auth cookies | ✅ |
 | `/lessons` | GET | Fetch all lessons | ✅ |
 | `/lessons/{id}/complete` | POST | Mark lesson complete | ✅ |
 | **`/rag/ask`** | **POST** | **Ask AI (RAG)** | **✅** |
@@ -223,7 +230,7 @@ See [README_DETAILED.md - Deployment Section](./README_DETAILED.md#setup--deploy
 **Request:**
 ```bash
 curl -X POST http://localhost:8080/rag/ask \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIs..." \
+  -b cookies.txt \
   -H "Content-Type: application/json" \
   -d '{
     "question": "How do I switch between chords faster?",
@@ -239,14 +246,23 @@ curl -X POST http://localhost:8080/rag/ask \
     {
       "id": 12,
       "title": "Chord Transitions Techniques",
-      "relevance_score": 0.95
+      "chapter": "Chord Transitions",
+      "number": 2,
+      "description": "Practice efficient chord movement.",
+      "relevanceScore": 0.95
     },
     {
       "id": 8,
       "title": "Finger Dexterity Exercises",
-      "relevance_score": 0.88
+      "chapter": "Technique",
+      "number": 1,
+      "description": "Finger independence drills.",
+      "relevanceScore": 0.88
     }
-  ]
+  ],
+  "grounded": true,
+  "retrievalQuality": 0.95,
+  "notice": null
 }
 ```
 
@@ -291,7 +307,7 @@ pnpm test:coverage        # Coverage report (target: >70%)
 ## 🔒 Security
 
 ✅ **Implemented Security Measures:**
-- **Authentication**: JWT tokens (HS256 signed)
+- **Authentication**: JWT tokens (HS256 signed) transported in HttpOnly cookies
 - **Password Security**: bcrypt hashing (10 rounds)
 - **Authorization**: Role-based access control (RBAC)
 - **API Protection**: Spring Security CSRF protection, CORS whitelisting
@@ -307,18 +323,20 @@ pnpm test:coverage        # Coverage report (target: >70%)
 
 ```
 1. User enters question in frontend chat UI
-2. Frontend calls POST /rag/ask with JWT token
-3. Spring Security validates token → extracts userId
-4. RagService receives request:
+2. Frontend calls POST /rag/ask with `credentials: "include"`
+3. Browser sends the HttpOnly `accessToken` cookie automatically
+4. Spring Security validates token → extracts userId
+5. RagService receives request:
    a. Validates question (max 1,000 chars)
    b. Calls EmbeddingService (Google GenAI API)
    c. pgvector searches for similar lessons (cosine distance)
-   d. Fetches user's lesson progress
-   e. Builds grounded prompt (7,000 char limit)
-   f. Calls ChatModel (Gemini 2.5 Flash)
-   g. Returns answer + source lessons
-5. Frontend displays answer with source attribution
-6. User clicks source lesson → navigates to lesson page
+   d. Filters weak matches by relevance score
+   e. Fetches user's lesson progress
+   f. Builds grounded prompt (7,000 char limit)
+   g. Calls ChatModel (Gemini 2.5 Flash)
+   h. Validates source citations before returning an answer
+6. Frontend displays answer with source attribution, or fallback notice
+7. User clicks source lesson → navigates to lesson page
 ```
 
 ### Request Flow: Authentication
@@ -327,11 +345,12 @@ pnpm test:coverage        # Coverage report (target: >70%)
 1. User registers: POST /auth/register with username/password
 2. Backend hashes password (bcrypt), stores in database
 3. User logs in: POST /auth/login with credentials
-4. Backend validates → generates JWT token
-5. Frontend stores JWT (secure http-only cookie recommended)
-6. For each API request, frontend includes: Authorization: Bearer {TOKEN}
-7. Spring Security filter validates signature, expiry, user roles
-8. Request processed with userId from token claims
+4. Backend validates → generates access + refresh JWTs
+5. Backend sets HttpOnly cookies: `accessToken` and `refreshToken`
+6. For each API request, the browser sends cookies automatically
+7. Spring Security filter reads `accessToken`, validates signature, expiry, and user roles
+8. If needed, `POST /auth/refresh` uses `refreshToken` to set a fresh access cookie
+9. Request processed with userId from token claims
 ```
 
 ---
@@ -561,9 +580,13 @@ Response shape:
       "title": "Lesson #1",
       "chapter": "Basics",
       "number": 1,
-      "description": "Lesson description"
+      "description": "Lesson description",
+      "relevanceScore": 0.93
     }
-  ]
+  ],
+  "grounded": true,
+  "retrievalQuality": 0.93,
+  "notice": null
 }
 ```
 
@@ -571,9 +594,10 @@ How it works:
 
 1. The backend validates the question.
 2. `EmbeddingService` creates an embedding using Gemini.
-3. `LessonRepository.findSimilarLessons` searches lesson embeddings with pgvector.
-4. `RagService` builds a grounded teaching prompt from the retrieved lessons and user progress.
-5. Spring AI calls Google GenAI and returns an answer plus lesson sources.
+3. `LessonRepository.findSimilarLessonsForRag` searches lesson embeddings with pgvector and returns vector distance.
+4. `RagService` filters weak matches, builds a grounded teaching prompt, and requires source citations.
+5. Spring AI calls Google GenAI.
+6. The backend validates citation fidelity and returns a grounded answer, or a fallback if retrieval/citations are weak.
 
 ## Important API Routes
 
@@ -583,6 +607,8 @@ Backend:
 - `POST /auth/register`
 - `POST /auth/login`
 - `POST /auth/refresh`
+- `GET /auth/me`
+- `POST /auth/logout`
 - `GET /lessons`
 - `POST /lessons`
 - `POST /lessons/assign`
@@ -678,6 +704,7 @@ Frontend:
 - Keep `GEMINI_API_KEY` server-side.
 - Rotate any key that was pasted into chat, committed, logged, or exposed in a browser bundle.
 - Keep production `JWT_SECRET` long, random, and different from local development.
+- Auth cookies are HttpOnly. Frontend requests must use `credentials: "include"` instead of reading tokens from `localStorage`.
 
 ## Verification
 

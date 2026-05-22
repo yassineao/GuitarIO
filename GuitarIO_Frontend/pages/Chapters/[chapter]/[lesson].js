@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import WavyGuitarStrings from "../../../components/loader";
 import ProtectedRoute from "../../../components/protectedContent";
 import { buildPublicApiUrl } from "../../../lib/api-url";
+import { useAuth } from "../../api/AuthContext";
 
 const fetcher = async (url) => {
   const res = await fetch(url, {
@@ -16,6 +17,7 @@ const fetcher = async (url) => {
 
 export default function Chapters({ chapter, lesson }) {
   const router = useRouter();
+  const { connected, loading: authLoading } = useAuth();
 
   // lesson is already the number from the URL
   const num = parseInt(lesson, 10);
@@ -24,7 +26,9 @@ export default function Chapters({ chapter, lesson }) {
   const title = decodeURIComponent(chapter);
 
   // API key
-  const key = buildPublicApiUrl(`/lessons/lesson/${encodeURIComponent(title)}/${num}`);
+  const key = !authLoading && connected
+    ? buildPublicApiUrl(`/lessons/lesson/${encodeURIComponent(title)}/${num}`)
+    : null;
 
   const { data, error, isLoading } = useSWR(key, fetcher, {
     revalidateOnFocus: false,
@@ -32,12 +36,12 @@ export default function Chapters({ chapter, lesson }) {
   });
 
 const { data: chaptersIndex } = useSWR(
-  buildPublicApiUrl("/lessons/chapters-with-numbers"),
+  !authLoading && connected ? buildPublicApiUrl("/lessons/chapters-with-numbers") : null,
   fetcher,
   { revalidateOnFocus: false, dedupingInterval: 10 * 60 * 1000 }
 );  
 
-  if (isLoading) return <WavyGuitarStrings />;
+  if (authLoading || isLoading) return <WavyGuitarStrings />;
   if (error) return <p>Error: {error.message}</p>;
 
   const lessonC = (data?.content || "").replace(/\\n/g, "\n");
@@ -55,6 +59,7 @@ const lessonNumbers = chaptersIndex?.[title] || [];
 const hasNext = lessonNumbers.includes(nextNum);
  const prefetchNext = () => {
   if (!hasNext) return;
+  if (!connected) return;
   mutate(nextKey, fetcher(nextKey), false);
 };
 

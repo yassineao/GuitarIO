@@ -29,7 +29,7 @@ GuitarIO is a full-stack educational platform that combines structured curriculu
 
 ### Key Achievements
 
-- ✅ **Secure Authentication**: JWT-based Spring Security with role-based access control
+- ✅ **Secure Authentication**: JWT-based Spring Security with HttpOnly access/refresh cookies and role-based access control
 - ✅ **Intelligent RAG System**: Vector similarity search powered by pgvector and Google's Gemini API
 - ✅ **Rich Music Education Content**: 50+ lessons with structured metadata and music theory
 - ✅ **Cross-Platform UI**: Next.js frontend with responsive design, Jest testing
@@ -50,7 +50,7 @@ GuitarIO is a full-stack educational platform that combines structured curriculu
 │  ├─ AI Teaching Assistant UI                           │
 │  └─ Student Dashboard & Progress Tracking              │
 └──────────────────────┬──────────────────────────────────┘
-                       │ REST API (JWT Bearer Tokens)
+                       │ REST API (HttpOnly cookie auth)
 ┌──────────────────────▼──────────────────────────────────┐
 │      Backend (Spring Boot 3.5.5 + Java 21)              │
 │  ├─ REST Controllers (11 specialized endpoints)        │
@@ -130,8 +130,9 @@ GuitarIO is a full-stack educational platform that combines structured curriculu
 - **Embedding Model**: Google GenAI Embedding API
 - **Similarity Metric**: Cosine similarity via pgvector
 - **Context Window**: 7,000 characters max (prevents token overflow)
-- **Retrieved Documents**: 4-8 lessons per query
+- **Retrieved Documents**: 4-8 lessons per query, filtered by relevance score
 - **Chat Model**: Gemini 2.5 Flash (fast, production-ready)
+- **Grounding Guardrails**: weak retrieval fallback and source citation validation
 
 ---
 
@@ -162,7 +163,7 @@ GuitarIO is a full-stack educational platform that combines structured curriculu
 | **State Management** | SWR | 2.4.0 | Data fetching, caching |
 | **Music Libraries** | AlphaTab, VexFlow, Tone.js | Latest | Tablature, music notation, audio |
 | **HTTP Client** | Axios | 1.7.2 | REST API calls |
-| **Auth** | JWT Decode, js-cookie | Latest | Token parsing, storage |
+| **Auth** | HttpOnly cookies + `/auth/me` | Built-in browser cookie jar | Session transport and profile lookup |
 | **Deployment** | Vercel | - | Edge deployment, analytics |
 
 ---
@@ -185,15 +186,17 @@ GuitarIO is a full-stack educational platform that combines structured curriculu
 ### 3. **AI Teaching Assistant (RAG)**
 - Context-aware answers from lesson embeddings
 - Grounded responses (no hallucinations outside lesson content)
+- Similarity thresholding and safe fallback when retrieval is weak
+- Citation validation before returning lesson-grounded answers
 - User progress awareness (adapts to student's completed lessons)
 - Source lesson transparency (shows which lessons support the answer)
 - Rate limiting and error handling (401 Unauthorized recovery)
 
 ### 4. **Authentication & Authorization**
-- JWT-based stateless authentication
+- JWT-based stateless authentication via HttpOnly `accessToken` and `refreshToken` cookies
 - Role-based access control (RBAC)
 - Secure password hashing (bcrypt)
-- Token refresh mechanism (via Spring Security)
+- Token refresh mechanism via `POST /auth/refresh`
 
 ### 5. **Music Theory Content**
 - Structured explanations with examples
@@ -451,14 +454,23 @@ CREATE TABLE strumming_pattern_tags (
     {
       "id": 12,
       "title": "Basic Barre Chords",
-      "relevance_score": 0.92
+      "chapter": "Chords",
+      "number": 3,
+      "description": "Introduction to barre chord shapes.",
+      "relevanceScore": 0.92
     },
     {
       "id": 8,
       "title": "Chord Shapes and Patterns",
-      "relevance_score": 0.87
+      "chapter": "Chords",
+      "number": 2,
+      "description": "Moveable chord-shape practice.",
+      "relevanceScore": 0.87
     }
-  ]
+  ],
+  "grounded": true,
+  "retrievalQuality": 0.92,
+  "notice": null
 }
 ```
 
@@ -475,9 +487,10 @@ public RagResponse askQuestion(Long userId, RagRequest request) {
     String embedding = toPgVector(embeddingService.embed(question));
     
     // 3. Vector similarity search (cosine distance)
-    //    - Retrieves 4-8 most similar lessons
+    //    - Retrieves 4-8 candidate lessons
     //    - Uses pgvector index for performance
-    List<Lesson> relevantLessons = lessonRepo.findSimilarLessons(embedding, limit);
+    List<RagLessonView> candidates = lessonRepo.findSimilarLessonsForRag(embedding, limit);
+    List<RagLessonView> relevantLessons = filterRelevantLessons(candidates);
     
     // 4. Fetch user progress (context awareness)
     List<UserLesson> userLessons = userLessonRepo.findByUserId(userId);
@@ -491,8 +504,8 @@ public RagResponse askQuestion(Long userId, RagRequest request) {
     // 6. Call Gemini chat model
     String answer = chatModel.call(prompt);
     
-    // 7. Return answer with transparent sources
-    return new RagResponse(answer, relevantLessons);
+    // 7. Validate citations and return grounded answer or fallback
+    return buildValidatedResponse(answer, relevantLessons);
 }
 ```
 
@@ -501,12 +514,13 @@ public RagResponse askQuestion(Long userId, RagRequest request) {
 You are GuitarIO's guitar teaching assistant.
 
 Rules:
-- Answer the student's question using the lesson context first.
-- If the context is missing something important, say that and then 
-  give a careful general guitar explanation.
+- Answer only from the retrieved GuitarIO lesson context.
+- Cite every lesson-derived claim with a source marker like [Source 1].
+- If the retrieved context does not contain the answer, say there is not
+  enough GuitarIO lesson context.
 - Keep the answer practical, beginner-friendly, and focused 
   on what to practice next.
-- Do not invent lesson names, progress, or facts that are not 
+- Do not invent lesson names, progress, citations, or facts that are not
   in the context.
 
 Student progress:
@@ -519,31 +533,34 @@ Retrieved lesson context:
 
 **Error Handling:**
 - **400 Bad Request**: Question missing, too long (>1,000 chars), or invalid limit
-- **401 Unauthorized**: Missing/invalid JWT token
+- **401 Unauthorized**: Missing/invalid access cookie or token
 - **502 Bad Gateway**: Gemini API key invalid or unreachable
 - **500 Internal Server Error**: Unexpected RAG failure with root cause details
 
 ### Authentication Flow
 
-**JWT Authentication Pipeline:**
+**JWT Cookie Authentication Pipeline:**
 
 ```
 1. User POST /auth/login
    ├─ Validate credentials (bcrypt compare)
-   └─ Generate JWT token (HS256 signed)
+   └─ Generate access + refresh JWTs (HS256 signed)
 
-2. Client stores token (Cookie or localStorage)
+2. Backend sets HttpOnly cookies:
+   accessToken, refreshToken
 
-3. Subsequent requests include Authorization header:
-   Authorization: Bearer {JWT_TOKEN}
+3. Browser automatically sends cookies on requests made with:
+   credentials: "include"
 
-4. Spring Security filter validates token:
+4. Spring Security filter reads accessToken and validates it:
    ├─ Signature verification
    ├─ Expiry check
    ├─ Extract userId as principal
    └─ Set authentication context
 
-5. @PostMapping("/rag/ask")
+5. POST /auth/refresh can use refreshToken to set a fresh accessToken cookie
+
+6. @PostMapping("/rag/ask")
    └─ Authentication auth parameter automatically populated
       (throws 401 if missing/invalid)
 ```
@@ -551,8 +568,9 @@ Retrieved lesson context:
 **JWT Claims:**
 ```json
 {
-  "sub": "12345",           // userId
-  "username": "guitarist",
+  "sub": "guitarist@example.com",
+  "uid": 12345,
+  "user": "guitarist",
   "iat": 1716259200,        // issued at
   "exp": 1716345600,        // expires in (configured)
   "role": "STUDENT"
@@ -561,10 +579,17 @@ Retrieved lesson context:
 
 ### Key Endpoints (Examples)
 
+#### Login and Store Cookies
+```bash
+curl -c cookies.txt -X POST http://localhost:8080/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": "you@example.com", "password": "your-password"}'
+```
+
 #### Get Lessons
 ```bash
 curl -X GET http://localhost:8080/lessons \
-  -H "Authorization: Bearer {JWT_TOKEN}"
+  -b cookies.txt
 ```
 
 Response:
@@ -583,13 +608,13 @@ Response:
 #### Get Chords by Tag
 ```bash
 curl -X GET "http://localhost:8080/chords/search?tag=rock" \
-  -H "Authorization: Bearer {JWT_TOKEN}"
+  -b cookies.txt
 ```
 
 #### Ask AI Teaching Assistant
 ```bash
 curl -X POST http://localhost:8080/rag/ask \
-  -H "Authorization: Bearer {JWT_TOKEN}" \
+  -b cookies.txt \
   -H "Content-Type: application/json" \
   -d '{"question": "How do I switch between chords faster?", "limit": 4}'
 ```
@@ -619,7 +644,7 @@ pages/
 ### Component Architecture
 
 **Core Components:**
-- **auth/LoginForm.js**: JWT token management, secure storage
+- **auth/LoginForm.js**: Login form that relies on backend-set HttpOnly auth cookies
 - **ChordChart.tsx**: Interactive chord diagram visualizer
 - **MuseScore.js**: Notation rendering (VexFlow/AlphaTab)
 - **canvas.js**: Music staff drawing and interaction
@@ -643,10 +668,10 @@ pages/
 - Optimistic UI updates
 - Error handling and retry logic
 
-**localStorage/Cookies:**
-- JWT token persistence
-- User preferences (theme, audio volume)
-- Session management
+**Cookies/localStorage:**
+- HttpOnly auth cookies for `accessToken` and `refreshToken`
+- User preferences in localStorage when needed (theme, audio volume)
+- Session profile lookup via `GET /auth/me`
 
 ### Testing
 
@@ -989,7 +1014,7 @@ pnpm test:coverage
 ### Backend Security
 
 ✅ **Implemented:**
-- JWT token-based authentication (HS256)
+- JWT token-based authentication (HS256) transported in HttpOnly cookies
 - Spring Security CSRF protection
 - Bcrypt password hashing (10 rounds)
 - SQL injection prevention (PreparedStatements via JPA)
@@ -1005,7 +1030,7 @@ pnpm test:coverage
 ### Frontend Security
 
 ✅ **Implemented:**
-- JWT token stored securely (http-only cookies preferred)
+- JWT tokens stored in HttpOnly cookies; frontend uses `credentials: "include"`
 - CSRF token validation (Next.js middleware)
 - XSS protection (React auto-escaping)
 - Input validation on forms

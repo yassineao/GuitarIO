@@ -59,7 +59,6 @@ public class SecurityConfig {
         CorsConfiguration cfg = new CorsConfiguration();
         cfg.setAllowedOriginPatterns(List.of(
                 "http://localhost:3000",   // Next.js dev
-                "http://localhost:5173",    // Vite (if you still use it)
                 "https://guitar-io.vercel.app",
                 "https://*.vercel.app"
         ));
