@@ -25,7 +25,8 @@ public interface LessonRepository extends JpaRepository<Lesson, Long> {
                 number,
                 content,
                 difficulty_level AS "difficultyLevel",
-                description
+                description,
+                embedding <=> CAST(:embedding AS vector) AS distance
             FROM lessons
             WHERE embedding IS NOT NULL
             ORDER BY embedding <=> CAST(:embedding AS vector)
@@ -45,5 +46,6 @@ public interface LessonRepository extends JpaRepository<Lesson, Long> {
         String getContent();
         String getDifficultyLevel();
         String getDescription();
+        Double getDistance();
     }
 }

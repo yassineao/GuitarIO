@@ -3,16 +3,14 @@ import { buildServerApiUrl } from "../../../../lib/api-url";
 export default async function handler(req, res) {
   const { chapter, lesson } = req.query;
 
-  // If you still use localStorage tokens, the server can't read them.
-  // So we forward Authorization from the browser request if present.
-  const auth = req.headers.authorization || "";
+  const cookie = req.headers.cookie || "";
 
   const backendUrl = buildServerApiUrl(
     `/lessons/lesson/${encodeURIComponent(chapter)}/${encodeURIComponent(lesson)}`
   );
 
   const r = await fetch(backendUrl, {
-    headers: auth ? { Authorization: auth } : {},
+    headers: cookie ? { Cookie: cookie } : {},
   });
 
   const text = await r.text();

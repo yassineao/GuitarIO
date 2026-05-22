@@ -4,9 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { buildPublicApiUrl } from "@/lib/api-url";
+import { useAuth } from "@/pages/api/AuthContext";
 
 export default function RegisterForm() {
   const router = useRouter();
+  const { login } = useAuth();
 
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
@@ -97,14 +99,7 @@ export default function RegisterForm() {
         return;
       }
 
-      if (payload?.accessToken) {
-        localStorage.setItem("accessToken", payload.accessToken);
-      }
-
-      if (payload?.refreshToken) {
-        localStorage.setItem("refreshToken", payload.refreshToken);
-      }
-
+      login(payload);
       router.push("/");
     } catch (err) {
       if (err.name === "AbortError") {

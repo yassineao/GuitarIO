@@ -30,15 +30,13 @@ export default function LoginForm() {
     try {
       setSubmitting(true);
       const payload = await authenticateUser(email, password, controller, setErrorMessage);
-      const accessToken = payload.access || payload.accessToken;
-      const refreshToken = payload.refresh || payload.refreshToken;
 
-      if (!accessToken) {
-        setErrorMessage("Login succeeded but no access token was returned.");
+      if (!payload?.uid) {
+        setErrorMessage("Login succeeded but no user profile was returned.");
         return;
       }
 
-      login(accessToken, refreshToken);
+      login(payload);
       router.push("/");
     } catch (err) {
       if (err?.name === "AbortError") {

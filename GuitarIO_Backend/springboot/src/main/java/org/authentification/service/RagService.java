@@ -12,8 +12,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class RagService {
@@ -22,6 +28,9 @@ public class RagService {
     private static final int MAX_LIMIT = 8;
     private static final int MAX_CONTEXT_CHARS = 7_000;
     private static final int MAX_LESSON_CHARS = 1_400;
+    private static final double MIN_RELEVANCE_SCORE = 0.55;
+    private static final Pattern SOURCE_CITATION_PATTERN = Pattern.compile("\\[Source\\s+(\\d+)]");
+    private static final String WEAK_RETRIEVAL_NOTICE = "Retrieved lessons were not similar enough to ground an answer.";
 
     private final EmbeddingService embeddingService;
     private final LessonRepository lessonRepo;
@@ -45,16 +54,36 @@ public class RagService {
         int limit = normalizeLimit(request == null ? null : request.limit());
 
         String embedding = toPgVector(embeddingService.embed(question));
-        List<RagLessonView> relevantLessons = lessonRepo.findSimilarLessonsForRag(embedding, limit);
+        List<RagLessonView> candidateLessons = lessonRepo.findSimilarLessonsForRag(embedding, limit);
+        List<RagLessonView> relevantLessons = filterRelevantLessons(candidateLessons);
         List<UserLesson> userLessons = userLessonRepo.findByUserId(userId);
+        Double retrievalQuality = bestRelevanceScore(candidateLessons);
+
+        if (relevantLessons.isEmpty()) {
+            return fallbackResponse(retrievalQuality, WEAK_RETRIEVAL_NOTICE);
+        }
 
         String answer = chatModel.call(buildPrompt(question, relevantLessons, userLessons));
+        String normalizedAnswer = answer == null || answer.isBlank()
+                ? "I could not generate an answer right now."
+                : answer.trim();
+        CitationValidation citationValidation = validateCitations(normalizedAnswer, relevantLessons.size());
+
+        if (!citationValidation.valid()) {
+            return fallbackResponse(
+                    retrievalQuality,
+                    "The generated answer did not cite the retrieved GuitarIO lesson context correctly."
+            );
+        }
 
         return new RagResponse(
-                answer == null || answer.isBlank() ? "I could not generate an answer right now." : answer.trim(),
-                relevantLessons.stream()
-                        .map(this::toSource)
-                        .toList()
+                normalizedAnswer,
+                citationValidation.citedSourceNumbers().stream()
+                        .map(sourceNumber -> toSource(relevantLessons.get(sourceNumber - 1)))
+                        .toList(),
+                true,
+                retrievalQuality,
+                null
         );
     }
 
@@ -70,6 +99,33 @@ public class RagService {
         Lesson savedLesson = lessonRepo.save(lesson);
 
         return toSource(savedLesson);
+    }
+
+    private List<RagLessonView> filterRelevantLessons(List<RagLessonView> lessons) {
+        return lessons.stream()
+                .filter(lesson -> relevanceScore(lesson) >= MIN_RELEVANCE_SCORE)
+                .sorted(Comparator.comparingDouble(RagService::relevanceScore).reversed())
+                .toList();
+    }
+
+    private Double bestRelevanceScore(List<RagLessonView> lessons) {
+        return lessons.stream()
+                .map(RagService::relevanceScore)
+                .max(Double::compareTo)
+                .orElse(null);
+    }
+
+    private RagResponse fallbackResponse(Double retrievalQuality, String notice) {
+        return new RagResponse(
+                """
+                I do not have enough matching GuitarIO lesson context to answer that reliably.
+                Try asking about a specific lesson, technique, chord, scale, or practice goal so I can ground the answer in your course material.
+                """.trim(),
+                List.of(),
+                false,
+                retrievalQuality,
+                notice
+        );
     }
 
     private String normalizeQuestion(String question) {
@@ -103,10 +159,11 @@ public class RagService {
                 You are GuitarIO's guitar teaching assistant.
 
                 Rules:
-                - Answer the student's question using the lesson context first.
-                - If the context is missing something important, say that and then give a careful general guitar explanation.
+                - Answer only from the retrieved GuitarIO lesson context.
+                - Cite every lesson-derived claim with one or more source markers exactly like [Source 1].
+                - If the retrieved lesson context does not contain the answer, say you do not have enough GuitarIO lesson context.
                 - Keep the answer practical, beginner-friendly, and focused on what to practice next.
-                - Do not invent lesson names, progress, or facts that are not in the context.
+                - Do not invent lesson names, progress, citations, or facts that are not in the context.
 
                 Student progress:
                 Assigned lessons: %d
@@ -145,6 +202,7 @@ public class RagService {
             String block = """
                     Source %d
                     Title: %s
+                    Relevance: %s
                     Description: %s
                     Difficulty: %s
                     Content:
@@ -153,6 +211,7 @@ public class RagService {
                     """.formatted(
                     i + 1,
                     sourceTitle(lesson),
+                    String.format(Locale.US, "%.2f", relevanceScore(lesson)),
                     blankToFallback(lesson.getDescription(), "No description"),
                     lesson.getDifficultyLevel(),
                     truncate(blankToFallback(lesson.getContent(), ""), MAX_LESSON_CHARS)
@@ -173,7 +232,8 @@ public class RagService {
                 sourceTitle(lesson),
                 lesson.getChapter(),
                 lesson.getNumber(),
-                lesson.getDescription()
+                lesson.getDescription(),
+                null
         );
     }
 
@@ -183,8 +243,34 @@ public class RagService {
                 sourceTitle(lesson),
                 lesson.getChapter(),
                 lesson.getNumber(),
-                lesson.getDescription()
+                lesson.getDescription(),
+                relevanceScore(lesson)
         );
+    }
+
+    private CitationValidation validateCitations(String answer, int sourceCount) {
+        Matcher matcher = SOURCE_CITATION_PATTERN.matcher(answer);
+        Set<Integer> citedSourceNumbers = new TreeSet<>();
+        List<Integer> invalidSourceNumbers = new ArrayList<>();
+
+        while (matcher.find()) {
+            int sourceNumber = Integer.parseInt(matcher.group(1));
+            if (sourceNumber < 1 || sourceNumber > sourceCount) {
+                invalidSourceNumbers.add(sourceNumber);
+            } else {
+                citedSourceNumbers.add(sourceNumber);
+            }
+        }
+
+        return new CitationValidation(!citedSourceNumbers.isEmpty() && invalidSourceNumbers.isEmpty(), citedSourceNumbers);
+    }
+
+    private static double relevanceScore(RagLessonView lesson) {
+        Double distance = lesson.getDistance();
+        if (distance == null || distance.isNaN()) {
+            return 0.0;
+        }
+        return Math.max(0.0, Math.min(1.0, 1.0 - distance));
     }
 
     private String sourceTitle(Lesson lesson) {
@@ -220,4 +306,6 @@ public class RagService {
     private String blankToFallback(String value, String fallback) {
         return value == null || value.isBlank() ? fallback : value.trim();
     }
+
+    private record CitationValidation(boolean valid, Set<Integer> citedSourceNumbers) {}
 }

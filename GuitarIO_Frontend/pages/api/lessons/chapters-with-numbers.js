@@ -2,12 +2,11 @@ import { buildServerApiUrl } from "../../../lib/api-url";
 
 export default async function handler(req, res) {
   try {
-    // Forward auth if needed (from browser request)
-    const auth = req.headers.authorization || "";
+    const cookie = req.headers.cookie || "";
 
     const backendRes = await fetch(buildServerApiUrl("/lessons/chapters-with-numbers"), {
       method: "GET",
-      headers: auth ? { Authorization: auth } : {},
+      headers: cookie ? { Cookie: cookie } : {},
     });
 
     const text = await backendRes.text();

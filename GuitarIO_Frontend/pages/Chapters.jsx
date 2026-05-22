@@ -3,12 +3,11 @@ import useSWR from "swr";
 import ProtectedRoute from "../components/protectedContent";
 import ChaptersLessons from "../components/lessons/chapterList";
 import WavyGuitarStrings from "../components/loader";
-const fetcher = async (url) => {
-  const token = localStorage.getItem("accessToken");
-  if (!token) throw new Error("NO_TOKEN");
+import { buildPublicApiUrl } from "../lib/api-url";
 
+const fetcher = async (url) => {
   const res = await fetch(url, {
-    headers: { Authorization: `Bearer ${token}` },
+    credentials: "include",
   });
 
   if (!res.ok) throw new Error(await res.text());
@@ -16,11 +15,9 @@ const fetcher = async (url) => {
 };
 
 export default function ChaptersListPage() {
-  // client-only: compute key so SWR doesn't run without token
   const swrKey = useMemo(() => {
     if (typeof window === "undefined") return null;
-    const token = localStorage.getItem("accessToken");
-    return token ? "/api/lessons/chapters-with-numbers" : null;
+    return buildPublicApiUrl("/lessons/chapters-with-numbers");
   }, []);
 
   const { data, error, isLoading } = useSWR(swrKey, fetcher, {
@@ -31,7 +28,7 @@ export default function ChaptersListPage() {
   return (
     <ProtectedRoute>
       {isLoading && <WavyGuitarStrings />}
-      {error && error.message !== "NO_TOKEN" && <p>Error: {error.message}</p>}
+      {error && <p>Error: {error.message}</p>}
       {data && <ChaptersLessons chapterss={Object.keys(data)} />}
     </ProtectedRoute>
   );

@@ -1,80 +1,69 @@
 // context/AuthContext.js
 import { createContext, useContext, useEffect, useState } from "react";
-import { jwtDecode } from "jwt-decode";
+import { buildPublicApiUrl } from "@/lib/api-url";
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);      // decoded JWT
+  const [user, setUser] = useState(null);
   const [connected, setConnected] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Load token on first render
   useEffect(() => {
-    if (typeof window === "undefined") {
-      setLoading(false);
-      return;
-    }
+    let cancelled = false;
 
-    const token = localStorage.getItem("accessToken");
-    if (!token) {
-      setLoading(false);
-      return;
-    }
+    async function loadSession() {
+      try {
+        const res = await fetch(buildPublicApiUrl("/auth/me"), {
+          credentials: "include",
+        });
 
-    try {
-      const decoded = jwtDecode(token);
-      const now = Date.now() / 1000;
+        if (!res.ok) {
+          throw new Error("Not authenticated");
+        }
 
-      if (decoded.exp && decoded.exp < now) {
-        // expired
-        localStorage.removeItem("accessToken");
-        localStorage.removeItem("refreshToken");
-        setUser(null);
-        setConnected(false);
-      } else {
-        setUser(decoded);
-        setConnected(true);
+        const profile = await res.json();
+        if (!cancelled) {
+          setUser(profile);
+          setConnected(true);
+        }
+      } catch {
+        if (!cancelled) {
+          setUser(null);
+          setConnected(false);
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false);
+        }
       }
-    } catch (e) {
-      console.error("Invalid token on init", e);
-      localStorage.removeItem("accessToken");
-      localStorage.removeItem("refreshToken");
-      setUser(null);
-      setConnected(false);
-    } finally {
-      setLoading(false);
     }
+
+    loadSession();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
-  // Call this after successful login
-  const login = (accessToken, refreshToken) => {
-    if (!accessToken) return;
-
-    if (typeof window !== "undefined") {
-      localStorage.setItem("accessToken", accessToken);
-      if (refreshToken) {
-        localStorage.setItem("refreshToken", refreshToken);
-      }
-    }
-
-    try {
-      const decoded = jwtDecode(accessToken);
-      setUser(decoded);
-      setConnected(true);
-    } catch (e) {
-      console.error("Failed to decode access token on login", e);
-    }
+  const login = (profile) => {
+    if (!profile) return;
+    setUser(profile);
+    setConnected(true);
   };
 
-  const logout = () => {
-    if (typeof window !== "undefined") {
-      localStorage.removeItem("accessToken");
-      localStorage.removeItem("refreshToken");
+  const logout = async () => {
+    try {
+      await fetch(buildPublicApiUrl("/auth/logout"), {
+        method: "POST",
+        credentials: "include",
+      });
+    } catch (e) {
+      console.error("Logout request failed", e);
+    } finally {
+      setUser(null);
+      setConnected(false);
     }
-    setUser(null);
-    setConnected(false);
-    location.reload();
   };
 
   return (

@@ -7,11 +7,11 @@ import org.authentification.service.JwtService;
 import org.authentification.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -37,14 +37,19 @@ class UserControllerUnitTest {
         when(userService.findByEmailOrThrow("player@guitario.test")).thenReturn(user);
         when(userService.checkPassword(user, "secret")).thenReturn(true);
 
-        ResponseEntity<?> response = userController.login(new LoginRequest("player@guitario.test", "secret"));
+        ResponseEntity<?> response = userController.login(
+                new LoginRequest("player@guitario.test", "secret"),
+                new MockHttpServletRequest()
+        );
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        TokenResponse tokens = assertInstanceOf(TokenResponse.class, response.getBody());
-        assertNotNull(tokens.accessToken());
-        assertNotNull(tokens.refreshToken());
-        assertEquals("refresh", jwtService.parse(tokens.refreshToken()).getBody().get("type"));
-        assertEquals(7, jwtService.parse(tokens.refreshToken()).getBody().get("uid"));
+        String accessToken = extractCookie(response, "accessToken");
+        String refreshToken = extractCookie(response, "refreshToken");
+        assertNotNull(accessToken);
+        assertNotNull(refreshToken);
+        assertEquals(7, jwtService.parse(accessToken).getBody().get("uid"));
+        assertEquals("refresh", jwtService.parse(refreshToken).getBody().get("type"));
+        assertEquals(7, jwtService.parse(refreshToken).getBody().get("uid"));
     }
 
     @Test
@@ -55,14 +60,17 @@ class UserControllerUnitTest {
                 java.time.Duration.ofDays(7)
         );
 
-        ResponseEntity<?> response = userController.refresh(new TokenResponse(null, refreshToken));
+        MockHttpServletRequest request = new MockHttpServletRequest();
+        request.setCookies(new jakarta.servlet.http.Cookie("refreshToken", refreshToken));
+
+        ResponseEntity<?> response = userController.refresh(null, request);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        TokenResponse tokens = assertInstanceOf(TokenResponse.class, response.getBody());
-        assertEquals(refreshToken, tokens.refreshToken());
-        assertEquals(7, jwtService.parse(tokens.accessToken()).getBody().get("uid"));
-        assertEquals("ROLE_USER", jwtService.parse(tokens.accessToken()).getBody().get("role"));
-        assertEquals("yassine", jwtService.parse(tokens.accessToken()).getBody().get("user"));
+        String accessToken = extractCookie(response, "accessToken");
+        assertNotNull(accessToken);
+        assertEquals(7, jwtService.parse(accessToken).getBody().get("uid"));
+        assertEquals("ROLE_USER", jwtService.parse(accessToken).getBody().get("role"));
+        assertEquals("yassine", jwtService.parse(accessToken).getBody().get("user"));
     }
 
     @Test
@@ -73,9 +81,20 @@ class UserControllerUnitTest {
                 java.time.Duration.ofMinutes(15)
         );
 
-        ResponseEntity<?> response = userController.refresh(new TokenResponse(null, accessToken));
+        ResponseEntity<?> response = userController.refresh(
+                new TokenResponse(null, accessToken),
+                new MockHttpServletRequest()
+        );
 
         assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+    }
+
+    private String extractCookie(ResponseEntity<?> response, String name) {
+        return response.getHeaders().getOrEmpty("Set-Cookie").stream()
+                .filter(header -> header.startsWith(name + "="))
+                .map(header -> header.substring((name + "=").length(), header.indexOf(';')))
+                .findFirst()
+                .orElse(null);
     }
 
     private User user() {

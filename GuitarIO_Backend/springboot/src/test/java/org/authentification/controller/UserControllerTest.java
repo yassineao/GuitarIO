@@ -53,8 +53,13 @@ class UserControllerTest {
                     }
                     """))
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.accessToken").value("mock-token"))
-                .andExpect(jsonPath("$.refreshToken").value("mock-token"));
+                .andExpect(header().stringValues("Set-Cookie",
+                        org.hamcrest.Matchers.hasItems(
+                                org.hamcrest.Matchers.containsString("accessToken=mock-token"),
+                                org.hamcrest.Matchers.containsString("refreshToken=mock-token")
+                        )))
+                .andExpect(jsonPath("$.uid").value(1))
+                .andExpect(jsonPath("$.user").value("testuser"));
     }
 
     @Test
@@ -73,8 +78,13 @@ class UserControllerTest {
                     }
                     """))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.accessToken").value("mock-token"))
-                .andExpect(jsonPath("$.refreshToken").value("mock-token"));
+                .andExpect(header().stringValues("Set-Cookie",
+                        org.hamcrest.Matchers.hasItems(
+                                org.hamcrest.Matchers.containsString("accessToken=mock-token"),
+                                org.hamcrest.Matchers.containsString("refreshToken=mock-token")
+                        )))
+                .andExpect(jsonPath("$.uid").value(1))
+                .andExpect(jsonPath("$.user").value("testuser"));
     }
 
     @Test

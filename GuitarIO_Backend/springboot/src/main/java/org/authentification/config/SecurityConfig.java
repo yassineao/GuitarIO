@@ -44,8 +44,8 @@ public class SecurityConfig {
                             res.getWriter().write("""
                                     {
                                       "error": "APP_JWT_MISSING",
-                                      "message": "This endpoint requires authentication, but no valid Bearer token was found.",
-                                      "hint": "Send Authorization: Bearer <token> with the request."
+                                      "message": "This endpoint requires authentication, but no valid access token was found.",
+                                      "hint": "Log in so the browser can send the HttpOnly accessToken cookie with the request."
                                     }
                                     """);
                         })

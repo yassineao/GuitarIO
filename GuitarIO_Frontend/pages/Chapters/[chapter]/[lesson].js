@@ -3,11 +3,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import WavyGuitarStrings from "../../../components/loader";
 import ProtectedRoute from "../../../components/protectedContent";
-const fetcher = async (url) => {
-  const token = localStorage.getItem("accessToken");
+import { buildPublicApiUrl } from "../../../lib/api-url";
 
+const fetcher = async (url) => {
   const res = await fetch(url, {
-    headers: token ? { Authorization: `Bearer ${token}` } : {},
+    credentials: "include",
   });
 
   if (!res.ok) throw new Error(await res.text());
@@ -24,7 +24,7 @@ export default function Chapters({ chapter, lesson }) {
   const title = decodeURIComponent(chapter);
 
   // API key
-  const key = `/api/lessons/${encodeURIComponent(title)}/${num}`;
+  const key = buildPublicApiUrl(`/lessons/lesson/${encodeURIComponent(title)}/${num}`);
 
   const { data, error, isLoading } = useSWR(key, fetcher, {
     revalidateOnFocus: false,
@@ -32,7 +32,7 @@ export default function Chapters({ chapter, lesson }) {
   });
 
 const { data: chaptersIndex } = useSWR(
-  "/api/lessons/chapters-with-numbers",
+  buildPublicApiUrl("/lessons/chapters-with-numbers"),
   fetcher,
   { revalidateOnFocus: false, dedupingInterval: 10 * 60 * 1000 }
 );  
@@ -49,7 +49,7 @@ const { data: chaptersIndex } = useSWR(
 
   const nextNum = num + 1;
   const nextHref = `/Chapters/${encodeURIComponent(title)}/${nextNum}`;
-  const nextKey = `/api/lessons/${encodeURIComponent(title)}/${nextNum}`;
+  const nextKey = buildPublicApiUrl(`/lessons/lesson/${encodeURIComponent(title)}/${nextNum}`);
 
 const lessonNumbers = chaptersIndex?.[title] || [];
 const hasNext = lessonNumbers.includes(nextNum);

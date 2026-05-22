@@ -10,23 +10,15 @@ function mockResponse({ ok, status, body }) {
   }
 }
 
-function mockJwtWithExpiry(exp) {
-  const payload = Buffer.from(JSON.stringify({ exp })).toString('base64url')
-  return `header.${payload}.signature`
-}
-
 describe('askTeachingAssistant', () => {
   const mockController = { signal: 'test-signal' }
   const mockSetErrorMessage = jest.fn()
 
   beforeEach(() => {
     jest.clearAllMocks()
-    localStorage.clear()
   })
 
-  test('sends the saved access token to the RAG endpoint', async () => {
-    localStorage.setItem('accessToken', 'access-token-1')
-
+  test('sends cookie credentials to the RAG endpoint without a bearer token', async () => {
     global.fetch.mockResolvedValueOnce(mockResponse({
       ok: true,
       status: 200,
@@ -49,7 +41,6 @@ describe('askTeachingAssistant', () => {
         credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: 'Bearer access-token-1',
         },
         body: JSON.stringify({ question: 'How do I improve rhythm?' }),
         signal: mockController.signal,
@@ -59,10 +50,7 @@ describe('askTeachingAssistant', () => {
     expect(mockSetErrorMessage).not.toHaveBeenCalled()
   })
 
-  test('refreshes the access token and retries once after a 401', async () => {
-    localStorage.setItem('accessToken', 'expired-access-token')
-    localStorage.setItem('refreshToken', 'refresh-token-1')
-
+  test('refreshes the access cookie and retries once after a 401', async () => {
     global.fetch
       .mockResolvedValueOnce(mockResponse({
         ok: false,
@@ -72,10 +60,7 @@ describe('askTeachingAssistant', () => {
       .mockResolvedValueOnce(mockResponse({
         ok: true,
         status: 200,
-        body: {
-          accessToken: 'new-access-token',
-          refreshToken: 'refresh-token-1',
-        },
+        body: { uid: 7, user: 'yassine' },
       }))
       .mockResolvedValueOnce(mockResponse({
         ok: true,
@@ -97,27 +82,24 @@ describe('askTeachingAssistant', () => {
       `${process.env.NEXT_PUBLIC_API_URL}/auth/refresh`,
       expect.objectContaining({
         method: 'POST',
-        body: JSON.stringify({ refreshToken: 'refresh-token-1' }),
+        credentials: 'include',
+        body: JSON.stringify({}),
       })
     )
     expect(global.fetch).toHaveBeenNthCalledWith(
       3,
       `${process.env.NEXT_PUBLIC_API_URL}/rag/ask`,
       expect.objectContaining({
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: 'Bearer new-access-token',
         },
       })
     )
-    expect(localStorage.getItem('accessToken')).toBe('new-access-token')
     expect(result.answer).toBe('Use two-minute chord-change bursts.')
   })
 
-  test('clears tokens and asks the user to log in again when refresh fails', async () => {
-    localStorage.setItem('accessToken', 'expired-access-token')
-    localStorage.setItem('refreshToken', 'bad-refresh-token')
-
+  test('asks the user to log in again when cookie refresh fails', async () => {
     global.fetch
       .mockResolvedValueOnce(mockResponse({
         ok: false,
@@ -137,34 +119,8 @@ describe('askTeachingAssistant', () => {
     )).rejects.toThrow('Please log in again to use the teaching assistant.')
 
     expect(global.fetch).toHaveBeenCalledTimes(2)
-    expect(localStorage.getItem('accessToken')).toBeNull()
-    expect(localStorage.getItem('refreshToken')).toBeNull()
     expect(mockSetErrorMessage).toHaveBeenCalledWith(
       'Please log in again to use the teaching assistant.'
     )
-  })
-
-  test('does not clear tokens when RAG returns 401 for an unexpired access token', async () => {
-    const unexpiredToken = mockJwtWithExpiry(Math.floor(Date.now() / 1000) + 3600)
-    localStorage.setItem('accessToken', unexpiredToken)
-    localStorage.setItem('refreshToken', 'refresh-token-1')
-
-    global.fetch.mockResolvedValueOnce(mockResponse({
-      ok: false,
-      status: 401,
-      body: { error: 'Unauthorized' },
-    }))
-
-    await expect(askTeachingAssistant(
-      'Can you explain barre chords?',
-      mockController,
-      mockSetErrorMessage
-    )).rejects.toThrow(
-      'The teaching assistant request was unauthorized. Your login was kept; please check the RAG API configuration.'
-    )
-
-    expect(global.fetch).toHaveBeenCalledTimes(1)
-    expect(localStorage.getItem('accessToken')).toBe(unexpiredToken)
-    expect(localStorage.getItem('refreshToken')).toBe('refresh-token-1')
   })
 })
