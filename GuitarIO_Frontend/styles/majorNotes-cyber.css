@@ -130,6 +130,32 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
+.note-variations-placeholder {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 430px;
+  gap: 0.75rem;
+  color: #9ee8e5;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    rgba(0, 0, 0, 0.35);
+  border: 1px dashed rgba(0, 255, 247, 0.35);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.note-variations-placeholder strong {
+  color: #fff;
+  font-family: var(--second-font);
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+}
+
+.note-variations-placeholder p {
+  max-width: 360px;
+}
+
 .chord-note,
 .chord-note__content {
   width: 100%;
@@ -138,6 +164,44 @@
 .chord-note__content {
   display: grid;
   gap: 1rem;
+}
+
+.chord-note__error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #ff9ca8;
+  border: 1px solid rgba(255, 80, 110, 0.45);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+}
+
+.chord-note__error button {
+  flex: 0 0 auto;
+  color: #05030c;
+  background: #d8ff37;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.65rem 0.85rem;
+}
+
+.note-variations-widget-status {
+  color: #9ee8e5;
+  border: 1px solid rgba(0, 255, 247, 0.3);
+  border-radius: 6px;
+  padding: 0.85rem;
+  text-align: center;
+}
+
+.major-note-card:disabled,
+.note-variation-card:disabled {
+  cursor: wait;
+  opacity: 0.55;
+  transform: none;
 }
 
 .chord-note__diagram {
@@ -283,6 +347,39 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 0.35rem;
+}
+
+.note-variations-note-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.note-variations-note-list button {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  min-height: 42px;
+  color: #fff;
+  background: rgba(0, 255, 247, 0.08);
+  border: 1px solid rgba(0, 255, 247, 0.35);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.note-variations-note-list button:hover,
+.note-variations-note-list button:focus-visible {
+  border-color: #00fff7;
+  outline: none;
+}
+
+.note-variations-note-list .note-variations-note-list__active {
+  color: #05030c;
+  background: #d8ff37;
+  border-color: #d8ff37;
+  cursor: default;
+  opacity: 1;
 }
 
 .note-variations-nav button {

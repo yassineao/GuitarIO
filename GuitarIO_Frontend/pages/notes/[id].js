@@ -1,48 +1,159 @@
 import { useEffect, useMemo, useState } from "react";
-import { useRouter } from "next/router";
 import Note from "../../components/note";
-
-const chordVariations = [
-  { ext: "", label: "Major", group: "Core", hint: "The clean home-base sound." },
-  { ext: "m", label: "Minor", group: "Core", hint: "Darker and softer color." },
-  { ext: "dim", label: "Dim", group: "Tension", hint: "Nervous, unstable sound." },
-  { ext: "aug", label: "Aug", group: "Tension", hint: "Bright, floating tension." },
-  { ext: "maj7", label: "Maj7", group: "Color", hint: "Smooth and dreamy." },
-  { ext: "7", label: "7", group: "Blues", hint: "Classic dominant pull." },
-  { ext: "m7", label: "m7", group: "Color", hint: "Soft minor with extra depth." },
-  { ext: "dim7", label: "Dim7", group: "Tension", hint: "Strong passing chord." },
-  { ext: "m(maj7)", label: "mMaj7", group: "Color", hint: "Cinematic minor color." },
-  { ext: "m7b5", label: "m7b5", group: "Jazz", hint: "Half-diminished flavor." },
-  { ext: "sus2", label: "Sus2", group: "Open", hint: "Suspended and airy." },
-  { ext: "sus4", label: "Sus4", group: "Open", hint: "Suspended with lift." },
-  { ext: "6/9", label: "6/9", group: "Color", hint: "Warm extended chord." },
-  { ext: "9", label: "9", group: "Extended", hint: "Funky dominant color." },
-  { ext: "11", label: "11", group: "Extended", hint: "Wide and modern." },
-  { ext: "13", label: "13", group: "Extended", hint: "Rich dominant sound." },
-  { ext: "5", label: "Power", group: "Rock", hint: "Simple two-note power chord." },
-];
+import WavyGuitarStrings from "../../components/loader";
 
 const validNotes = ["a", "b", "c", "d", "e", "f", "g"];
 
 export default function Notes({ name }) {
-  const router = useRouter();
-  const [selectedChord, setSelectedChord] = useState(chordVariations[0].ext);
-
-  useEffect(() => {
-    if (window.ScalesChordsAPI) {
-      window.ScalesChordsAPI.scan();
-    }
-  }, [selectedChord, name]);
+  const [chordMap, setChordMap] = useState(() => new Map());
+  const [selectedChordId, setSelectedChordId] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState("");
+  const [widgetError, setWidgetError] = useState("");
+  const [widgetsReady, setWidgetsReady] = useState(false);
 
   const normalizedName = String(name || "").toLowerCase();
   const noteIndex = validNotes.indexOf(normalizedName);
 
-  const selectedVariation = useMemo(
-    () =>
-      chordVariations.find((variation) => variation.ext === selectedChord) ||
-      chordVariations[0],
-    [selectedChord]
-  );
+  useEffect(() => {
+    if (noteIndex === -1) {
+      return;
+    }
+
+    const controller = new AbortController();
+
+    async function loadChords() {
+      setIsLoading(true);
+      setLoadError("");
+      setSelectedChordId(null);
+
+      try {
+        const response = await fetch(`/api/chord?note=${encodeURIComponent(normalizedName)}`, {
+          cache: "no-store",
+          signal: controller.signal,
+        });
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.message || "Could not load chord variations.");
+        }
+
+        setChordMap(new Map(data.chords.map((chord) => [chord.id, chord])));
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          setChordMap(new Map());
+          setLoadError(error.message);
+        }
+      } finally {
+        if (!controller.signal.aborted) {
+          setIsLoading(false);
+        }
+      }
+    }
+
+    loadChords();
+
+    return () => controller.abort();
+  }, [normalizedName, noteIndex]);
+
+  const chordVariations = useMemo(() => Array.from(chordMap.values()), [chordMap]);
+  const selectedVariation = selectedChordId
+    ? chordMap.get(selectedChordId)
+    : null;
+
+  useEffect(() => {
+    if (isLoading || loadError || chordMap.size === 0) {
+      return;
+    }
+
+    setWidgetError("");
+    setWidgetsReady(false);
+
+    let cancelled = false;
+    let verificationTimer;
+    const scripts = [];
+
+    const diagramsAreReady = () => {
+      const containers = Array.from(
+        document.querySelectorAll("[data-chord-diagram]")
+      );
+
+      return (
+        containers.length === chordMap.size &&
+        containers.every((container) => {
+          const widget = container.querySelector(".scales_chords_api");
+          return Boolean(
+            container.querySelector("img, svg, canvas") ||
+              (widget && widget.childNodes.length > 0)
+          );
+        })
+      );
+    };
+
+    const verifyWidgets = (attempt) => {
+      const startedAt = Date.now();
+
+      const check = () => {
+        if (cancelled) {
+          return;
+        }
+
+        if (diagramsAreReady()) {
+          setWidgetsReady(true);
+          setWidgetError("");
+          return;
+        }
+
+        if (Date.now() - startedAt < 6000) {
+          verificationTimer = window.setTimeout(check, 250);
+          return;
+        }
+
+        if (attempt === 1) {
+          loadWidgetScript(2);
+          return;
+        }
+
+        setWidgetError(
+          "Some chord diagrams did not load. Please refresh the page and try again."
+        );
+      };
+
+      check();
+    };
+
+    const loadWidgetScript = (attempt) => {
+      const script = document.createElement("script");
+      script.src = `https://www.scales-chords.com/api/scales-chords-api.js?note=${encodeURIComponent(
+        normalizedName
+      )}&attempt=${attempt}&time=${Date.now()}`;
+      script.async = true;
+      script.onload = () => verifyWidgets(attempt);
+      script.onerror = () => {
+        if (attempt === 1) {
+          loadWidgetScript(2);
+        } else {
+          setWidgetError(
+            "The chord diagram service could not be loaded. Please refresh the page."
+          );
+        }
+      };
+      scripts.push(script);
+      document.body.appendChild(script);
+    };
+
+    loadWidgetScript(1);
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(verificationTimer);
+      scripts.forEach((script) => {
+        script.onload = null;
+        script.onerror = null;
+        script.remove();
+      });
+    };
+  }, [chordMap, isLoading, loadError, normalizedName]);
 
   if (noteIndex === -1) {
     return (
@@ -59,7 +170,10 @@ export default function Notes({ name }) {
   const nextChar = validNotes[(noteIndex + 1) % validNotes.length];
   const prevChar = validNotes[(noteIndex - 1 + validNotes.length) % validNotes.length];
   const uppercaseId = normalizedName.toUpperCase();
-  const chordName = `${uppercaseId}${selectedVariation.ext}`;
+  const chordName = selectedVariation?.chord || uppercaseId;
+  const navigateToNote = (note) => {
+    window.location.assign(`/notes/${note}`);
+  };
 
   return (
     <main className="note-variations-page">
@@ -70,13 +184,32 @@ export default function Notes({ name }) {
           Explore {uppercaseId} chord shapes from simple open sounds to richer colors and tension chords.
         </p>
 
-        <div className="note-variations-nav" aria-label="Note navigation">
-          <button type="button" onClick={() => router.push(`/notes/${prevChar}`)}>
+        {/* <div className="note-variations-nav" aria-label="Note navigation">
+          <button type="button" onClick={() => navigateToNote(prevChar)}>
             Previous {prevChar.toUpperCase()}
           </button>
-          <button type="button" onClick={() => router.push(`/notes/${nextChar}`)}>
+          <button type="button" onClick={() => navigateToNote(nextChar)}>
             Next {nextChar.toUpperCase()}
           </button>
+        </div> */}
+
+        <div className="note-variations-note-list" aria-label="Choose a note">
+          {validNotes.map((note) => {
+            const isCurrent = note === normalizedName;
+
+            return (
+              <button
+                key={note}
+                type="button"
+                className={isCurrent ? "note-variations-note-list__active" : ""}
+                onClick={() => navigateToNote(note)}
+                disabled={isCurrent}
+                aria-current={isCurrent ? "page" : undefined}
+              >
+                {note.toUpperCase()}
+              </button>
+            );
+          })}
         </div>
       </section>
 
@@ -84,32 +217,91 @@ export default function Notes({ name }) {
         <div className="note-variations-preview">
           <div className="note-variations-preview__header">
             <span>Diagram</span>
-            <small>{selectedVariation.group}</small>
+            <small>{selectedVariation?.group || "Choose a variation"}</small>
           </div>
 
-          <Note name={normalizedName} ext={selectedVariation.ext} />
+          {isLoading ? (
+            <WavyGuitarStrings compact label="Loading chord variations" />
+          ) : loadError ? (
+            <div className="note-variations-placeholder" role="alert">
+              <strong>Could not load chords</strong>
+              <p>{loadError}</p>
+            </div>
+          ) : (
+            <>
+              {widgetError && (
+                <div className="chord-note__error" role="alert">
+                  <p>{widgetError}</p>
+                  <button type="button" onClick={() => window.location.reload()}>
+                    Refresh page
+                  </button>
+                </div>
+              )}
+
+              {!widgetsReady && !widgetError && (
+                <WavyGuitarStrings compact label="Loading chord diagrams" />
+              )}
+
+              {!selectedVariation && widgetsReady && (
+                <div className="note-variations-placeholder">
+                  <strong>Select a chord type</strong>
+                  <p>All chord diagrams are loaded and ready to display.</p>
+                </div>
+              )}
+
+              <div className="note-variations-cache">
+                {chordVariations.map((variation) => {
+                  const isSelected = selectedChordId === variation.id;
+
+                  return (
+                    <div
+                      key={variation.id}
+                      className="note-variations-cache__item"
+                      hidden={!isSelected}
+                      aria-hidden={!isSelected}
+                    >
+                      <div data-chord-diagram={variation.id}>
+                        <Note chord={variation} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
         </div>
 
         <aside className="note-variations-picker">
           <div className="note-variations-picker__header">
             <span>Chord type</span>
-            <p>{selectedVariation.hint}</p>
+            <p>
+              {selectedVariation?.hint ||
+                "Choose a variation to load its chord diagram."}
+            </p>
           </div>
 
           <div className="note-variations-grid">
             {chordVariations.map((variation) => {
-              const isSelected = selectedChord === variation.ext;
+              const isSelected = selectedChordId === variation.id;
 
               return (
                 <button
-                  key={variation.ext || "major"}
+                  key={variation.id}
                   type="button"
                   className={`note-variation-card${isSelected ? " note-variation-card--selected" : ""}`}
-                  onClick={() => setSelectedChord(variation.ext)}
+                  onClick={() => setSelectedChordId(variation.id)}
+                  aria-pressed={isSelected}
+                  disabled={!widgetsReady}
                 >
                   <span>{variation.group}</span>
                   <strong>{variation.label}</strong>
-                  <small>{isSelected ? "Selected" : "Preview"}</small>
+                  <small>
+                    {!widgetsReady
+                      ? "Loading"
+                      : isSelected
+                        ? "Selected"
+                        : "Show diagram"}
+                  </small>
                 </button>
               );
             })}

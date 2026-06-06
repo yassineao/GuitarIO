@@ -15,7 +15,7 @@ const PAD_X = 30;
 const STRING_GAP = (CANVAS_H - 60) / (STRINGS.length - 1);
 const STRING_Y_START = 30;
 
-const WavyGuitarStrings = () => {
+const WavyGuitarStrings = ({ compact = false, label = 'Loading' }) => {
   const canvasRef = useRef(null);
   const stateRef = useRef(
     STRINGS.map(() => ({ amplitude: 0, phase: 0, plucking: false, pluckTime: 0 }))
@@ -165,15 +165,20 @@ const WavyGuitarStrings = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100vh',
+      height: compact ? 'auto' : '100vh',
+      minHeight: compact ? '360px' : undefined,
+      width: '100%',
       overflow: 'hidden',
       position: 'relative',
       gap: '24px',
+      borderRadius: compact ? '8px' : undefined,
+      padding: compact ? '1.5rem' : undefined,
     }}>
       <canvas
         ref={canvasRef}
         style={{
           width: CANVAS_W,
+          maxWidth: '100%',
           height: CANVAS_H,
           borderRadius: '16px',
           background: 'linear-gradient(180deg, rgba(50,30,15,0.6) 0%, rgba(30,18,8,0.8) 100%)',
@@ -194,7 +199,7 @@ const WavyGuitarStrings = () => {
           textTransform: 'uppercase',
           opacity: 0.85,
         }}>
-          Loading
+          {label}
         </span>
         <span style={{ display: 'flex', gap: '4px' }}>
           {[0, 1, 2].map((i) => (

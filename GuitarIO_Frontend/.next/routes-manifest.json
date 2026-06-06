@@ -170,16 +170,16 @@
         "nxtPchapter": "nxtPchapter",
         "nxtPlesson": "nxtPlesson"
       },
-      "dataRouteRegex": "^/_next/data/2GmpVqZ\\-1wxUETc8OrWvS/Chapters/([^/]+?)/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/2GmpVqZ\\-1wxUETc8OrWvS/Chapters/(?<nxtPchapter>[^/]+?)/(?<nxtPlesson>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/gv7_1mseov3syvzQF3169/Chapters/([^/]+?)/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/gv7_1mseov3syvzQF3169/Chapters/(?<nxtPchapter>[^/]+?)/(?<nxtPlesson>[^/]+?)\\.json$"
     },
     {
       "page": "/notes/[id]",
       "routeKeys": {
         "nxtPid": "nxtPid"
       },
-      "dataRouteRegex": "^/_next/data/2GmpVqZ\\-1wxUETc8OrWvS/notes/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/2GmpVqZ\\-1wxUETc8OrWvS/notes/(?<nxtPid>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/gv7_1mseov3syvzQF3169/notes/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/gv7_1mseov3syvzQF3169/notes/(?<nxtPid>[^/]+?)\\.json$"
     }
   ],
   "rsc": {
